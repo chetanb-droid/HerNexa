@@ -1,0 +1,5 @@
+{
+  "name": "HerNexa - Global Women's Wellness & Health Insights",
+  "description": "A comprehensive, SEO-optimized platform for women's health, providing evergreen content on wellness, reproductive health, and medical insights across 150+ countries.",
+  "requestFramePermissions": ["geolocation"]
+}

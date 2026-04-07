@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #8E44AD; /* Deep Mauve */
+  --color-primary-light: #F4ECF7; /* Very Light Mauve */
+  --color-secondary: #FADBD8; /* Soft Blush */
+  --color-accent: #E67E22; /* Soft Gold/Amber */
+  --color-success: #82E0AA; /* Soft Green */
+  --color-warning: #F9E79F; /* Soft Yellow */
+  --color-text-dark: #4A235A; /* Deep Purple-Grey */
+  --color-text-medium: #7D6608; /* Muted Gold-Grey */
+  --color-bg-light: #FDFAFF; /* Off-white with hint of purple */
+  --color-border: #F2D7D5; /* Soft Rose Border */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-light text-text-dark antialiased;
+  }
+  h1, h2, h3, h4 { @apply font-serif text-text-dark; }
+  h1 { @apply text-primary font-bold; }
+}
+
+.calculator-card {
+  @apply bg-white rounded-[2rem] border border-border shadow-[0_10px_30px_rgba(142,68,173,0.05)] p-8 md:p-10 transition-all hover:shadow-[0_15px_40px_rgba(142,68,173,0.08)];
+}
+
+.results-section {
+  @apply bg-primary-light rounded-[1.5rem] p-8 border border-primary/10 mt-10;
+}
+
+.prose-health {
+  @apply prose prose-neutral max-w-none prose-headings:font-serif prose-headings:text-primary prose-a:text-primary hover:prose-a:text-accent prose-p:text-text-medium prose-li:text-text-medium;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] transition-all active:scale-[0.98];
+}
+
+.input-field {
+  @apply w-full h-14 px-6 rounded-2xl border border-border bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-text-dark placeholder:text-text-medium/50;
+}
