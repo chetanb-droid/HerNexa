@@ -13,9 +13,6 @@ import {
   Utensils
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import fertilityImg from '../assets/pexels-nadezhda-moryak-7467100.jpg';
-import menstrualImg from '../assets/pexels-karola-g-7281705.jpg';
-import postpartumImg from '../assets/pexels-sarah-chai-7282403.jpg';
 
 const mainCategories = [
   {
@@ -29,7 +26,7 @@ const mainCategories = [
   {
     id: 'ovulation',
     title: 'Fertility',
-    image: fertilityImg,
+    image: '/pexels-nadezhda-moryak-7467100.jpg',
     color: 'bg-accent',
     tools: ['Ovulation Calculator', 'Fertility Window', 'Time to Conceive'],
     zoom: false
@@ -37,7 +34,7 @@ const mainCategories = [
   {
     id: 'period',
     title: 'Menstrual',
-    image: menstrualImg,
+    image: '/pexels-karola-g-7281705.jpg',
     color: 'bg-secondary',
     tools: ['Period Calculator', 'Cycle Length', 'PCOS Symptom Checker'],
     zoom: false
@@ -61,7 +58,7 @@ const mainCategories = [
   {
     id: 'postpartum',
     title: 'Postpartum & Baby Care',
-    image: postpartumImg,
+    image: '/pexels-sarah-chai-7282403.jpg',
     color: 'bg-info',
     tools: ['EPDS Screener', 'Baby Growth Percentile', 'Recovery Guide'],
     zoom: false
@@ -293,13 +290,6 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
-
-      {/* AD: Large Banner */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="w-full h-32 bg-neutral-50 border border-dashed border-neutral-200 rounded-3xl flex items-center justify-center text-neutral-400 text-sm italic">
-          Homepage Leaderboard Advertisement (728x90 or 970x90)
-        </div>
-      </div>
 
       {/* FAQ Section */}
       <motion.section 

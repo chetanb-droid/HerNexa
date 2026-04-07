@@ -2,9 +2,6 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Search, ChevronRight, Baby, Calendar, Activity, Heart, Utensils, Scale } from 'lucide-react';
 import { motion } from 'motion/react';
-import fertilityImg from '../assets/pexels-nadezhda-moryak-7467100.jpg';
-import menstrualImg from '../assets/pexels-karola-g-7281705.jpg';
-import postpartumImg from '../assets/pexels-sarah-chai-7282403.jpg';
 
 const tools = [
   {
@@ -22,7 +19,7 @@ const tools = [
   },
   {
     category: "Fertility & Ovulation",
-    image: fertilityImg,
+    image: "/pexels-nadezhda-moryak-7467100.jpg",
     color: "bg-accent",
     items: [
       { name: "Ovulation Calculator", path: "/ovulation-calculator", desc: "Identify your peak fertile days and increase your chances of conception." },
@@ -36,7 +33,7 @@ const tools = [
   },
   {
     category: "Menstrual & Hormonal Health",
-    image: menstrualImg,
+    image: "/pexels-karola-g-7281705.jpg",
     color: "bg-success",
     items: [
       { name: "Period Calculator", path: "/period-calculator", desc: "Predict your next six periods and stay prepared for your cycle." },
@@ -74,7 +71,7 @@ const tools = [
   },
   {
     category: "Postpartum & Baby Care",
-    image: postpartumImg,
+    image: "/pexels-sarah-chai-7282403.jpg",
     color: "bg-primary",
     items: [
       { name: "Postpartum Depression", path: "/epds-screener", desc: "A clinical tool (EPDS) to help identify signs of postpartum depression." },
@@ -135,23 +132,23 @@ export default function HealthTools() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="flex items-center gap-6 border-b border-primary/10 pb-6"
+                className="flex items-center gap-6 md:gap-10 border-b-2 border-primary/10 pb-8"
               >
-                <div className={`w-32 h-32 rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border-2 border-white shrink-0 bg-white`}>
+                <div className={`w-24 h-24 md:w-44 md:h-44 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white shrink-0 bg-white`}>
                   {group.image ? (
                     <img 
                       src={group.image} 
                       alt={group.category} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       referrerPolicy="no-referrer" 
                     />
                   ) : (
                     <div className="w-full h-full bg-primary/5 flex items-center justify-center text-primary/40">
-                      <Baby className="w-12 h-12" />
+                      <Baby className="w-10 h-10 md:w-16 md:h-16" />
                     </div>
                   )}
                 </div>
-                <h2 className="text-4xl font-serif font-bold text-text-dark tracking-tight">{group.category}</h2>
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-text-dark tracking-tighter leading-tight break-words">{group.category}</h2>
               </motion.div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -118,9 +118,10 @@ export default function BloodVolumeCalculator() {
               <h3 className="font-bold text-text-dark text-lg">Volume Expansion Curve</h3>
             </div>
             
-            <div className="h-[250px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={chartData}>
+            <div className="w-full overflow-x-auto pb-2">
+              <div className="h-[220px] md:h-[250px] min-w-[450px] md:min-w-full w-full pr-2">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={chartData} margin={{ top: 20, right: 20, left: 30, bottom: 20 }}>
                   <defs>
                     <linearGradient id="colorVol" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#E11D48" stopOpacity={0.1}/>
@@ -132,7 +133,10 @@ export default function BloodVolumeCalculator() {
                     dataKey="week" 
                     axisLine={false} 
                     tickLine={false} 
-                    tick={{fontSize: 10, fill: '#a3a3a3'}}
+                    tick={{fontSize: 12, fill: '#a3a3a3'}}
+                    minTickGap={20}
+                    height={40}
+                    label={{ value: 'Week', position: 'insideBottom', offset: -10, fontSize: 12, fill: '#a3a3a3' }}
                   />
                   <YAxis 
                     axisLine={false} 
@@ -161,9 +165,9 @@ export default function BloodVolumeCalculator() {
                     name="Pre-Pregnancy (L)"
                   />
                 </AreaChart>
-              </ResponsiveContainer>
+                </ResponsiveContainer>
+              </div>
             </div>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-6 rounded-xl border border-primary-light flex items-center gap-4 shadow-sm">

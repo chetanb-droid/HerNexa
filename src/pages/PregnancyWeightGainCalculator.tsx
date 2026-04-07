@@ -166,9 +166,10 @@ export default function PregnancyWeightGainCalculator() {
               <h3 className="font-bold text-text-dark text-lg">Weight Gain Curve (Week 0-40)</h3>
             </div>
             
-            <div className="h-[300px] w-full bg-neutral-50/50 rounded-2xl p-4 border border-neutral-100">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={chartData}>
+            <div className="w-full bg-neutral-50/50 rounded-2xl p-2 md:p-6 border border-neutral-100 overflow-x-auto">
+              <div className="h-[220px] md:h-[300px] min-w-[450px] md:min-w-full w-full pr-2">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={chartData} margin={{ top: 20, right: 20, left: 30, bottom: 20 }}>
                   <defs>
                     <linearGradient id="colorGain" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#E11D48" stopOpacity={0.1}/>
@@ -181,7 +182,9 @@ export default function PregnancyWeightGainCalculator() {
                     axisLine={false} 
                     tickLine={false} 
                     tick={{fontSize: 12, fill: '#737373'}}
-                    label={{ value: 'Week', position: 'insideBottom', offset: -5, fontSize: 12 }}
+                    minTickGap={20}
+                    height={40}
+                    label={{ value: 'Week', position: 'insideBottom', offset: -10, fontSize: 12, fill: '#737373' }}
                   />
                   <YAxis 
                     axisLine={false} 
@@ -211,15 +214,16 @@ export default function PregnancyWeightGainCalculator() {
                     name="Lower Limit"
                   />
                 </AreaChart>
-              </ResponsiveContainer>
+                </ResponsiveContainer>
+              </div>
             </div>
-          </div>
 
           <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <p className="text-xs text-amber-800 leading-relaxed italic">
               Note: These ranges are for singleton pregnancies. If you are expecting twins or multiples, your weight gain requirements will be higher.
             </p>
+          </div>
           </div>
         </motion.div>
       )}

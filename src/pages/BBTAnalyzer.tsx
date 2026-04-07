@@ -93,9 +93,10 @@ export default function BBTAnalyzer() {
                 </span>
               )}
             </div>
-            <div className="h-72 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={results.chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+            <div className="w-full overflow-x-auto pb-2">
+              <div className="h-[220px] md:h-72 min-w-[450px] md:min-w-full w-full pr-2">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={results.chartData} margin={{ top: 20, right: 20, left: 30, bottom: 20 }}>
                   <defs>
                     <linearGradient id="colorTemp" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#ff8da1" stopOpacity={0.3}/>
@@ -108,7 +109,9 @@ export default function BBTAnalyzer() {
                     axisLine={false}
                     tickLine={false}
                     tick={{ fontSize: 12, fill: '#94a3b8' }}
-                    label={{ value: 'Cycle Day', position: 'insideBottom', offset: -5, fontSize: 12, fill: '#94a3b8' }} 
+                    minTickGap={20}
+                    height={40}
+                    label={{ value: 'Cycle Day', position: 'insideBottom', offset: -10, fontSize: 12, fill: '#94a3b8' }} 
                   />
                   <YAxis 
                     domain={['dataMin - 0.2', 'dataMax + 0.2']} 
@@ -132,9 +135,9 @@ export default function BBTAnalyzer() {
                     activeDot={{ r: 6, strokeWidth: 0 }}
                   />
                 </AreaChart>
-              </ResponsiveContainer>
+                </ResponsiveContainer>
+              </div>
             </div>
-          </div>
 
           <div className={`p-8 rounded-[2rem] border text-center ${results.shiftDay !== -1 ? 'bg-success/5 border-success/20' : 'bg-amber-50 border-amber-100'}`}>
             <div className="flex justify-center mb-4">
