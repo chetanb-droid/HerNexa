@@ -1,6 +1,5 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { ReactNode } from 'react';
-import { Info } from 'lucide-react';
 
 interface TooltipProps {
   content: string;
@@ -15,7 +14,6 @@ export default function Tooltip({ content, children, showIcon = false }: Tooltip
         <TooltipPrimitive.Trigger asChild>
           <span className="inline-flex items-center gap-1 cursor-help">
             {children}
-            {showIcon && <Info className="w-3.5 h-3.5 text-text-medium/50 hover:text-primary transition-colors" />}
           </span>
         </TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>

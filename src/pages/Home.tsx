@@ -13,6 +13,9 @@ import {
   Utensils
 } from 'lucide-react';
 import SEO from '../components/SEO';
+import fertilityImg from '../assets/pexels-nadezhda-moryak-7467100.jpg';
+import menstrualImg from '../assets/pexels-karola-g-7281705.jpg';
+import postpartumImg from '../assets/pexels-sarah-chai-7282403.jpg';
 
 const mainCategories = [
   {
@@ -26,7 +29,7 @@ const mainCategories = [
   {
     id: 'ovulation',
     title: 'Fertility',
-    image: '/pexels-nadezhda-moryak-7467100.jpg',
+    image: fertilityImg,
     color: 'bg-accent',
     tools: ['Ovulation Calculator', 'Fertility Window', 'Time to Conceive'],
     zoom: false
@@ -34,7 +37,7 @@ const mainCategories = [
   {
     id: 'period',
     title: 'Menstrual',
-    image: '/pexels-karola-g-7281705.jpg',
+    image: menstrualImg,
     color: 'bg-secondary',
     tools: ['Period Calculator', 'Cycle Length', 'PCOS Symptom Checker'],
     zoom: false
@@ -58,7 +61,7 @@ const mainCategories = [
   {
     id: 'postpartum',
     title: 'Postpartum & Baby Care',
-    image: '/pexels-sarah-chai-7282403.jpg',
+    image: postpartumImg,
     color: 'bg-info',
     tools: ['EPDS Screener', 'Baby Growth Percentile', 'Recovery Guide'],
     zoom: false

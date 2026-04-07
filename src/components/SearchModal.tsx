@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, X, Calculator, FileText, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface SearchResult {
@@ -85,17 +84,16 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden relative z-10"
           >
             <div className="p-4 border-b border-neutral-100 flex items-center gap-4">
-              <Search className="w-6 h-6 text-neutral-400" />
               <input 
                 autoFocus
                 type="text" 
                 placeholder="Search for tools or topics..." 
-                className="flex-1 h-12 text-lg outline-none bg-transparent"
+                className="flex-1 h-12 text-lg outline-none bg-transparent pl-2"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <button onClick={onClose} className="p-2 hover:bg-neutral-100 rounded-full transition-colors">
-                <X className="w-5 h-5 text-neutral-500" />
+              <button onClick={onClose} className="p-2 hover:bg-neutral-100 rounded-full transition-colors text-sm font-bold text-neutral-500">
+                Close
               </button>
             </div>
 
@@ -110,12 +108,11 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                       className="w-full flex items-center justify-between p-3 rounded-xl hover:bg-rose-50 transition-colors group"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-rose-100 text-rose-600">
-                          <Calculator className="w-4 h-4" />
+                        <div className="p-2 rounded-lg bg-rose-100 text-rose-600 font-bold text-xs">
+                          {item.name[0]}
                         </div>
                         <span className="font-medium text-neutral-700 group-hover:text-rose-700">{item.name}</span>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-neutral-300 group-hover:text-rose-400" />
                     </button>
                   ))}
                 </div>
@@ -135,7 +132,6 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                           onClick={() => handleSelect(item.path)}
                           className="flex items-center gap-3 p-3 rounded-xl border border-neutral-100 hover:border-rose-200 hover:bg-rose-50 transition-all text-left"
                         >
-                          <Calculator className="w-4 h-4 text-rose-500" />
                           <span className="text-sm font-medium text-neutral-600">{item.name}</span>
                         </button>
                       ))}

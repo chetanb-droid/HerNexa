@@ -1,6 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ChevronRight, Filter, SortAsc, Calculator, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const categoryData: Record<string, any> = {
@@ -88,7 +87,6 @@ export default function Category() {
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-text-medium">
         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-        <ChevronRight className="w-4 h-4" />
         <span className="text-primary font-medium">{data.title}</span>
       </nav>
 
@@ -108,8 +106,8 @@ export default function Category() {
             whileHover={{ y: -4 }}
             className="group p-6 bg-white border border-border rounded-2xl hover:shadow-xl hover:shadow-primary/5 transition-all flex flex-col"
           >
-            <div className="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-              <Calculator className="w-6 h-6" />
+            <div className="w-12 h-12 bg-bg-light rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform font-bold text-xl">
+              ?
             </div>
             <h3 className="text-xl font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">{calc.name}</h3>
             <p className="text-text-medium text-sm leading-relaxed mb-6 flex-1">
@@ -120,7 +118,6 @@ export default function Category() {
               className="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all"
             >
               Open Calculator
-              <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         ))}

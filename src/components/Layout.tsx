@@ -3,6 +3,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, Search, Heart, Globe, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import SearchModal from './SearchModal';
+import logoImg from '../assets/hernexa-logo.jpeg';
 
 export default function Layout() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Layout() {
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <Link to="/" className="flex items-center gap-3 group">
-              <img src="/hernexa-logo.jpeg" alt="HerNexa Logo" className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" referrerPolicy="no-referrer" />
+              <img src={logoImg} alt="HerNexa Logo" className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" referrerPolicy="no-referrer" />
               <span className="text-2xl font-serif font-bold tracking-tight text-text-dark">HerNexa</span>
             </Link>
             
@@ -109,7 +110,7 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3 text-text-dark group">
-              <img src="/hernexa-logo.jpeg" alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
+              <img src={logoImg} alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
               <span className="text-2xl font-serif font-bold tracking-tight">HerNexa</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-xs">

@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Search, ChevronRight, Baby, Calendar, Activity, Heart, Utensils, Scale } from 'lucide-react';
 import { motion } from 'motion/react';
+import fertilityImg from '../assets/pexels-nadezhda-moryak-7467100.jpg';
+import menstrualImg from '../assets/pexels-karola-g-7281705.jpg';
+import postpartumImg from '../assets/pexels-sarah-chai-7282403.jpg';
 
 const tools = [
   {
@@ -19,7 +22,7 @@ const tools = [
   },
   {
     category: "Fertility & Ovulation",
-    image: "/pexels-nadezhda-moryak-7467100.jpg",
+    image: fertilityImg,
     color: "bg-accent",
     items: [
       { name: "Ovulation Calculator", path: "/ovulation-calculator", desc: "Identify your peak fertile days and increase your chances of conception." },
@@ -33,7 +36,7 @@ const tools = [
   },
   {
     category: "Menstrual & Hormonal Health",
-    image: "/pexels-karola-g-7281705.jpg",
+    image: menstrualImg,
     color: "bg-success",
     items: [
       { name: "Period Calculator", path: "/period-calculator", desc: "Predict your next six periods and stay prepared for your cycle." },
@@ -71,7 +74,7 @@ const tools = [
   },
   {
     category: "Postpartum & Baby Care",
-    image: "/pexels-sarah-chai-7282403.jpg",
+    image: postpartumImg,
     color: "bg-primary",
     items: [
       { name: "Postpartum Depression", path: "/epds-screener", desc: "A clinical tool (EPDS) to help identify signs of postpartum depression." },
