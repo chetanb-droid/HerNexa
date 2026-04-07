@@ -113,11 +113,11 @@ export default function HealthTools() {
             transition={{ delay: 0.2 }}
             className="max-w-xl mx-auto relative group"
           >
-            <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-text-medium w-5 h-5 group-focus-within:text-primary transition-colors" />
+            <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-text-medium w-6 h-6 group-focus-within:text-primary transition-colors z-10" />
             <input 
               type="text" 
               placeholder="Search for a tool (e.g., 'Due Date')..."
-              className="input-field pl-14 h-16 text-lg shadow-xl shadow-primary/5"
+              className="input-field !pl-16 h-16 text-lg shadow-xl shadow-primary/5"
             />
           </motion.div>
         </div>
