@@ -19,7 +19,7 @@ const tools = [
   },
   {
     category: "Fertility & Ovulation",
-    image: "/pexels-nadezhda-moryak-7467100.jpg",
+    image: "https://images.pexels.com/photos/7467100/pexels-photo-7467100.jpeg?auto=compress&cs=tinysrgb&w=800",
     color: "bg-accent",
     items: [
       { name: "Ovulation Calculator", path: "/ovulation-calculator", desc: "Identify your peak fertile days and increase your chances of conception." },
@@ -33,7 +33,7 @@ const tools = [
   },
   {
     category: "Menstrual & Hormonal Health",
-    image: "/pexels-karola-g-7281705.jpg",
+    image: "https://images.pexels.com/photos/7281705/pexels-photo-7281705.jpeg?auto=compress&cs=tinysrgb&w=800",
     color: "bg-success",
     items: [
       { name: "Period Calculator", path: "/period-calculator", desc: "Predict your next six periods and stay prepared for your cycle." },
@@ -71,7 +71,7 @@ const tools = [
   },
   {
     category: "Postpartum & Baby Care",
-    image: "/pexels-sarah-chai-7282403.jpg",
+    image: "https://images.pexels.com/photos/7282403/pexels-photo-7282403.jpeg?auto=compress&cs=tinysrgb&w=800",
     color: "bg-primary",
     items: [
       { name: "Postpartum Depression", path: "/epds-screener", desc: "A clinical tool (EPDS) to help identify signs of postpartum depression." },

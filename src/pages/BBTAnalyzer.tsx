@@ -138,6 +138,7 @@ export default function BBTAnalyzer() {
                 </ResponsiveContainer>
               </div>
             </div>
+          </div>
 
           <div className={`p-8 rounded-[2rem] border text-center ${results.shiftDay !== -1 ? 'bg-success/5 border-success/20' : 'bg-amber-50 border-amber-100'}`}>
             <div className="flex justify-center mb-4">

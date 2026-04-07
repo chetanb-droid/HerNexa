@@ -168,6 +168,7 @@ export default function BloodVolumeCalculator() {
                 </ResponsiveContainer>
               </div>
             </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-6 rounded-xl border border-primary-light flex items-center gap-4 shadow-sm">

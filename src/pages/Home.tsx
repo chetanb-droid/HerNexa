@@ -26,7 +26,7 @@ const mainCategories = [
   {
     id: 'ovulation',
     title: 'Fertility',
-    image: '/pexels-nadezhda-moryak-7467100.jpg',
+    image: 'https://images.pexels.com/photos/7467100/pexels-photo-7467100.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'bg-accent',
     tools: ['Ovulation Calculator', 'Fertility Window', 'Time to Conceive'],
     zoom: false
@@ -34,7 +34,7 @@ const mainCategories = [
   {
     id: 'period',
     title: 'Menstrual',
-    image: '/pexels-karola-g-7281705.jpg',
+    image: 'https://images.pexels.com/photos/7281705/pexels-photo-7281705.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'bg-secondary',
     tools: ['Period Calculator', 'Cycle Length', 'PCOS Symptom Checker'],
     zoom: false
@@ -58,7 +58,7 @@ const mainCategories = [
   {
     id: 'postpartum',
     title: 'Postpartum & Baby Care',
-    image: '/pexels-sarah-chai-7282403.jpg',
+    image: 'https://images.pexels.com/photos/7282403/pexels-photo-7282403.jpeg?auto=compress&cs=tinysrgb&w=800',
     color: 'bg-info',
     tools: ['EPDS Screener', 'Baby Growth Percentile', 'Recovery Guide'],
     zoom: false
@@ -203,8 +203,8 @@ export default function Home() {
               title: "Clinical Risk Assessments",
               desc: "Assess your health risks with our evidence-based clinical calculators.",
               path: "/category/health-risk",
-              icon: <Activity className="w-6 h-6" />,
-              color: "bg-warning text-text-dark"
+              icon: <Heart className="w-6 h-6" />,
+              color: "bg-[#E91E63] text-white"
             }
           ].map((tool, i) => (
             <Link key={i} to={tool.path} className="group bg-white border border-neutral-100 rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/20 transition-all">
