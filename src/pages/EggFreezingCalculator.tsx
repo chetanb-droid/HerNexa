@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -79,6 +80,28 @@ export default function EggFreezingCalculator() {
         { name: "Fertility Window Calculator", path: "/fertility-window-calculator" },
         { name: "AMH Level Guide", path: "/amh-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Egg Freezing",
+          url: "https://www.mayoclinic.org/tests-procedures/egg-freezing/about/pac-20384556",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fertility Preservation",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/01/fertility-preservation-through-oocyte-cryopreservation",
+          source: "ACOG"
+        },
+        {
+          title: "Egg Freezing Success Rates",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5562431/",
+          source: "PubMed"
+        },
+        {
+          title: "Oocyte cryopreservation",
+          url: "https://en.wikipedia.org/wiki/Oocyte_cryopreservation",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -114,6 +137,17 @@ export default function EggFreezingCalculator() {
                 These percentages are based on mature eggs (MII). Not all eggs retrieved during a cycle will be mature or suitable for freezing. Success also depends on the specific clinic's thaw survival rates and IVF protocols.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our IVF Success Rate Calculator.</p>
+            </div>
+            <Link to="/ivf-success-rate-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              IVF Success Rate Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

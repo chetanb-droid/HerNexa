@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -83,6 +84,28 @@ export default function EndometriosisRiskCalculator() {
         { name: "Hormone Balance Quiz", path: "/hormone-balance-quiz" },
         { name: "Period Tracker", path: "/period-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Endometriosis",
+          url: "https://www.acog.org/womens-health/faqs/endometriosis",
+          source: "ACOG"
+        },
+        {
+          title: "Endometriosis Symptoms and Causes",
+          url: "https://www.womenshealth.gov/a-z-topics/endometriosis",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Endometriosis: Diagnosis and Treatment",
+          url: "https://www.nhs.uk/conditions/endometriosis/",
+          source: "NHS"
+        },
+        {
+          title: "Endometriosis",
+          url: "https://en.wikipedia.org/wiki/Endometriosis",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -123,6 +146,17 @@ export default function EndometriosisRiskCalculator() {
             <p className="text-sm text-text-medium leading-relaxed italic">
               "This tool is for educational purposes and is not a medical diagnosis. Endometriosis can only be definitively diagnosed through laparoscopic surgery. If you are in pain, your feelings are valid, and you deserve medical support."
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our PMDD Screener.</p>
+            </div>
+            <Link to="/pmdd-screener" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              PMDD Screener &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

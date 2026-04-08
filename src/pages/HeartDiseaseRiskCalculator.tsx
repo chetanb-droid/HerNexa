@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { HeartPulse, AlertCircle, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Activity, Search } from 'lucide-react';
@@ -179,6 +180,28 @@ export default function HeartDiseaseRiskCalculator() {
         { name: "Breast Cancer Risk Calculator", path: "/breast-cancer-risk-calculator" },
         { name: "Menopause Symptom Checker", path: "/menopause-checker" }
       ]}
+      medicalReferences={[
+        {
+          title: "ASCVD Risk Estimator Plus",
+          url: "https://tools.acc.org/ascvd-risk-estimator-plus/",
+          source: "ACC"
+        },
+        {
+          title: "Heart Disease in Women",
+          url: "https://www.heart.org/en/health-topics/heart-attack/understand-your-risks-to-prevent-a-heart-attack/women-and-heart-disease",
+          source: "AHA"
+        },
+        {
+          title: "Cardiovascular Disease Prevention",
+          url: "https://www.cdc.gov/heartdisease/prevention.htm",
+          source: "CDC"
+        },
+        {
+          title: "Cardiovascular Disease",
+          url: "https://en.wikipedia.org/wiki/Cardiovascular_disease",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -211,6 +234,17 @@ export default function HeartDiseaseRiskCalculator() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               <strong>Note:</strong> This tool provides a statistical estimate for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Women's BMI Calculator.</p>
+            </div>
+            <Link to="/womens-bmi-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Women's BMI Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

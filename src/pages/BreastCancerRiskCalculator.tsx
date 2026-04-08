@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, HeartPulse, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Search } from 'lucide-react';
@@ -123,6 +124,28 @@ export default function BreastCancerRiskCalculator() {
         { name: "Osteoporosis Risk Calculator", path: "/osteoporosis-risk-calculator" },
         { name: "Thyroid Risk Calculator", path: "/thyroid-risk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Breast Cancer Risk Assessment Tool",
+          url: "https://bcrisktool.cancer.gov/",
+          source: "National Cancer Institute"
+        },
+        {
+          title: "Breast Cancer Screening Guidelines",
+          url: "https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html",
+          source: "ACS"
+        },
+        {
+          title: "Breast Cancer Risk Factors",
+          url: "https://www.cdc.gov/cancer/breast/basic_info/risk_factors.htm",
+          source: "CDC"
+        },
+        {
+          title: "Breast Cancer",
+          url: "https://en.wikipedia.org/wiki/Breast_cancer",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -157,6 +180,17 @@ export default function BreastCancerRiskCalculator() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               <strong>Important:</strong> This tool provides a statistical estimate for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or genetic testing.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Heart Disease Risk Calculator.</p>
+            </div>
+            <Link to="/heart-disease-risk-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Heart Disease Risk Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

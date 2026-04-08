@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Utensils, Activity, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Scale, Flame } from 'lucide-react';
@@ -104,6 +105,28 @@ export default function MacrosCalculator() {
         { name: "Women's BMI Calculator", path: "/womens-bmi-calculator" },
         { name: "Ideal Body Weight", path: "/ideal-body-weight-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Dietary Reference Intakes",
+          url: "https://www.ncbi.nlm.nih.gov/books/NBK56068/table/summarytables.t4/?report=objectonly",
+          source: "NIH"
+        },
+        {
+          title: "Macronutrient Ratios",
+          url: "https://www.healthline.com/nutrition/best-macronutrient-ratio",
+          source: "Healthline"
+        },
+        {
+          title: "Nutrition and Healthy Eating",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/basics/nutrition-basics/hlv-20049477",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Macronutrient",
+          url: "https://en.wikipedia.org/wiki/Macronutrient",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -143,6 +166,17 @@ export default function MacrosCalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               For women, macros are about more than just muscle. Adequate <strong>fat intake</strong> is essential for hormone production (estrogen and progesterone), while <strong>protein</strong> supports metabolic health and bone density. <strong>Carbohydrates</strong> fuel your brain and your workouts, helping to prevent burnout and hormonal disruption.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Women's TDEE Calculator.</p>
+            </div>
+            <Link to="/womens-tdee-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Women's TDEE Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

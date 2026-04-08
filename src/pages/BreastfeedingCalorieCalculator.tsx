@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Utensils, Info, TrendingUp, Activity, AlertCircle, Heart } from 'lucide-react';
@@ -80,6 +81,28 @@ export default function BreastfeedingCalorieCalculator() {
         { name: "Pregnancy Calorie Calculator", path: "/pregnancy-calorie-calculator" },
         { name: "Pregnancy BMI Calculator", path: "/pregnancy-bmi-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Maternal Diet",
+          url: "https://www.cdc.gov/breastfeeding/breastfeeding-special-circumstances/diet-and-micronutrients/maternal-diet.html",
+          source: "CDC"
+        },
+        {
+          title: "Nutrition During Breastfeeding",
+          url: "https://www.acog.org/womens-health/faqs/nutrition-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Breastfeeding and Diet",
+          url: "https://www.nhs.uk/conditions/baby/breastfeeding-and-bottle-feeding/breastfeeding-and-lifestyle/diet/",
+          source: "NHS"
+        },
+        {
+          title: "Breastfeeding",
+          url: "https://en.wikipedia.org/wiki/Breastfeeding",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <div className="space-y-8">
           <div className="text-center space-y-2">
@@ -111,6 +134,17 @@ export default function BreastfeedingCalorieCalculator() {
                 Prioritize hydration and nutrient-dense foods. Your body needs extra fluids and vitamins to maintain a healthy milk supply and support your recovery.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Breast Milk Calculator.</p>
+            </div>
+            <Link to="/breast-milk-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Breast Milk Calculator &rarr;
+            </Link>
           </div>
         </div>
       )}

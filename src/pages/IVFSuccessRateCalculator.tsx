@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, validateNumber } from '../lib/calculators';
 import { Activity, Info, Percent, AlertCircle, Sparkles, Heart, ArrowRight, ShieldCheck } from 'lucide-react';
@@ -107,6 +108,28 @@ export default function IVFSuccessRateCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Miscarriage Risk Calculator", path: "/miscarriage-risk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "IVF Success Rates",
+          url: "https://www.cdc.gov/art/artdata/index.html",
+          source: "CDC"
+        },
+        {
+          title: "In Vitro Fertilization (IVF)",
+          url: "https://www.mayoclinic.org/tests-procedures/in-vitro-fertilization/about/pac-20384716",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "IVF: What are the risks?",
+          url: "https://www.nhs.uk/conditions/ivf/",
+          source: "NHS"
+        },
+        {
+          title: "In vitro fertilisation",
+          url: "https://en.wikipedia.org/wiki/In_vitro_fertilisation",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -149,6 +172,17 @@ export default function IVFSuccessRateCalculator() {
                 <p className="text-xs text-text-medium mt-1">Estimated after 3 complete cycles</p>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Ovulation Calculator.</p>
+            </div>
+            <Link to="/ovulation-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Ovulation Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

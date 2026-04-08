@@ -91,6 +91,28 @@ export default function BabySizeComparator() {
         { name: "Pregnancy Week Calculator", path: "/pregnancy-week-calculator" },
         { name: "Pregnancy Weight Gain", path: "/pregnancy-weight-gain-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Fetal Development: The First Trimester",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/prenatal-care/art-20045302",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fetal Development Milestones",
+          url: "https://www.acog.org/womens-health/faqs/how-your-fetus-grows-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Your Pregnancy Week by Week",
+          url: "https://www.nhs.uk/start-for-life/pregnancy/week-by-week/",
+          source: "NHS"
+        },
+        {
+          title: "Fetal development",
+          url: "https://en.wikipedia.org/wiki/Prenatal_development",
+          source: "Wikipedia"
+        }
+      ]}
       results={
         <motion.div 
           key={`${week}-${comparisonType}`}

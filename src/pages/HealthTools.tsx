@@ -141,6 +141,8 @@ export default function HealthTools() {
                       alt={group.category} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       referrerPolicy="no-referrer" 
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-full h-full bg-primary/5 flex items-center justify-center text-primary/40">

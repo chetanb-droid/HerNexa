@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Baby, Info, Sparkles, ShoppingBag, Calendar, Clock, AlertCircle, CheckCircle2, TrendingUp, ShoppingCart } from 'lucide-react';
@@ -70,6 +71,28 @@ export default function DiaperCalculator() {
         { name: "Baby Sleep Schedule", path: "/baby-sleep-schedule" },
         { name: "Baby Growth Percentile", path: "/baby-growth-percentile" }
       ]}
+      medicalReferences={[
+        {
+          title: "Diapering Your Baby",
+          url: "https://www.healthychildren.org/English/ages-stages/baby/diapers-clothing/Pages/Diapering-Your-Baby.aspx",
+          source: "AAP"
+        },
+        {
+          title: "Baby's First Days: Bowel Movements and Urination",
+          url: "https://www.acog.org/womens-health/faqs/your-babys-first-days",
+          source: "ACOG"
+        },
+        {
+          title: "Nappy Rash",
+          url: "https://www.nhs.uk/conditions/baby/caring-for-a-newborn/nappy-rash/",
+          source: "NHS"
+        },
+        {
+          title: "Diaper",
+          url: "https://en.wikipedia.org/wiki/Diaper",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -111,6 +134,17 @@ export default function DiaperCalculator() {
             <p className="text-sm text-text-dark font-medium">
               By the time your infant is 1 year old, you will have changed approximately <strong>{results.totalToDate.toLocaleString()}</strong> diapers.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Milk Calculator.</p>
+            </div>
+            <Link to="/breast-milk-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Milk Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -49,6 +50,28 @@ export default function PelvicFloorTracker() {
         { name: "Pregnancy Exercise", path: "/pregnancy-exercise-calculator" },
         { name: "Postpartum Recovery", path: "/epds-screener" }
       ]}
+      medicalReferences={[
+        {
+          title: "Pelvic Floor Exercises",
+          url: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+          source: "NHS"
+        },
+        {
+          title: "Pelvic Floor Disorders",
+          url: "https://www.acog.org/womens-health/faqs/pelvic-floor-disorders",
+          source: "ACOG"
+        },
+        {
+          title: "Kegel Exercises",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/kegel-exercises/art-20045283",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Pelvic floor",
+          url: "https://en.wikipedia.org/wiki/Pelvic_floor",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-6">
           <div className="p-8 bg-success/5 border border-success/10 rounded-3xl text-center">
@@ -61,6 +84,17 @@ export default function PelvicFloorTracker() {
             <p className="text-sm text-text-medium leading-relaxed">
               You've completed your daily goal. Aim for at least 3 sets of 10-15 repetitions every day for the best results.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Vaginal pH Guide.</p>
+            </div>
+            <Link to="/vaginal-ph-guide" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Vaginal pH Guide &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

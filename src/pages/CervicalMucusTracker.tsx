@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -49,7 +50,7 @@ export default function CervicalMucusTracker() {
     <CalculatorLayout
       title="Cervical Mucus Fertility Tracker"
       description="Track and interpret changes in your cervical fluid to identify your most fertile days and peak conception window."
-      intro="Your cervical mucus is one of the most reliable physical indicators of your fertility status. By observing its changes in color and consistency, you can pinpoint your fertile window and optimize your chances of conception. This tracker helps you interpret your observations based on the Billings Ovulation Method."
+      intro={<>Your cervical mucus is one of the most reliable physical indicators of your fertility status. By observing its changes in color and consistency, you can pinpoint your fertile window and optimize your chances of conception. This tracker helps you interpret your observations based on the Billings <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">Ovulation</Link> Method.</>}
       schema={[
         generateSoftwareAppSchema("Cervical Mucus Tracker", "Analyze cervical fluid for fertility tracking", "https://femhealth.com/cervical-mucus-tracker"),
         generateFAQSchema(faqs),
@@ -74,6 +75,28 @@ export default function CervicalMucusTracker() {
         { name: "BBT Analyzer", path: "/bbt-analyzer" },
         { name: "Ovulation Calculator", path: "/ovulation-calculator" },
         { name: "Fertility Window Calculator", path: "/fertility-window-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Cervical Mucus and Fertility",
+          url: "https://www.mayoclinic.org/tests-procedures/basal-body-temperature/about/pac-20393026",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fertility Awareness-Based Methods",
+          url: "https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning",
+          source: "ACOG"
+        },
+        {
+          title: "Natural Family Planning",
+          url: "https://www.nhs.uk/conditions/contraception/natural-family-planning/",
+          source: "NHS"
+        },
+        {
+          title: "Cervical mucus",
+          url: "https://en.wikipedia.org/wiki/Cervical_mucus",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -116,6 +139,17 @@ export default function CervicalMucusTracker() {
               </p>
             </div>
           )}
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our BBT Analyzer.</p>
+            </div>
+            <Link to="/bbt-analyzer" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              BBT Analyzer &rarr;
+            </Link>
+          </div>
         </motion.div>
       )}
       richContent={

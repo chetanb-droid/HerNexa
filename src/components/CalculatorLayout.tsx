@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 interface CalculatorLayoutProps {
   title: string;
   description: string;
-  intro: string;
+  intro: ReactNode | string;
   children: ReactNode;
   results?: ReactNode;
   howItWorks: ReactNode;
@@ -14,6 +14,7 @@ interface CalculatorLayoutProps {
   relatedTools: { name: string; path: string }[];
   schema: object | object[];
   richContent?: ReactNode;
+  medicalReferences?: { title: string; url: string; source: string }[];
 }
 
 export default function CalculatorLayout({
@@ -26,7 +27,8 @@ export default function CalculatorLayout({
   faqs,
   relatedTools,
   schema,
-  richContent
+  richContent,
+  medicalReferences
 }: CalculatorLayoutProps) {
   const schemas = Array.isArray(schema) ? schema : [schema];
 
@@ -38,17 +40,29 @@ export default function CalculatorLayout({
         schema={schemas}
       />
 
-      <Link 
-        to="/tools" 
-        className="inline-flex items-center gap-2 text-xs font-bold text-text-medium hover:text-primary transition-colors uppercase tracking-[0.2em] group"
-      >
-        <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-        Back to Tools
-      </Link>
+      <nav aria-label="Breadcrumb" className="py-4">
+        <ol className="flex items-center space-x-2 text-xs font-bold text-text-medium uppercase tracking-wider">
+          <li>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+          </li>
+          <li>
+            <span className="text-text-medium/50 mx-1">/</span>
+          </li>
+          <li>
+            <Link to="/tools" className="hover:text-primary transition-colors">Tools</Link>
+          </li>
+          <li>
+            <span className="text-text-medium/50 mx-1">/</span>
+          </li>
+          <li className="text-primary truncate max-w-[200px] sm:max-w-none" aria-current="page">
+            {title}
+          </li>
+        </ol>
+      </nav>
 
       <header className="space-y-6 text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-text-dark leading-tight tracking-tight">{title}</h1>
-        <p className="text-lg text-text-medium leading-relaxed font-light italic">
+        <h1 className="text-3xl md:text-6xl font-serif font-bold text-text-dark leading-tight tracking-tight">{title}</h1>
+        <p className="text-base md:text-lg text-text-medium leading-relaxed font-light italic">
           {intro}
         </p>
       </header>
@@ -78,7 +92,7 @@ export default function CalculatorLayout({
 
       {/* Rich Content Section - SEO Focused */}
       {richContent && (
-        <section className="prose-health bg-white rounded-[3rem] p-12 md:p-20 shadow-sm border border-primary/5">
+        <section className="prose-health bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 shadow-sm border border-primary/5">
           {richContent}
         </section>
       )}
@@ -134,6 +148,37 @@ export default function CalculatorLayout({
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {medicalReferences && medicalReferences.length > 0 && (
+        <div className="space-y-8 border-t border-border pt-16">
+          <div className="flex items-center gap-4 justify-center">
+            <div className="p-3 bg-success/10 text-success rounded-2xl">
+              <BookOpen className="w-6 h-6" />
+            </div>
+            <h2 className="text-3xl font-serif font-bold text-text-dark">Medical References & Sources</h2>
+          </div>
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {medicalReferences.map((ref, idx) => (
+              <a 
+                key={idx}
+                href={ref.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col p-6 bg-white rounded-2xl border border-border/50 hover:border-primary hover:shadow-lg transition-all group"
+              >
+                <span className="text-xs font-bold text-primary uppercase tracking-wider mb-2">{ref.source}</span>
+                <span className="font-bold text-text-dark group-hover:text-primary transition-colors leading-tight">{ref.title}</span>
+                <span className="text-xs text-text-medium mt-3 flex items-center gap-1">
+                  View Source <ChevronLeft className="w-3 h-3 rotate-180" />
+                </span>
+              </a>
+            ))}
+          </div>
+          <p className="text-center text-xs text-text-medium max-w-2xl mx-auto italic">
+            HerNexa is committed to providing evidence-based health information. Our calculators are developed using clinical guidelines from these and other reputable medical organizations.
+          </p>
         </div>
       )}
     </div>

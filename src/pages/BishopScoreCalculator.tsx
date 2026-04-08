@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -79,6 +80,28 @@ export default function BishopScoreCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Contraction Timer", path: "/contraction-timer" }
       ]}
+      medicalReferences={[
+        {
+          title: "Bishop Score for Induction of Labor",
+          url: "https://www.ncbi.nlm.nih.gov/books/NBK441961/",
+          source: "StatPearls"
+        },
+        {
+          title: "Induction of Labor",
+          url: "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2014/02/induction-of-labor",
+          source: "ACOG"
+        },
+        {
+          title: "Cervical Ripening and Induction",
+          url: "https://www.mayoclinic.org/tests-procedures/labor-induction/about/pac-20385141",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Bishop score",
+          url: "https://en.wikipedia.org/wiki/Bishop_score",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }} 
@@ -105,6 +128,17 @@ export default function BishopScoreCalculator() {
                 A higher score indicates a higher probability of a successful vaginal delivery if induction is performed. If your score is low, your provider may discuss "cervical ripening" options to help prepare your body before starting Pitocin.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our VBAC Calculator.</p>
+            </div>
+            <Link to="/vbac-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              VBAC Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

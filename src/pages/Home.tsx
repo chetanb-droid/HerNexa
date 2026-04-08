@@ -143,6 +143,8 @@ export default function Home() {
                       alt={cat.title} 
                       className={`w-full h-full object-cover transition-transform duration-700 ${cat.zoom ? 'scale-[1.5]' : ''}`}
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-full h-full bg-primary/5 flex items-center justify-center text-primary/40">

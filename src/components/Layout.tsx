@@ -36,7 +36,7 @@ export default function Layout() {
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <Link to="/" className="flex items-center gap-3 group">
-              <img src={logoBase64} alt="HerNexa Logo" className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" referrerPolicy="no-referrer" />
+              <img src={logoBase64} alt="HerNexa Logo" className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" referrerPolicy="no-referrer" loading="eager" decoding="async" />
               <span className="text-2xl font-serif font-bold tracking-tight text-text-dark">HerNexa</span>
             </Link>
             
@@ -72,13 +72,13 @@ export default function Layout() {
               exit={{ opacity: 0, y: -20 }}
               className="lg:hidden bg-white border-b border-primary/10 overflow-hidden shadow-2xl"
             >
-              <div className="px-6 py-8 space-y-6">
+              <div className="px-6 py-6 space-y-2">
                 {navLinks.map((link) => (
                   <Link 
                     key={link.path} 
                     to={link.path} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-xl font-serif font-bold text-text-dark hover:text-primary transition-colors"
+                    className="block py-3 text-xl font-serif font-bold text-text-dark hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -108,26 +108,45 @@ export default function Layout() {
 
       {/* Footer - SEO Rich */}
       <footer className="bg-white text-text-medium pt-24 pb-12 border-t border-primary/10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-          <div className="space-y-6">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+          <div className="space-y-6 md:col-span-1">
             <Link to="/" className="flex items-center gap-3 text-text-dark group">
-              <img src={logoBase64} alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" />
+              <img src={logoBase64} alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
               <span className="text-2xl font-serif font-bold tracking-tight">HerNexa</span>
             </Link>
-            <p className="text-sm leading-relaxed max-w-xs">
+            <p className="text-sm leading-relaxed">
               The world's leading resource for evergreen women's health content. 
               Scientifically backed, expert-reviewed, and accessible globally.
             </p>
           </div>
 
           <div>
-            <h4 className="text-text-dark font-serif font-bold text-lg mb-8">Health Topics</h4>
-            <ul className="space-y-4 text-sm font-medium">
-              {navLinks.map((link) => (
-                <li key={link.path}>
-                  <Link to={link.path} className="hover:text-primary transition-colors">{link.name}</Link>
-                </li>
-              ))}
+            <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Fertility Tools</h4>
+            <ul className="space-y-3 text-sm font-medium">
+              <li><Link to="/ovulation-calculator" className="hover:text-primary transition-colors">Ovulation Calculator</Link></li>
+              <li><Link to="/period-calculator" className="hover:text-primary transition-colors">Period Calculator</Link></li>
+              <li><Link to="/conception-calculator" className="hover:text-primary transition-colors">Conception Calculator</Link></li>
+              <li><Link to="/bbt-analyzer" className="hover:text-primary transition-colors">BBT Analyzer</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Pregnancy Tools</h4>
+            <ul className="space-y-3 text-sm font-medium">
+              <li><Link to="/due-date-calculator" className="hover:text-primary transition-colors">Due Date Calculator</Link></li>
+              <li><Link to="/pregnancy-week-calculator" className="hover:text-primary transition-colors">Pregnancy Week Calculator</Link></li>
+              <li><Link to="/baby-size-comparator" className="hover:text-primary transition-colors">Baby Size Comparator</Link></li>
+              <li><Link to="/pregnancy-weight-gain-calculator" className="hover:text-primary transition-colors">Weight Gain Calculator</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Baby & Health</h4>
+            <ul className="space-y-3 text-sm font-medium">
+              <li><Link to="/baby-sleep-schedule" className="hover:text-primary transition-colors">Baby Sleep Schedule</Link></li>
+              <li><Link to="/solid-food-timeline" className="hover:text-primary transition-colors">Solid Food Timeline</Link></li>
+              <li><Link to="/hormone-balance-quiz" className="hover:text-primary transition-colors">Hormone Balance Quiz</Link></li>
+              <li><Link to="/tools" className="hover:text-primary transition-colors font-bold text-primary">View All Tools &rarr;</Link></li>
             </ul>
           </div>
         </div>
@@ -138,11 +157,8 @@ export default function Layout() {
             <p className="mt-2"><strong>Affiliate Disclosure:</strong> Some of the links on this website are affiliate links. This means that, at zero cost to you, we will earn an affiliate commission if you click through the link and finalize a purchase. This helps support our work in providing free health tools.</p>
           </div>
           
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase font-bold tracking-widest text-text-medium/60">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-[11px] uppercase font-bold tracking-widest text-text-medium/60">
             <p>&copy; {new Date().getFullYear()} HerNexa. All rights reserved.</p>
-            <div className="flex flex-wrap justify-center gap-8">
-              <Link to="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
-            </div>
           </div>
           <div className="text-center text-[11px] font-medium text-text-medium/60 mt-4">
             At HerNexa, we prioritize your privacy. We do not store any of your personal health data.

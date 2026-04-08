@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, validateNumber } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -97,6 +98,28 @@ export default function BabyGrowthPercentile() {
         { name: "Baby Sleep Schedule", path: "/baby-sleep-schedule" },
         { name: "Solid Food Timeline", path: "/solid-food-timeline" }
       ]}
+      medicalReferences={[
+        {
+          title: "WHO Child Growth Standards",
+          url: "https://www.who.int/tools/child-growth-standards/standards",
+          source: "WHO"
+        },
+        {
+          title: "Growth Charts",
+          url: "https://www.cdc.gov/growthcharts/index.htm",
+          source: "CDC"
+        },
+        {
+          title: "Your Baby's Growth",
+          url: "https://www.nhs.uk/conditions/baby/babys-development/height-weight-and-reviews/babys-weight-and-height/",
+          source: "NHS"
+        },
+        {
+          title: "Growth chart",
+          url: "https://en.wikipedia.org/wiki/Growth_chart",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -150,6 +173,17 @@ export default function BabyGrowthPercentile() {
                 While percentiles provide a standardized metric, they are only one component of a comprehensive pediatric assessment. Clinicians evaluate the overall growth trajectory (the 'curve') rather than isolated data points. A child consistently tracking along the 10th percentile is typically just as healthy as one tracking along the 90th. Significant deviations crossing two major percentile lines warrant clinical review.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Baby Size Comparator.</p>
+            </div>
+            <Link to="/baby-size-comparator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Baby Size Comparator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

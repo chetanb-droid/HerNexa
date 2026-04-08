@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -70,6 +71,28 @@ export default function BabyHeartRatePredictor() {
         { name: "Baby Size Comparator", path: "/baby-size-comparator" },
         { name: "Due Date Calculator", path: "/due-date-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Fetal Heart Rate and Gender",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4919244/",
+          source: "PubMed"
+        },
+        {
+          title: "Fetal Heart Rate Monitoring",
+          url: "https://www.acog.org/womens-health/faqs/fetal-heart-rate-monitoring-during-labor",
+          source: "ACOG"
+        },
+        {
+          title: "Prenatal Care: Second Trimester",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/prenatal-care/art-20044581",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fetal heart rate",
+          url: "https://en.wikipedia.org/wiki/Cardiotocography",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }} 
@@ -125,6 +148,17 @@ export default function BabyHeartRatePredictor() {
                 While this is a fun tradition, remember that fetal heart rate changes constantly based on the baby's movement and gestational age. The only reliable ways to determine gender are via NIPT blood tests (analyzing cell-free DNA), anatomy ultrasounds, or invasive testing like CVS or amniocentesis.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Chinese Gender Predictor.</p>
+            </div>
+            <Link to="/chinese-gender-predictor" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Chinese Gender Predictor &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Bone, AlertCircle, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Activity, Search } from 'lucide-react';
@@ -113,6 +114,28 @@ export default function OsteoporosisRiskCalculator() {
         { name: "Women's BMI Calculator", path: "/womens-bmi-calculator" },
         { name: "Thyroid Risk Calculator", path: "/thyroid-risk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Osteoporosis in Women",
+          url: "https://www.womenshealth.gov/a-z-topics/osteoporosis",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Bone Health and Osteoporosis",
+          url: "https://www.nia.nih.gov/health/osteoporosis",
+          source: "NIH"
+        },
+        {
+          title: "Osteoporosis Prevention",
+          url: "https://www.cdc.gov/genomics/resources/diseases/osteoporosis.htm",
+          source: "CDC"
+        },
+        {
+          title: "Osteoporosis",
+          url: "https://en.wikipedia.org/wiki/Osteoporosis",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -147,6 +170,17 @@ export default function OsteoporosisRiskCalculator() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               <strong>Note:</strong> This tool is for educational purposes only and does not replace a clinical FRAX assessment or a DEXA scan performed by a medical professional.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Menopause Symptom Checker.</p>
+            </div>
+            <Link to="/menopause-checker" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Menopause Symptom Checker &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

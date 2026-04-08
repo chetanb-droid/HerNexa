@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Calendar as CalendarIcon, Droplets, Heart, Info } from 'lucide-react';
@@ -92,7 +93,7 @@ export default function OvulationCalendar() {
     <CalculatorLayout
       title="Ovulation Calendar & Tracker"
       description="Generate a personalized 3-month ovulation calendar to track your period, fertile window, and exact ovulation day."
-      intro="Planning a pregnancy? Our visual Ovulation Calendar maps out your next 3 menstrual cycles. See exactly when your period is due, when your fertile window opens, and your highest chance of conception."
+      intro={<>Planning a pregnancy? Our visual Ovulation Calendar maps out your next 3 menstrual cycles. See exactly when your period is due, when your <Link to="/fertility-window-calculator" className="text-primary hover:underline font-medium">fertile window</Link> opens, and your highest chance of conception.</>}
       schema={[
         generateSoftwareAppSchema(
           "Ovulation Calendar",
@@ -121,6 +122,28 @@ export default function OvulationCalendar() {
         { name: "Fertility Window Calculator", path: "/fertility-window-calculator" },
         { name: "Time to Conceive", path: "/time-to-conceive-calculator" },
         { name: "Period Calculator", path: "/period-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Ovulation and Fertility",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/in-depth/ovulation-signs/art-20044000",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fertility Awareness-Based Methods",
+          url: "https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning",
+          source: "ACOG"
+        },
+        {
+          title: "Natural Family Planning",
+          url: "https://www.nhs.uk/conditions/contraception/natural-family-planning/",
+          source: "NHS"
+        },
+        {
+          title: "Ovulation",
+          url: "https://en.wikipedia.org/wiki/Ovulation",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -169,6 +192,17 @@ export default function OvulationCalendar() {
               </div>
             );
           })}
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Fertility Window Calculator.</p>
+            </div>
+            <Link to="/fertility-window-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Fertility Window Calculator &rarr;
+            </Link>
+          </div>
         </div>
       )}
     >

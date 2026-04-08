@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { calculateEDD_LMP, calculateEDD_IVF, calculateEDD_CRL, formatDate, daysBetween, getWeeksAndDays, addDays, validateDate, validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Calendar, Info, Baby, Heart, Activity, AlertCircle } from 'lucide-react';
@@ -76,7 +77,7 @@ export default function DueDateCalculator() {
     <CalculatorLayout
       title="Clinical Due Date Calculator"
       description="Calculate your estimated due date (EDD) using LMP, conception date, IVF transfer, or ultrasound CRL. Accurate pregnancy due date predictor for prenatal planning."
-      intro="Knowing your due date is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, conception date, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible."
+      intro={<>Knowing your <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, conception date, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Due Date Calculator",
@@ -92,7 +93,7 @@ export default function DueDateCalculator() {
       ]}
       howItWorks={
         <>
-          <p>This calculator utilizes standardized obstetric formulas to determine your Estimated Due Date (EDD) and gestational age:</p>
+          <p>This calculator utilizes standardized obstetric formulas to determine your Estimated Due Date (EDD) and <Link to="/pregnancy-week-calculator" className="text-primary hover:underline font-medium">gestational age</Link>:</p>
           <ul>
             <li><strong>Naegele's Rule (LMP):</strong> The standard obstetric method which adds 280 days (40 weeks) to the first day of your last menstrual period. Our calculator dynamically adjusts this based on your specific cycle length (e.g., adding days for cycles longer than 28 days).</li>
             <li><strong>IVF Transfer Dating:</strong> Highly accurate dating calculated by adding 261 days for a Day 5 blastocyst transfer or 263 days for a Day 3 cleavage-stage embryo transfer.</li>
@@ -105,6 +106,28 @@ export default function DueDateCalculator() {
         { name: "Pregnancy Weight Gain", path: "/pregnancy-weight-gain-calculator" },
         { name: "Baby Size Comparator", path: "/baby-size-comparator" },
         { name: "Miscarriage Risk Calculator", path: "/miscarriage-risk-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Methods for Estimating the Due Date",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/05/methods-for-estimating-the-due-date",
+          source: "ACOG"
+        },
+        {
+          title: "Calculating Your Due Date",
+          url: "https://www.nhs.uk/pregnancy/finding-out/your-due-date/",
+          source: "NHS"
+        },
+        {
+          title: "Pregnancy: How it works",
+          url: "https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/stages-pregnancy",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Gestational Age & Due Date",
+          url: "https://en.wikipedia.org/wiki/Gestational_age",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <div className="space-y-8">
@@ -156,6 +179,17 @@ export default function DueDateCalculator() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Now that you know your due date, see how big your baby is this week!</p>
+            </div>
+            <Link to="/baby-size-comparator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Compare Baby Size &rarr;
+            </Link>
           </div>
         </div>
       )}

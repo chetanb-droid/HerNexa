@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -45,10 +46,32 @@ export default function PregnancyExerciseCalculator() {
           </ul>
         </div>
       }
+      medicalReferences={[
+        {
+          title: "Exercise During Pregnancy",
+          url: "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Pregnancy and Exercise",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/pregnancy-and-exercise/art-20046896",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Exercise in Pregnancy",
+          url: "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+          source: "NHS"
+        },
+        {
+          title: "Exercise and pregnancy",
+          url: "https://en.wikipedia.org/wiki/Exercise_and_pregnancy",
+          source: "Wikipedia"
+        }
+      ]}
       relatedTools={[
-        { name: "Hydration Calculator", path: "/hydration-calculator" },
-        { name: "Iron Intake Calculator", path: "/iron-intake-calculator" },
-        { name: "Pelvic Floor Tracker", path: "/pelvic-floor-tracker" }
+        { name: "Pregnancy Calorie Calculator", path: "/pregnancy-calorie-calculator" },
+        { name: "Pregnancy Weight Gain", path: "/pregnancy-weight-gain-calculator" },
+        { name: "Blood Volume Calculator", path: "/blood-volume-calculator" }
       ]}
       results={results && (
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-6">
@@ -63,6 +86,17 @@ export default function PregnancyExerciseCalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               Always consult your healthcare provider before starting a new exercise routine during pregnancy.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Pregnancy Calorie Calculator.</p>
+            </div>
+            <Link to="/pregnancy-calorie-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Pregnancy Calorie Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

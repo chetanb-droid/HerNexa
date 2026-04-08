@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Droplets, Activity, Baby } from 'lucide-react';
@@ -95,6 +96,28 @@ export default function WaterIntakeCalculator() {
         { name: "Pregnancy Nutrition Calculator", path: "/pregnancy-calorie-calculator" },
         { name: "Breast Milk Calculator", path: "/breast-milk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Water: How much should you drink?",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Hydration during pregnancy",
+          url: "https://www.acog.org/womens-health/experts-and-events/ask-acog/how-much-water-should-i-drink-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Dietary Reference Intakes for Water",
+          url: "https://www.nationalacademies.org/news/2004/02/report-sets-dietary-intake-levels-for-water-salt-and-potassium-to-maintain-health-and-reduce-chronic-disease-risk",
+          source: "National Academies"
+        },
+        {
+          title: "Water requirements",
+          url: "https://en.wikipedia.org/wiki/Water_requirements",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 text-center">
@@ -132,6 +155,17 @@ export default function WaterIntakeCalculator() {
                 </div>
               )}
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Women's TDEE Calculator.</p>
+            </div>
+            <Link to="/womens-tdee-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Women's TDEE Calculator &rarr;
+            </Link>
           </div>
         </div>
       )}

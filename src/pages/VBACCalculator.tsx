@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { AlertCircle, CheckCircle2, Info } from 'lucide-react';
@@ -46,7 +47,7 @@ export default function VBACCalculator() {
     <CalculatorLayout
       title="VBAC Success Probability Calculator"
       description="Estimate your probability of a successful vaginal birth after a cesarean (VBAC) using medical risk factors."
-      intro="Considering a vaginal birth after a previous C-section? This calculator helps estimate your success probability based on factors like age, BMI, and previous birth history, based on the Grobman nomogram."
+      intro={<>Considering a vaginal birth after a previous C-section? This calculator helps estimate your success probability based on factors like age, <Link to="/womens-bmi-calculator" className="text-primary hover:underline font-medium">BMI</Link>, and previous birth history, based on the Grobman nomogram.</>}
       schema={[
         generateSoftwareAppSchema("VBAC Calculator", "Estimate VBAC success probability", "https://femhealth.com/vbac-calculator"),
         generateFAQSchema(faqs),
@@ -73,6 +74,28 @@ export default function VBACCalculator() {
         { name: "Bishop Score Calculator", path: "/bishop-score-calculator" },
         { name: "Pregnancy Weight Gain", path: "/pregnancy-weight-gain-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Vaginal Birth After Cesarean (VBAC)",
+          url: "https://www.acog.org/womens-health/faqs/vaginal-birth-after-cesarean-delivery",
+          source: "ACOG"
+        },
+        {
+          title: "VBAC: Is it Right for You?",
+          url: "https://www.mayoclinic.org/tests-procedures/vbac/about/pac-20395249",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Giving Birth After a Caesarean",
+          url: "https://www.nhs.uk/pregnancy/labour-and-birth/what-happens/giving-birth-after-caesarean/",
+          source: "NHS"
+        },
+        {
+          title: "Vaginal birth after caesarean",
+          url: "https://en.wikipedia.org/wiki/Vaginal_birth_after_caesarean",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
           <div className="text-center p-8 bg-primary/5 rounded-3xl border border-primary/10">
@@ -84,6 +107,17 @@ export default function VBACCalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               This score indicates a statistical likelihood of success. A score above 60-70% is generally considered a good indication for a Trial of Labor After Cesarean (TOLAC).
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

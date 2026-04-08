@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, validateNumber } from '../lib/calculators';
 import { Activity, AlertCircle, HeartPulse, Info, Sparkles, ShieldCheck, ArrowRight } from 'lucide-react';
@@ -103,6 +104,28 @@ export default function MiscarriageRiskCalculator() {
         { name: "Pregnancy Weight Gain", path: "/pregnancy-weight-gain-calculator" },
         { name: "Baby Size Comparator", path: "/baby-size-comparator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Early Pregnancy Loss",
+          url: "https://www.acog.org/womens-health/faqs/early-pregnancy-loss",
+          source: "ACOG"
+        },
+        {
+          title: "Miscarriage: Symptoms, Causes, and Treatment",
+          url: "https://www.nhs.uk/conditions/miscarriage/",
+          source: "NHS"
+        },
+        {
+          title: "Pregnancy Loss",
+          url: "https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/pregnancy-loss",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Miscarriage",
+          url: "https://en.wikipedia.org/wiki/Miscarriage",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -145,6 +168,17 @@ export default function MiscarriageRiskCalculator() {
                 <p className="text-xs text-text-medium mt-1">Risk drops sharply after week 8</p>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

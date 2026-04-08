@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, validateNumber } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -99,6 +100,28 @@ export default function BabySleepSchedule() {
         { name: "Baby Size Comparator", path: "/baby-size-comparator" },
         { name: "Solid Food Timeline", path: "/solid-food-timeline" }
       ]}
+      medicalReferences={[
+        {
+          title: "Infant Sleep",
+          url: "https://www.aap.org/en/patient-care/safe-sleep/",
+          source: "AAP"
+        },
+        {
+          title: "Helping Your Baby Sleep",
+          url: "https://www.nhs.uk/conditions/baby/caring-for-a-newborn/helping-your-baby-to-sleep/",
+          source: "NHS"
+        },
+        {
+          title: "Baby Sleep Basics",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/baby-sleep/art-20045014",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Infant sleep training",
+          url: "https://en.wikipedia.org/wiki/Infant_sleep_training",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -145,6 +168,17 @@ export default function BabySleepSchedule() {
                 {results.schedule}
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Baby Growth Percentile.</p>
+            </div>
+            <Link to="/baby-growth-percentile" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Baby Growth Percentile &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

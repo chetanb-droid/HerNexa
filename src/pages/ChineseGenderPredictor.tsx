@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Baby, Info, Sparkles, HelpCircle, AlertCircle, Calendar, Moon, Stethoscope } from 'lucide-react';
@@ -70,6 +71,28 @@ export default function ChineseGenderPredictor() {
         { name: "Baby Heart Rate Predictor", path: "/baby-heart-rate-predictor" },
         { name: "Fetal Size Calculator", path: "/fetal-size-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Accuracy of the Chinese Lunar Calendar",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2776161/",
+          source: "PubMed"
+        },
+        {
+          title: "Gender Selection and Folklore",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/expert-answers/sex-selection/faq-20058275",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Predicting the Sex of Your Baby",
+          url: "https://www.nhs.uk/conditions/baby/support-and-services/finding-out-the-sex-of-your-baby/",
+          source: "NHS"
+        },
+        {
+          title: "Gender selection",
+          url: "https://en.wikipedia.org/wiki/Sex_selection",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }} 
@@ -108,6 +131,17 @@ export default function ChineseGenderPredictor() {
                 While the chart predicts a {results.gender}, remember that biological sex is determined solely by the sperm cell at conception. To confirm your baby's sex, consult your obstetrician regarding NIPT or schedule your mid-pregnancy anatomy scan.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

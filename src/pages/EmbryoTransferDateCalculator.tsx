@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Calendar, Baby, Clock, Activity, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList } from 'lucide-react';
@@ -48,7 +49,7 @@ export default function EmbryoTransferDateCalculator() {
     <CalculatorLayout
       title="IVF Embryo Transfer Due Date Calculator"
       description="Calculate your exact pregnancy due date and important milestones based on your IVF embryo transfer date. Precise IVF pregnancy tracking."
-      intro="If you conceived through IVF (In Vitro Fertilization) or FET (Frozen Embryo Transfer), standard due date calculators using your last menstrual period won't be accurate. This specialized calculator uses your transfer date and embryo age to provide the most mathematically precise due date possible."
+      intro={<>If you conceived through IVF (In Vitro Fertilization) or FET (Frozen Embryo Transfer), standard <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> calculators using your last menstrual period won't be accurate. This specialized calculator uses your transfer date and embryo age to provide the most mathematically precise due date possible.</>}
       schema={[
         generateSoftwareAppSchema(
           "Embryo Transfer Date Calculator",
@@ -76,6 +77,28 @@ export default function EmbryoTransferDateCalculator() {
         { name: "IVF Success Rate Calculator", path: "/ivf-success-rate-calculator" },
         { name: "Pregnancy Week Calculator", path: "/pregnancy-week-calculator" },
         { name: "Due Date Calculator", path: "/due-date-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "IVF Pregnancy Dating",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/05/methods-for-estimating-the-due-date",
+          source: "ACOG"
+        },
+        {
+          title: "Embryo Transfer",
+          url: "https://www.nhs.uk/conditions/ivf/what-happens/",
+          source: "NHS"
+        },
+        {
+          title: "IVF Milestones",
+          url: "https://www.mayoclinic.org/tests-procedures/in-vitro-fertilization/about/pac-20384716",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Embryo transfer",
+          url: "https://en.wikipedia.org/wiki/Embryo_transfer",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -118,6 +141,17 @@ export default function EmbryoTransferDateCalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               In a natural conception, the exact date of ovulation can vary. In IVF, the embryo's age is known down to the hour. On your transfer day, you were technically <strong>{results.gestationalAgeAtTransfer}</strong> pregnant. This removes the "guesswork" often found in traditional due date calculations.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our IVF Success Rate Calculator.</p>
+            </div>
+            <Link to="/ivf-success-rate-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              IVF Success Rate Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

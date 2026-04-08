@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, Flame, Utensils, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Scale } from 'lucide-react';
@@ -89,6 +90,28 @@ export default function WomensTDEECalculator() {
         { name: "Macros Calculator", path: "/macros-calculator" },
         { name: "Ideal Body Weight", path: "/ideal-body-weight-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Total Daily Energy Expenditure in Women",
+          url: "https://pubmed.ncbi.nlm.nih.gov/15886634/",
+          source: "PubMed"
+        },
+        {
+          title: "How Many Calories Should You Eat?",
+          url: "https://www.healthline.com/nutrition/how-many-calories-per-day",
+          source: "Healthline"
+        },
+        {
+          title: "Calorie Calculator",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/calorie-calculator/itt-20084939",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Total Daily Energy Expenditure",
+          url: "https://en.wikipedia.org/wiki/Basal_metabolic_rate#Total_daily_energy_expenditure",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -130,6 +153,17 @@ export default function WomensTDEECalculator() {
                 </p>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Women's BMI Calculator.</p>
+            </div>
+            <Link to="/womens-bmi-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Women's BMI Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

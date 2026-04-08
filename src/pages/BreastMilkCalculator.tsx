@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Baby, Info, Droplets, Scale, Activity, AlertCircle, Milk, Stethoscope } from 'lucide-react';
@@ -113,6 +114,28 @@ export default function BreastMilkCalculator() {
         { name: "Baby Growth Percentile", path: "/baby-growth-percentile" },
         { name: "Solid Food Timeline", path: "/solid-food-timeline" }
       ]}
+      medicalReferences={[
+        {
+          title: "Infant and Young Child Feeding",
+          url: "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+          source: "WHO"
+        },
+        {
+          title: "Breastfeeding Your Baby",
+          url: "https://www.acog.org/womens-health/faqs/breastfeeding-your-baby",
+          source: "ACOG"
+        },
+        {
+          title: "Amount and Schedule of Formula Feedings",
+          url: "https://www.healthychildren.org/English/ages-stages/baby/formula-feeding/Pages/Amount-and-Schedule-of-Formula-Feedings.aspx",
+          source: "AAP"
+        },
+        {
+          title: "Breast milk",
+          url: "https://en.wikipedia.org/wiki/Breast_milk",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
           
@@ -172,6 +195,17 @@ export default function BreastMilkCalculator() {
             </div>
           </div>
 
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Breastfeeding Calorie Calculator.</p>
+            </div>
+            <Link to="/breastfeeding-calorie-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Breastfeeding Calorie Calculator &rarr;
+            </Link>
+          </div>
         </motion.div>
       )}
       richContent={

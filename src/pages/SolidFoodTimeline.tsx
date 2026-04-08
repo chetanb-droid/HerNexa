@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, validateNumber } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -91,6 +92,28 @@ export default function SolidFoodTimeline() {
         { name: "Baby Formula Calculator", path: "/baby-formula-calculator" },
         { name: "Baby Sleep Schedule", path: "/baby-sleep-schedule" }
       ]}
+      medicalReferences={[
+        {
+          title: "Starting Solid Foods",
+          url: "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Starting-Solid-Foods.aspx",
+          source: "AAP"
+        },
+        {
+          title: "Infant and Young Child Feeding",
+          url: "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+          source: "WHO"
+        },
+        {
+          title: "Your Baby's First Solid Foods",
+          url: "https://www.nhs.uk/conditions/baby/weaning-and-feeding/babys-first-solid-foods/",
+          source: "NHS"
+        },
+        {
+          title: "Complementary feeding",
+          url: "https://en.wikipedia.org/wiki/Complementary_feeding",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
           
@@ -166,6 +189,17 @@ export default function SolidFoodTimeline() {
             </div>
           </div>
 
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Baby Growth Percentile.</p>
+            </div>
+            <Link to="/baby-growth-percentile" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Baby Growth Percentile &rarr;
+            </Link>
+          </div>
         </motion.div>
       )}
       richContent={

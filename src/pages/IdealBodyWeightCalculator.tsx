@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Scale, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Activity } from 'lucide-react';
@@ -113,6 +114,28 @@ export default function IdealBodyWeightCalculator() {
         { name: "Women's TDEE Calculator", path: "/womens-tdee-calculator" },
         { name: "Macros Calculator", path: "/macros-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Ideal Body Weight Calculation",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4941268/",
+          source: "PubMed"
+        },
+        {
+          title: "Healthy Weight",
+          url: "https://www.cdc.gov/healthyweight/index.html",
+          source: "CDC"
+        },
+        {
+          title: "Body Composition in Women",
+          url: "https://www.womenshealth.gov/healthy-weight/body-composition",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Ideal Body Weight",
+          url: "https://en.wikipedia.org/wiki/Ideal_body_weight",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -162,6 +185,17 @@ export default function IdealBodyWeightCalculator() {
                 <span className="font-bold text-text-dark">{results.hamwi}</span>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Women's BMI Calculator.</p>
+            </div>
+            <Link to="/womens-bmi-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Women's BMI Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

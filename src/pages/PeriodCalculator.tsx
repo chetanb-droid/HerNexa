@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { formatDate, addDays, validateDate, validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Calendar, Heart, Activity, Sparkles, AlertCircle, Info, Clock } from 'lucide-react';
@@ -84,6 +85,28 @@ export default function PeriodCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Cervical Mucus Tracker", path: "/cervical-mucus-tracker" }
       ]}
+      medicalReferences={[
+        {
+          title: "Your Menstrual Cycle",
+          url: "https://www.womenshealth.gov/menstrual-cycle/your-menstrual-cycle",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Normal Menstruation",
+          url: "https://www.acog.org/womens-health/faqs/normal-menstruation",
+          source: "ACOG"
+        },
+        {
+          title: "Periods and Fertility",
+          url: "https://www.nhs.uk/conditions/periods/fertility-in-the-menstrual-cycle/",
+          source: "NHS"
+        },
+        {
+          title: "Menstrual Cycle",
+          url: "https://en.wikipedia.org/wiki/Menstrual_cycle",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -144,6 +167,17 @@ export default function PeriodCalculator() {
                 While this calculator provides a mathematical projection, it is normal for cycles to vary by a few days. Factors such as stress, illness, travel, and significant weight changes can temporarily alter your cycle length.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Ovulation Calculator.</p>
+            </div>
+            <Link to="/ovulation-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Ovulation Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, formatDate } from '../lib/calculators';
 import { Calendar, Activity, AlertCircle, Info, ArrowRight, Sparkles, ShieldCheck, History } from 'lucide-react';
@@ -87,7 +88,7 @@ export default function MenstrualCycleLengthCalculator() {
     <CalculatorLayout
       title="Menstrual Cycle Length Calculator"
       description="Calculate your average menstrual cycle length and determine if your periods are regular, short, or long. Foundation for tracking reproductive health."
-      intro="Knowing your exact menstrual cycle length is the foundation of tracking your reproductive health. By analyzing the dates of your last few periods, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique rhythm."
+      intro={<>Knowing your exact <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link> length is the foundation of tracking your reproductive health. By analyzing the dates of your last few periods, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique rhythm.</>}
       schema={[
         generateSoftwareAppSchema(
           "Menstrual Cycle Length Calculator",
@@ -116,6 +117,28 @@ export default function MenstrualCycleLengthCalculator() {
         { name: "Period Calculator", path: "/period-calculator" },
         { name: "Ovulation Calculator", path: "/ovulation-calculator" },
         { name: "PCOS Symptom Checker", path: "/pcos-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Normal Menstrual Cycle",
+          url: "https://www.womenshealth.gov/menstrual-cycle/your-menstrual-cycle",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Menstruation in Girls and Adolescents",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2015/12/menstruation-in-girls-and-adolescents-using-the-menstrual-cycle-as-a-vital-sign",
+          source: "ACOG"
+        },
+        {
+          title: "Irregular Periods",
+          url: "https://www.nhs.uk/conditions/irregular-periods/",
+          source: "NHS"
+        },
+        {
+          title: "Menstrual cycle",
+          url: "https://en.wikipedia.org/wiki/Menstrual_cycle",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -171,6 +194,17 @@ export default function MenstrualCycleLengthCalculator() {
                 ? "Your cycle appears healthy and regular. Continue tracking to maintain a baseline of your reproductive health."
                 : "Your results show some irregularity. While occasional variation is normal, consistent irregularity should be discussed with a healthcare provider to rule out conditions like PCOS or thyroid imbalances."}
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Period Calculator.</p>
+            </div>
+            <Link to="/period-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Period Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

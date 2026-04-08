@@ -27,11 +27,11 @@
 }
 
 .calculator-card {
-  @apply bg-white rounded-[2rem] border border-border shadow-[0_10px_30px_rgba(142,68,173,0.05)] p-8 md:p-10 transition-all hover:shadow-[0_15px_40px_rgba(142,68,173,0.08)];
+  @apply bg-white rounded-[1.5rem] md:rounded-[2rem] border border-border shadow-[0_10px_30px_rgba(142,68,173,0.05)] p-6 md:p-10 transition-all hover:shadow-[0_15px_40px_rgba(142,68,173,0.08)];
 }
 
 .results-section {
-  @apply bg-primary-light rounded-[1.5rem] p-8 border border-primary/10 mt-10;
+  @apply bg-primary-light rounded-[1.25rem] md:rounded-[1.5rem] p-6 md:p-8 border border-primary/10 mt-8 md:mt-10;
 }
 
 .prose-health {

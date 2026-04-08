@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { AlertCircle, CheckCircle2, Info, Activity, ClipboardList, Thermometer } from 'lucide-react';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
@@ -118,6 +119,17 @@ export default function MenopauseChecker() {
             <p className="text-xs text-blue-800 leading-relaxed italic">
               Important: This tool is for informational purposes only. Only a qualified medical professional can diagnose menopause through physical exams and medical history.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Period Calculator.</p>
+            </div>
+            <Link to="/period-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Period Calculator &rarr;
+            </Link>
           </div>
         </div>
       )}

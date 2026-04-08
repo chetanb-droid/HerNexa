@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, Calendar, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList } from 'lucide-react';
@@ -107,6 +108,28 @@ export default function OvulationPainCalculator() {
         { name: "Endometriosis Risk Calculator", path: "/endometriosis-risk-calculator" },
         { name: "Period Calculator", path: "/period-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Mittelschmerz (Ovulation Pain)",
+          url: "https://www.mayoclinic.org/diseases-conditions/mittelschmerz/symptoms-causes/syc-20375122",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Pelvic Pain",
+          url: "https://www.acog.org/womens-health/faqs/pelvic-pain",
+          source: "ACOG"
+        },
+        {
+          title: "Ovulation Pain",
+          url: "https://www.nhs.uk/conditions/ovulation-pain/",
+          source: "NHS"
+        },
+        {
+          title: "Mittelschmerz",
+          url: "https://en.wikipedia.org/wiki/Mittelschmerz",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -141,6 +164,17 @@ export default function OvulationPainCalculator() {
             <p className="text-sm text-text-medium leading-relaxed italic">
               "Mittelschmerz is a normal physiological event for many women. However, severe pelvic pain can also be a sign of other conditions like ovarian cysts, appendicitis, or ectopic pregnancy. If your pain is debilitating or accompanied by fever, please seek medical attention immediately."
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Ovulation Calculator.</p>
+            </div>
+            <Link to="/ovulation-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Ovulation Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

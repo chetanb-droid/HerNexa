@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Search, Thermometer, Wind } from 'lucide-react';
@@ -103,7 +104,7 @@ export default function ThyroidRiskCalculator() {
     <CalculatorLayout
       title="Thyroid Health Symptom Assessment"
       description="Analyze your symptoms to assess your risk for Hypothyroidism (underactive) or Hyperthyroidism (overactive). Expert guidance on thyroid health for women."
-      intro="The thyroid gland is the master controller of your metabolism. When it's out of balance, every system in your body can feel the effects—from your energy levels and weight to your mood and menstrual cycle. This checker helps you identify patterns that may indicate a thyroid disorder."
+      intro={<>The thyroid gland is the master controller of your metabolism. When it's out of balance, every system in your body can feel the effects—from your energy levels and weight to your mood and <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. This checker helps you identify patterns that may indicate a thyroid disorder.</>}
       schema={[
         generateSoftwareAppSchema(
           "Thyroid Risk Calculator",
@@ -132,6 +133,28 @@ export default function ThyroidRiskCalculator() {
         { name: "PCOS Symptom Checker", path: "/pcos-calculator" },
         { name: "Menopause Symptom Checker", path: "/menopause-checker" },
         { name: "Period Symptom Tracker", path: "/period-symptom-tracker" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Thyroid Disease in Women",
+          url: "https://www.womenshealth.gov/a-z-topics/thyroid-disease",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Hypothyroidism (Underactive Thyroid)",
+          url: "https://www.niddk.nih.gov/health-information/endocrine-diseases/hypothyroidism",
+          source: "NIH"
+        },
+        {
+          title: "Thyroid Problems",
+          url: "https://www.nhs.uk/conditions/thyroid-problems/",
+          source: "NHS"
+        },
+        {
+          title: "Thyroid disease",
+          url: "https://en.wikipedia.org/wiki/Thyroid_disease",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -184,6 +207,17 @@ export default function ThyroidRiskCalculator() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               <strong>Note:</strong> This tool is for educational purposes only. Thyroid disorders can only be diagnosed with a clinical blood test (TSH, Free T3, Free T4) ordered by a healthcare professional.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our PCOS Symptom Checker.</p>
+            </div>
+            <Link to="/pcos-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              PCOS Symptom Checker &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

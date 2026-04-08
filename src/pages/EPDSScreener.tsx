@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -42,7 +43,7 @@ export default function EPDSScreener() {
     <CalculatorLayout
       title="Postpartum Depression (EPDS) Screener"
       description="A clinical tool (EPDS) to help identify signs of postpartum depression."
-      intro="Postpartum depression is common and treatable. This tool uses the Edinburgh Postnatal Depression Scale to help you screen for symptoms."
+      intro={<><Link to="/epds-screener" className="text-primary hover:underline font-medium">Postpartum depression</Link> is common and treatable. This tool uses the Edinburgh Postnatal Depression Scale to help you screen for symptoms.</>}
       schema={[
         generateSoftwareAppSchema("EPDS Screener", "Screener for postpartum depression", "https://femhealth.com/epds-screener"),
         generateFAQSchema(faqs),
@@ -67,6 +68,28 @@ export default function EPDSScreener() {
         { name: "Baby Sleep Schedule", path: "/baby-sleep-schedule" },
         { name: "Pelvic Floor Tracker", path: "/pelvic-floor-tracker" }
       ]}
+      medicalReferences={[
+        {
+          title: "Postpartum Depression",
+          url: "https://www.acog.org/womens-health/faqs/postpartum-depression",
+          source: "ACOG"
+        },
+        {
+          title: "Edinburgh Postnatal Depression Scale (EPDS)",
+          url: "https://www.fresno.ucsf.edu/pediatrics/downloads/edinburghscale.pdf",
+          source: "UCSF"
+        },
+        {
+          title: "Post-natal Depression",
+          url: "https://www.nhs.uk/mental-health/conditions/post-natal-depression/",
+          source: "NHS"
+        },
+        {
+          title: "Edinburgh Postnatal Depression Scale",
+          url: "https://en.wikipedia.org/wiki/Edinburgh_Postnatal_Depression_Scale",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-6">
           <div className={`p-8 rounded-3xl border text-center ${results.total >= 10 ? 'bg-rose-50 border-rose-100' : 'bg-success/5 border-success/10'}`}>
@@ -78,6 +101,17 @@ export default function EPDSScreener() {
             <p className="text-sm text-text-medium leading-relaxed">
               {results.total >= 10 ? "Your score suggests you may be experiencing symptoms of depression. We strongly recommend sharing these results with your healthcare provider or a mental health professional." : "Your score does not strongly suggest postpartum depression. However, if you are feeling overwhelmed, please reach out for support."}
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Baby Growth Percentile.</p>
+            </div>
+            <Link to="/baby-growth-percentile" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Baby Growth Percentile &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

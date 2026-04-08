@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { calculateBMI, getBMICategory, validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Scale, Info, TrendingUp, AlertCircle, Activity } from 'lucide-react';
@@ -86,7 +87,7 @@ export default function PregnancyWeightGainCalculator() {
     <CalculatorLayout
       title="Clinical Pregnancy Weight Gain Tracker"
       description="Track your healthy pregnancy weight gain based on your pre-pregnancy BMI. Get personalized recommendations for every week of your pregnancy. Expert guidance for a healthy baby."
-      intro="Healthy weight gain is a vital part of a successful pregnancy, supporting fetal growth, placental development, and maternal fat stores for breastfeeding. Our clinical calculator uses the Institute of Medicine (IOM) guidelines to provide a personalized weight gain trajectory based on your pre-pregnancy Body Mass Index (BMI) and current gestational age."
+      intro={<>Healthy weight gain is a vital part of a successful pregnancy, supporting fetal growth, placental development, and maternal fat stores for breastfeeding. Our clinical calculator uses the Institute of Medicine (IOM) guidelines to provide a personalized weight gain trajectory based on your pre-pregnancy Body Mass Index (<Link to="/womens-bmi-calculator" className="text-primary hover:underline font-medium">BMI</Link>) and current gestational age.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Pregnancy Weight Gain Tracker",
@@ -116,6 +117,28 @@ export default function PregnancyWeightGainCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Baby Size Comparator", path: "/baby-size-comparator" },
         { name: "Miscarriage Risk Calculator", path: "/miscarriage-risk-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Weight Gain During Pregnancy",
+          url: "https://www.cdc.gov/healthyweight/pregnancy/index.html",
+          source: "CDC"
+        },
+        {
+          title: "Weight Gain During Pregnancy: Committee Opinion",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2013/01/weight-gain-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Pregnancy weight gain: What's healthy?",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/pregnancy-weight-gain/art-20044360",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Pregnancy weight gain",
+          url: "https://en.wikipedia.org/wiki/Pregnancy_weight_gain",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -224,6 +247,17 @@ export default function PregnancyWeightGainCalculator() {
               Note: These ranges are for singleton pregnancies. If you are expecting twins or multiples, your weight gain requirements will be higher.
             </p>
           </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

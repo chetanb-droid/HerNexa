@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, HeartPulse, Info } from 'lucide-react';
@@ -110,6 +111,28 @@ export default function PeriodSymptomTracker() {
         { name: "PMDD Screener", path: "/pmdd-screener" },
         { name: "Endometriosis Risk Calculator", path: "/endometriosis-risk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Premenstrual Syndrome (PMS)",
+          url: "https://www.mayoclinic.org/diseases-conditions/premenstrual-syndrome/symptoms-causes/syc-20376780",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Dysmenorrhea: Painful Periods",
+          url: "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods",
+          source: "ACOG"
+        },
+        {
+          title: "Period Pain",
+          url: "https://www.nhs.uk/conditions/period-pain/",
+          source: "NHS"
+        },
+        {
+          title: "Premenstrual syndrome",
+          url: "https://en.wikipedia.org/wiki/Premenstrual_syndrome",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <div className={`p-8 rounded-2xl border text-center ${results.status === 'Mild' ? 'bg-emerald-50 border-emerald-100' : results.status === 'Moderate' ? 'bg-amber-50 border-amber-100' : 'bg-rose-50 border-rose-100'}`}>
@@ -141,6 +164,17 @@ export default function PeriodSymptomTracker() {
                 </div>
               )}
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Period Calculator.</p>
+            </div>
+            <Link to="/period-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Period Calculator &rarr;
+            </Link>
           </div>
         </div>
       )}

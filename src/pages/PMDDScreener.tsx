@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -92,6 +93,28 @@ export default function PMDDScreener() {
         { name: "Hormone Balance Quiz", path: "/hormone-balance-quiz" },
         { name: "Endometriosis Risk Calculator", path: "/endometriosis-risk-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Premenstrual Dysphoric Disorder (PMDD)",
+          url: "https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd",
+          source: "Johns Hopkins"
+        },
+        {
+          title: "Premenstrual Syndrome (PMS)",
+          url: "https://www.acog.org/womens-health/faqs/premenstrual-syndrome-pms",
+          source: "ACOG"
+        },
+        {
+          title: "PMDD Symptoms and Treatment",
+          url: "https://www.nhs.uk/mental-health/conditions/pms/",
+          source: "NHS"
+        },
+        {
+          title: "Premenstrual dysphoric disorder",
+          url: "https://en.wikipedia.org/wiki/Premenstrual_dysphoric_disorder",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }} 
@@ -137,6 +160,17 @@ export default function PMDDScreener() {
                 A formal diagnosis requires tracking your symptoms daily for at least two full menstrual cycles. We recommend using a symptom tracking app or a paper diary to document the severity of your symptoms each day. Bring this data to your doctor or a mental health professional who specializes in reproductive health.
               </p>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Period Symptom Tracker.</p>
+            </div>
+            <Link to="/period-symptom-tracker" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Period Symptom Tracker &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

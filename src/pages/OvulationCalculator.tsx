@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { calculateOvulation, formatDate, addDays, validateDate, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Sparkles, Heart, Activity, Calendar, AlertCircle } from 'lucide-react';
@@ -57,7 +58,7 @@ export default function OvulationCalculator() {
     <CalculatorLayout
       title="Clinical Ovulation & Fertility Window Tracker"
       description="Predict your most fertile days with our free ovulation calculator. Find your fertile window, ovulation date, and next period based on your cycle. Accurate fertility tracking for conception."
-      intro="Trying to conceive? Our clinical ovulation calculator helps you identify your most fertile days by analyzing your menstrual cycle. By tracking the first day of your last period and your average cycle length, you can pinpoint the optimal window for conception based on standard obstetric guidelines."
+      intro={<>Trying to conceive? Our clinical ovulation calculator helps you identify your most fertile days by analyzing your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. By tracking the first day of your last period and your average cycle length, you can pinpoint the optimal window for conception based on standard obstetric guidelines.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Ovulation & Fertility Window Tracker",
@@ -86,6 +87,28 @@ export default function OvulationCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Period Tracker", path: "/period-calculator" },
         { name: "Conception Date Calculator", path: "/conception-date-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Understanding Ovulation and Fertility",
+          url: "https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning",
+          source: "ACOG"
+        },
+        {
+          title: "Planning a Pregnancy",
+          url: "https://www.nhs.uk/pregnancy/trying-for-a-baby/planning-your-pregnancy/",
+          source: "NHS"
+        },
+        {
+          title: "Trying to Conceive",
+          url: "https://www.womenshealth.gov/pregnancy/trying-to-conceive",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Ovulation & Menstrual Cycle",
+          url: "https://en.wikipedia.org/wiki/Ovulation",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -201,6 +224,17 @@ export default function OvulationCalculator() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">Planning to conceive?</h4>
+              <p className="text-sm text-text-medium">Calculate your statistical probability of conception based on your age.</p>
+            </div>
+            <Link to="/time-to-conceive-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Time to Conceive &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

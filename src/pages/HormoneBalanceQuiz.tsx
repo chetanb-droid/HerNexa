@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList, Search, Thermometer, Wind, Moon, Zap, Brain, Droplets } from 'lucide-react';
@@ -96,6 +97,28 @@ export default function HormoneBalanceQuiz() {
         { name: "Endometriosis Risk", path: "/endometriosis-risk-calculator" },
         { name: "PCOS Screener", path: "/pcos-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Hormonal Imbalance",
+          url: "https://my.clevelandclinic.org/health/diseases/22673-hormonal-imbalance",
+          source: "Cleveland Clinic"
+        },
+        {
+          title: "Women's Health: Hormones",
+          url: "https://www.endocrine.org/patient-engagement/endocrine-library/hormones-and-womens-health",
+          source: "Endocrine Society"
+        },
+        {
+          title: "Hormone Replacement Therapy",
+          url: "https://www.nhs.uk/conditions/hormone-replacement-therapy-hrt/",
+          source: "NHS"
+        },
+        {
+          title: "Hormonal imbalance",
+          url: "https://en.wikipedia.org/wiki/Hormonal_imbalance",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -130,6 +153,17 @@ export default function HormoneBalanceQuiz() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               <strong>Note:</strong> This quiz is a screening tool, not a diagnostic test. Hormonal health is complex and requires clinical testing (blood, saliva, or urine) for a definitive diagnosis.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our PMDD Screener.</p>
+            </div>
+            <Link to="/pmdd-screener" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              PMDD Screener &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

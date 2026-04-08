@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { formatDate, daysBetween, getWeeksAndDays, addDays, validateDate, validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Baby, Info, Calendar, Activity, AlertCircle, Ruler, Weight, Heart, Sparkles, ArrowRight } from 'lucide-react';
@@ -104,7 +105,7 @@ export default function PregnancyWeekCalculator() {
     <CalculatorLayout
       title="Clinical Pregnancy Progress & Milestones"
       description="Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool."
-      intro="Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact gestational age (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your conception window."
+      intro={<>Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact gestational age (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception window</Link>.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Pregnancy Week Calculator",
@@ -122,7 +123,7 @@ export default function PregnancyWeekCalculator() {
         <div className="space-y-4">
           <p>This comprehensive clinical calculator integrates three essential obstetric tracking tools:</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Gestational Progress:</strong> Calculates your exact gestational age (weeks and days) and current trimester based on your LMP or EDD, utilizing the standard 280-day obstetric model (Naegele's rule).</li>
+            <li><strong>Gestational Progress:</strong> Calculates your exact gestational age (weeks and days) and current trimester based on your LMP or <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Estimated Due Date (EDD)</Link>, utilizing the standard 280-day obstetric model (Naegele's rule).</li>
             <li><strong>Fetal Development (Size):</strong> Provides estimates of fetal weight and length based on standardized fetal growth charts (e.g., Hadlock or WHO), alongside key embryological and fetal developmental milestones.</li>
             <li><strong>Conception Estimation:</strong> Retrospectively calculates the probable window of fertilization by subtracting 266 days (38 weeks of fetal age) from your Estimated Due Date.</li>
           </ul>
@@ -133,6 +134,28 @@ export default function PregnancyWeekCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Pregnancy Weight Gain Calculator", path: "/pregnancy-weight-gain-calculator" },
         { name: "Baby Size Comparator", path: "/baby-size-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Methods for Estimating the Due Date",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/05/methods-for-estimating-the-due-date",
+          source: "ACOG"
+        },
+        {
+          title: "Fetal Development Milestones",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/prenatal-care/art-20045302",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Your Pregnancy Week by Week",
+          url: "https://www.nhs.uk/start-for-life/pregnancy/week-by-week/",
+          source: "NHS"
+        },
+        {
+          title: "Gestational age",
+          url: "https://en.wikipedia.org/wiki/Gestational_age",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -241,6 +264,17 @@ export default function PregnancyWeekCalculator() {
               </div>
             </>
           )}
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
+          </div>
         </motion.div>
       )}
       richContent={

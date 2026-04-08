@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, Info, TrendingUp, Heart, Sparkles, AlertCircle } from 'lucide-react';
@@ -100,6 +101,28 @@ export default function BloodVolumeCalculator() {
         { name: "Pregnancy BMI Calculator", path: "/pregnancy-bmi-calculator" },
         { name: "Fetal Size Calculator", path: "/fetal-size-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Maternal Cardiovascular Adaptation to Pregnancy",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4167332/",
+          source: "PubMed"
+        },
+        {
+          title: "Physiological Changes in Pregnancy",
+          url: "https://www.msdmanuals.com/professional/gynecology-and-obstetrics/approach-to-the-pregnant-woman-and-prenatal-care/physiology-of-pregnancy",
+          source: "MSD Manuals"
+        },
+        {
+          title: "Blood Volume Expansion in Pregnancy",
+          url: "https://pubmed.ncbi.nlm.nih.gov/4075604/",
+          source: "PubMed"
+        },
+        {
+          title: "Maternal physiological changes in pregnancy",
+          url: "https://en.wikipedia.org/wiki/Maternal_physiological_changes_in_pregnancy",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -192,6 +215,17 @@ export default function BloodVolumeCalculator() {
             <p className="text-xs text-blue-800 leading-relaxed italic">
               Note: This is an estimate based on average physiological data. Individual blood volume expansion can vary significantly.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Pregnancy Weight Gain.</p>
+            </div>
+            <Link to="/pregnancy-weight-gain-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Pregnancy Weight Gain &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

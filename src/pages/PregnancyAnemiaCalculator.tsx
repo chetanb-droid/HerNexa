@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -51,6 +52,28 @@ export default function PregnancyAnemiaCalculator() {
           </ul>
         </div>
       }
+      medicalReferences={[
+        {
+          title: "Anemia and Pregnancy",
+          url: "https://www.hematology.org/education/patients/anemia/pregnancy",
+          source: "American Society of Hematology"
+        },
+        {
+          title: "Nutrition During Pregnancy",
+          url: "https://www.acog.org/womens-health/faqs/nutrition-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Iron Deficiency Anemia in Pregnancy",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/anemia-during-pregnancy/art-20114455",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Anemia in pregnancy",
+          url: "https://en.wikipedia.org/wiki/Anemia_in_pregnancy",
+          source: "Wikipedia"
+        }
+      ]}
       relatedTools={[
         { name: "Iron Intake Calculator", path: "/iron-intake-calculator" },
         { name: "Blood Volume Calculator", path: "/blood-volume-calculator" },
@@ -70,6 +93,17 @@ export default function PregnancyAnemiaCalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               {results.isAnemic ? "Your hemoglobin level is below the recommended threshold. Please consult your healthcare provider for further testing and potential iron supplementation." : "Your hemoglobin level is currently within the normal range for your trimester. Continue your prenatal vitamins as prescribed."}
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Iron Intake Calculator.</p>
+            </div>
+            <Link to="/iron-intake-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Iron Intake Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

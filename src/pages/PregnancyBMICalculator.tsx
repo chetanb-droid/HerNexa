@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { calculateBMI, getBMICategory, validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Scale, Info, TrendingUp, AlertCircle, Activity } from 'lucide-react';
@@ -45,7 +46,7 @@ export default function PregnancyBMICalculator() {
     <CalculatorLayout
       title="Pregnancy BMI Calculator"
       description="Calculate your pre-pregnancy BMI and understand your recommended weight gain range. Get expert guidance on healthy pregnancy weight management. Essential pregnancy health tracking."
-      intro="Your pre-pregnancy Body Mass Index (BMI) is a key factor in determining how much weight you should ideally gain during pregnancy. Our specialized calculator helps you find your BMI category and provides the medically recommended weight gain range to support a healthy pregnancy."
+      intro={<>Your pre-pregnancy Body Mass Index (BMI) is a key factor in determining how much weight you should ideally gain during pregnancy. Our specialized calculator helps you find your BMI category and provides the medically recommended <Link to="/pregnancy-weight-gain-calculator" className="text-primary hover:underline font-medium">weight gain</Link> range to support a healthy pregnancy.</>}
       schema={[
         generateSoftwareAppSchema(
           "Pregnancy BMI Calculator",
@@ -75,6 +76,28 @@ export default function PregnancyBMICalculator() {
         { name: "Pregnancy Calorie Calculator", path: "/pregnancy-calorie-calculator" },
         { name: "Fetal Size Calculator", path: "/fetal-size-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "BMI and Pregnancy",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4155554/",
+          source: "PubMed"
+        },
+        {
+          title: "Overweight and pregnant",
+          url: "https://www.nhs.uk/pregnancy/finding-out/overweight-and-pregnant/",
+          source: "NHS"
+        },
+        {
+          title: "Body Mass Index - BMI",
+          url: "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index",
+          source: "WHO"
+        },
+        {
+          title: "Body Mass Index",
+          url: "https://en.wikipedia.org/wiki/Body_mass_index",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <div className="space-y-8">
           <div className="text-center space-y-2">
@@ -98,6 +121,17 @@ export default function PregnancyBMICalculator() {
             <p className="text-xs text-amber-800 leading-relaxed italic">
               Note: These ranges are for singleton pregnancies. If you are expecting twins or multiples, your weight gain requirements will be higher.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Pregnancy Weight Gain.</p>
+            </div>
+            <Link to="/pregnancy-weight-gain-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Pregnancy Weight Gain &rarr;
+            </Link>
           </div>
         </div>
       )}

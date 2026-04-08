@@ -106,6 +106,28 @@ export default function PregnancyCalorieCalculator() {
         { name: "Breastfeeding Calories", path: "/breastfeeding-calorie-calculator" },
         { name: "Pregnancy BMI Calculator", path: "/pregnancy-bmi-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Nutrition During Pregnancy",
+          url: "https://www.acog.org/womens-health/faqs/nutrition-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Vitamins, supplements and nutrition in pregnancy",
+          url: "https://www.nhs.uk/pregnancy/keeping-well/vitamins-supplements-and-nutrition/",
+          source: "NHS"
+        },
+        {
+          title: "Eating for two",
+          url: "https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/eating-for-two",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Nutrition and pregnancy",
+          url: "https://en.wikipedia.org/wiki/Nutrition_and_pregnancy",
+          source: "Wikipedia"
+        }
+      ]}
       results={
         <div className="space-y-8">
           {activeTab === 'calories' && calorieResults && (

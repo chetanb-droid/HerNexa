@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -51,10 +52,32 @@ export default function VaginalPHGuide() {
           </ul>
         </div>
       }
+      medicalReferences={[
+        {
+          title: "Vaginal Health",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/vaginal-health/art-20046590",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Vaginitis",
+          url: "https://www.acog.org/womens-health/faqs/vaginitis",
+          source: "ACOG"
+        },
+        {
+          title: "Vaginal Discharge",
+          url: "https://www.nhs.uk/conditions/vaginal-discharge/",
+          source: "NHS"
+        },
+        {
+          title: "Vaginal flora",
+          url: "https://en.wikipedia.org/wiki/Vaginal_flora",
+          source: "Wikipedia"
+        }
+      ]}
       relatedTools={[
-        { name: "Hormone Balance Quiz", path: "/hormone-balance-quiz" },
         { name: "Pelvic Floor Tracker", path: "/pelvic-floor-tracker" },
-        { name: "Cervical Mucus Tracker", path: "/cervical-mucus-tracker" }
+        { name: "Period Symptom Tracker", path: "/period-symptom-tracker" },
+        { name: "Hormone Balance Quiz", path: "/hormone-balance-quiz" }
       ]}
       results={results && (
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-6">
@@ -67,6 +90,17 @@ export default function VaginalPHGuide() {
           <div className="bg-white p-6 rounded-2xl border border-primary/10 flex gap-4">
             <Info className="w-6 h-6 text-primary shrink-0" />
             <p className="text-sm text-text-medium leading-relaxed">{results.description}</p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Pelvic Floor Tracker.</p>
+            </div>
+            <Link to="/pelvic-floor-tracker" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Pelvic Floor Tracker &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

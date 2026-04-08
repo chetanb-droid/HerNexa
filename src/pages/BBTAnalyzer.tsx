@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { motion } from 'motion/react';
@@ -49,7 +50,7 @@ export default function BBTAnalyzer() {
     <CalculatorLayout
       title="BBT Analyzer & Charting Tool"
       description="Analyze your Basal Body Temperature patterns to confirm ovulation. Track your thermal shift and luteal phase with our advanced charting tool."
-      intro="Tracking your Basal Body Temperature (BBT) is one of the most reliable ways to confirm that ovulation has actually occurred. Unlike ovulation tests which predict when ovulation *might* happen, BBT confirms it *after* the fact. This tool helps you visualize your temperature shift and identify your fertile patterns."
+      intro={<>Tracking your Basal Body Temperature (BBT) is one of the most reliable ways to confirm that <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation</Link> has actually occurred. Unlike ovulation tests which predict when ovulation *might* happen, BBT confirms it *after* the fact. This tool helps you visualize your temperature shift and identify your fertile patterns.</>}
       schema={[
         generateSoftwareAppSchema("BBT Analyzer", "Analyze BBT patterns and confirm ovulation", "https://femhealth.com/bbt-analyzer"),
         generateFAQSchema(faqs),
@@ -74,6 +75,28 @@ export default function BBTAnalyzer() {
         { name: "Cervical Mucus Tracker", path: "/cervical-mucus-tracker" },
         { name: "Ovulation Calculator", path: "/ovulation-calculator" },
         { name: "Fertility Window", path: "/fertility-window-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Basal Body Temperature for Monitoring Ovulation",
+          url: "https://www.mayoclinic.org/tests-procedures/basal-body-temperature/about/pac-20393026",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Fertility Awareness-Based Methods",
+          url: "https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning",
+          source: "ACOG"
+        },
+        {
+          title: "Natural Family Planning (Fertility Awareness)",
+          url: "https://www.nhs.uk/conditions/contraception/natural-family-planning/",
+          source: "NHS"
+        },
+        {
+          title: "Basal body temperature",
+          url: "https://en.wikipedia.org/wiki/Basal_body_temperature",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -181,6 +204,17 @@ export default function BBTAnalyzer() {
                 </p>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Cervical Mucus Tracker.</p>
+            </div>
+            <Link to="/cervical-mucus-tracker" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Cervical Mucus Tracker &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

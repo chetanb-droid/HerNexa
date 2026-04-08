@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { Activity, Info, TrendingUp, Heart, Sparkles, AlertCircle, Calendar, ArrowRight, ShieldCheck } from 'lucide-react';
 import { validateNumber, generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
@@ -86,6 +87,28 @@ export default function TimeToConceiveCalculator() {
         { name: "Fertile Window Calculator", path: "/fertile-window-calculator" },
         { name: "IVF Success Rate Calculator", path: "/ivf-success-rate-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "Optimizing Natural Fertility",
+          url: "https://www.asrm.org/practice-guidance/practice-committee-documents/optimizing-natural-fertility-a-committee-opinion-2021/",
+          source: "ASRM"
+        },
+        {
+          title: "How long does it take to get pregnant?",
+          url: "https://www.nhs.uk/pregnancy/trying-for-a-baby/how-long-it-takes-to-get-pregnant/",
+          source: "NHS"
+        },
+        {
+          title: "Infertility FAQs",
+          url: "https://www.cdc.gov/reproductivehealth/infertility/index.htm",
+          source: "CDC"
+        },
+        {
+          title: "Fertility",
+          url: "https://en.wikipedia.org/wiki/Fertility",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -132,6 +155,17 @@ export default function TimeToConceiveCalculator() {
               </div>
             </div>
           ) : null}
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Ovulation Calculator.</p>
+            </div>
+            <Link to="/ovulation-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Ovulation Calculator &rarr;
+            </Link>
+          </div>
         </motion.div>
       )}
       richContent={

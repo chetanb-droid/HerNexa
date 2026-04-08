@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Activity, AlertCircle, Scale, Droplets, Info, ShieldCheck, Heart, Sparkles, ArrowRight, ClipboardList } from 'lucide-react';
@@ -111,6 +112,28 @@ export default function WomensBMICalculator() {
         { name: "Women's TDEE Calculator", path: "/womens-tdee-calculator" },
         { name: "Ideal Body Weight", path: "/ideal-body-weight-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "About Adult BMI",
+          url: "https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html",
+          source: "CDC"
+        },
+        {
+          title: "BMI and Health",
+          url: "https://www.nhs.uk/live-well/healthy-weight/bmi-calculator/",
+          source: "NHS"
+        },
+        {
+          title: "Waist-to-Height Ratio Research",
+          url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4155554/",
+          source: "PubMed"
+        },
+        {
+          title: "Body Mass Index (BMI)",
+          url: "https://en.wikipedia.org/wiki/Body_mass_index",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -156,6 +179,17 @@ export default function WomensBMICalculator() {
             <p className="text-sm text-text-medium leading-relaxed">
               BMI is a statistical tool, not a measure of body fat percentage. For women with high muscle mass (athletes) or those who are pregnant, BMI will not be an accurate reflection of health. Always consider these numbers alongside other markers like blood pressure, cholesterol, and energy levels.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Pregnancy BMI Calculator.</p>
+            </div>
+            <Link to="/pregnancy-bmi-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Pregnancy BMI Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

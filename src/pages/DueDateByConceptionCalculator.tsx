@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { Calendar, Baby, ArrowRight, Activity, Info, Sparkles } from 'lucide-react';
@@ -42,7 +43,7 @@ export default function DueDateByConceptionCalculator() {
     <CalculatorLayout
       title="Clinical Due Date by Conception Calculator"
       description="Calculate your highly accurate pregnancy due date based on a known date of conception, ovulation, IUI, or IVF transfer."
-      intro="For women who have meticulously tracked their ovulation, undergone Intrauterine Insemination (IUI), or had an In Vitro Fertilization (IVF) transfer, the standard Last Menstrual Period (LMP) calculation can be inaccurate. This clinical calculator bypasses the assumptions of the LMP method, utilizing your exact conception date to provide a highly precise Estimated Due Date (EDD) and trimester timeline."
+      intro={<>For women who have meticulously tracked their ovulation, undergone Intrauterine Insemination (IUI), or had an In Vitro Fertilization (IVF) transfer, the standard Last Menstrual Period (LMP) calculation can be inaccurate. This clinical calculator bypasses the assumptions of the LMP method, utilizing your exact conception date to provide a highly precise Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) and trimester timeline.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Due Date by Conception Calculator",
@@ -71,6 +72,28 @@ export default function DueDateByConceptionCalculator() {
         { name: "Conception Calculator", path: "/conception-calculator" },
         { name: "Pregnancy Week Calculator", path: "/pregnancy-week-calculator" },
         { name: "IVF Success Rate Calculator", path: "/ivf-success-rate-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Methods for Estimating the Due Date",
+          url: "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/05/methods-for-estimating-the-due-date",
+          source: "ACOG"
+        },
+        {
+          title: "Calculating Your Due Date",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/due-date-calculator/art-20048514",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "Your Pregnancy Due Date",
+          url: "https://www.nhs.uk/pregnancy/finding-out/your-due-date/",
+          source: "NHS"
+        },
+        {
+          title: "Gestational age",
+          url: "https://en.wikipedia.org/wiki/Gestational_age",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -112,6 +135,17 @@ export default function DueDateByConceptionCalculator() {
                 <p className="text-xs text-text-medium mt-1">27 Weeks, 6 Days</p>
               </div>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Conception Calculator.</p>
+            </div>
+            <Link to="/conception-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Conception Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

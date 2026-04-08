@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, formatDate, addDays, subDays, validateDate, validateNumber } from '../lib/calculators';
 import { Calendar, Heart, ArrowRight, Info, Sparkles, Activity, AlertCircle, CheckCircle2, TrendingUp, Clock, Zap } from 'lucide-react';
@@ -56,7 +57,7 @@ export default function FertilityWindowCalculator() {
     <CalculatorLayout
       title="Fertility Window Calculator"
       description="Calculate your 6-day fertile window and exact ovulation date to maximize your chances of getting pregnant. Personalized fertility tracking based on your unique cycle."
-      intro="Timing is everything when trying to conceive. Our Fertility Window Calculator pinpoints your most fertile days based on your menstrual cycle, helping you identify the exact 6-day window when pregnancy is possible. By adjusting for your specific cycle length and luteal phase, we provide a more personalized estimate than standard calculators."
+      intro={<>Timing is everything when trying to conceive. Our Fertility Window Calculator pinpoints your most fertile days based on your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>, helping you identify the exact 6-day window when pregnancy is possible. By adjusting for your specific cycle length and luteal phase, we provide a more personalized estimate than standard calculators.</>}
       schema={[
         generateSoftwareAppSchema(
           "Fertility Window Calculator",
@@ -85,6 +86,28 @@ export default function FertilityWindowCalculator() {
         { name: "Ovulation Calculator", path: "/ovulation-calculator" },
         { name: "Time to Conceive", path: "/time-to-conceive-calculator" },
         { name: "Conception Calculator", path: "/conception-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "The Fertile Window",
+          url: "https://www.asrm.org/practice-guidance/practice-committee-documents/optimizing-natural-fertility-a-committee-opinion-2021/",
+          source: "ASRM"
+        },
+        {
+          title: "Fertility Awareness-Based Methods",
+          url: "https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning",
+          source: "ACOG"
+        },
+        {
+          title: "Natural Family Planning",
+          url: "https://www.nhs.uk/conditions/contraception/natural-family-planning/",
+          source: "NHS"
+        },
+        {
+          title: "Fertile window",
+          url: "https://en.wikipedia.org/wiki/Fertile_window",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -133,6 +156,17 @@ export default function FertilityWindowCalculator() {
             <p className="text-sm text-text-dark leading-relaxed font-medium">
               For the best chance of conception, aim for intercourse at least every other day during your <strong>Peak</strong> and <strong>High</strong> fertility days.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Ovulation Calculator.</p>
+            </div>
+            <Link to="/ovulation-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Ovulation Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

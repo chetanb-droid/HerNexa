@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema, formatDate, subDays, addDays, validateDate, validateNumber } from '../lib/calculators';
 import { Heart, Calendar, ArrowRight, Info, Sparkles, Activity, AlertCircle, Dna } from 'lucide-react';
@@ -56,7 +57,7 @@ export default function ConceptionCalculator() {
     <CalculatorLayout
       title="Clinical Conception Date Calculator"
       description="Calculate your estimated conception date and fertile window based on your due date or last menstrual period. Understand the biological timeline of fertilization."
-      intro="Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated Due Date (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development."
+      intro={<>Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Conception Calculator",
@@ -85,6 +86,28 @@ export default function ConceptionCalculator() {
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Ovulation Calculator", path: "/ovulation-calculator" },
         { name: "Pregnancy Week Calculator", path: "/pregnancy-week-calculator" }
+      ]}
+      medicalReferences={[
+        {
+          title: "Conception: How it Works",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/in-depth/pregnancy/art-20047524",
+          source: "Mayo Clinic"
+        },
+        {
+          title: "How Pregnancy Happens",
+          url: "https://www.acog.org/womens-health/faqs/how-your-fetus-grows-during-pregnancy",
+          source: "ACOG"
+        },
+        {
+          title: "Conception and Early Pregnancy",
+          url: "https://www.nhs.uk/pregnancy/trying-for-a-baby/how-to-get-pregnant/",
+          source: "NHS"
+        },
+        {
+          title: "Conception",
+          url: "https://en.wikipedia.org/wiki/Fertilisation",
+          source: "Wikipedia"
+        }
       ]}
       results={results && (
         <motion.div 
@@ -122,6 +145,17 @@ export default function ConceptionCalculator() {
               <ArrowRight className="w-5 h-5 text-rose-400" />
               <span>{formatDate(results.windowEnd)}</span>
             </div>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Due Date Calculator.</p>
+            </div>
+            <Link to="/due-date-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Due Date Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}

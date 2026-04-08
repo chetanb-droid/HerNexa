@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CalculatorLayout from '../components/CalculatorLayout';
 import { generateFAQSchema, generateBreadcrumbSchema, generateSoftwareAppSchema } from '../lib/calculators';
 import { AlertCircle, CheckCircle2, Info, Activity, ClipboardList, Sparkles, ShieldCheck, ArrowRight } from 'lucide-react';
@@ -91,6 +92,28 @@ export default function PCOSCalculator() {
         { name: "Cycle Length Calculator", path: "/cycle-length-calculator" },
         { name: "Ovulation Calculator", path: "/ovulation-calculator" }
       ]}
+      medicalReferences={[
+        {
+          title: "PCOS: Diagnosis and Treatment",
+          url: "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos",
+          source: "ACOG"
+        },
+        {
+          title: "Polycystic Ovary Syndrome (PCOS)",
+          url: "https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/",
+          source: "NHS"
+        },
+        {
+          title: "PCOS Symptoms and Causes",
+          url: "https://www.womenshealth.gov/a-z-topics/polycystic-ovary-syndrome",
+          source: "WomensHealth.gov"
+        },
+        {
+          title: "Polycystic Ovary Syndrome",
+          url: "https://en.wikipedia.org/wiki/Polycystic_ovary_syndrome",
+          source: "Wikipedia"
+        }
+      ]}
       results={results && (
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -126,6 +149,17 @@ export default function PCOSCalculator() {
             <p className="text-sm text-amber-800 leading-relaxed italic">
               Important: This tool is for informational purposes only. Only a qualified medical professional can diagnose PCOS through physical exams, blood tests, and ultrasounds.
             </p>
+          </div>
+        
+          {/* Next Step CTA */}
+          <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+            <div>
+              <h4 className="font-bold text-text-dark mb-1">What's Next?</h4>
+              <p className="text-sm text-text-medium">Continue your health journey with our Period Calculator.</p>
+            </div>
+            <Link to="/period-calculator" className="btn-primary whitespace-nowrap px-6 py-2 text-sm">
+              Period Calculator &rarr;
+            </Link>
           </div>
         </motion.div>
       )}
