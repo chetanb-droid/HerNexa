@@ -46,7 +46,7 @@ export default function PregnancyBMICalculator() {
     <CalculatorLayout
       title="Pregnancy BMI Calculator"
       description="Calculate your pre-pregnancy BMI and understand your recommended weight gain range. Get expert guidance on healthy pregnancy weight management. Essential pregnancy health tracking."
-      intro={<>Your pre-pregnancy Body Mass Index (BMI) is a key factor in determining how much weight you should ideally gain during pregnancy. Our specialized calculator helps you find your BMI category and provides the medically recommended <Link to="/pregnancy-weight-gain-calculator" className="text-primary hover:underline font-medium">weight gain</Link> range to support a healthy pregnancy.</>}
+      intro={<>Your pre-pregnancy Body Mass Index (BMI) is a key factor in determining how much weight you should ideally gain during pregnancy. Our specialized calculator helps you find your BMI category and provides the medically recommended weight gain range to support a healthy pregnancy.</>}
       schema={[
         generateSoftwareAppSchema(
           "Pregnancy BMI Calculator",

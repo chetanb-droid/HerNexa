@@ -77,7 +77,7 @@ export default function DueDateCalculator() {
     <CalculatorLayout
       title="Clinical Due Date Calculator"
       description="Calculate your estimated due date (EDD) using LMP, conception date, IVF transfer, or ultrasound CRL. Accurate pregnancy due date predictor for prenatal planning."
-      intro={<>Knowing your <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception date</Link>, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible.</>}
+      intro={<>Knowing your due date is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception date</Link>, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Due Date Calculator",

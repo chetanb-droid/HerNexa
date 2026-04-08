@@ -43,7 +43,7 @@ export default function DueDateByConceptionCalculator() {
     <CalculatorLayout
       title="Clinical Due Date by Conception Calculator"
       description="Calculate your highly accurate pregnancy due date based on a known date of conception, ovulation, IUI, or IVF transfer."
-      intro={<>For women who have meticulously tracked their ovulation, undergone Intrauterine Insemination (IUI), or had an In Vitro Fertilization (IVF) transfer, the standard Last Menstrual Period (LMP) calculation can be inaccurate. This clinical calculator bypasses the assumptions of the LMP method, utilizing your exact conception date to provide a highly precise Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) and trimester timeline.</>}
+      intro={<>For women who have meticulously tracked their ovulation, undergone Intrauterine Insemination (IUI), or had an In Vitro Fertilization (IVF) transfer, the standard Last Menstrual Period (LMP) calculation can be inaccurate. This clinical calculator bypasses the assumptions of the LMP method, utilizing your exact conception date to provide a highly precise Estimated Due Date (EDD) and trimester timeline.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Due Date by Conception Calculator",

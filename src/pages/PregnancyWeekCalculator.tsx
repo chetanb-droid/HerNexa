@@ -105,7 +105,7 @@ export default function PregnancyWeekCalculator() {
     <CalculatorLayout
       title="Clinical Pregnancy Progress & Milestones"
       description="Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool."
-      intro={<>Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact <Link to="/pregnancy-week-calculator" className="text-primary hover:underline font-medium">gestational age</Link> (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception window</Link>.</>}
+      intro={<>Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact gestational age (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception window</Link>.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Pregnancy Week Calculator",

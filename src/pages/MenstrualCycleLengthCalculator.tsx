@@ -88,7 +88,7 @@ export default function MenstrualCycleLengthCalculator() {
     <CalculatorLayout
       title="Menstrual Cycle Length Calculator"
       description="Calculate your average menstrual cycle length and determine if your periods are regular, short, or long. Foundation for tracking reproductive health."
-      intro={<>Knowing your exact <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link> length is the foundation of tracking your reproductive health. By analyzing the dates of your last few periods, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique rhythm.</>}
+      intro={<>Knowing your exact menstrual cycle length is the foundation of tracking your reproductive health. By analyzing the dates of your last few <Link to="/period-calculator" className="text-primary hover:underline font-medium">periods</Link>, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique rhythm.</>}
       schema={[
         generateSoftwareAppSchema(
           "Menstrual Cycle Length Calculator",

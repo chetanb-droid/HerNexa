@@ -43,7 +43,7 @@ export default function EPDSScreener() {
     <CalculatorLayout
       title="Postpartum Depression (EPDS) Screener"
       description="A clinical tool (EPDS) to help identify signs of postpartum depression."
-      intro={<><Link to="/epds-screener" className="text-primary hover:underline font-medium">Postpartum depression</Link> is common and treatable. This tool uses the Edinburgh Postnatal Depression Scale to help you screen for symptoms.</>}
+      intro={<><Link to="/postpartum-depression-screener" className="text-primary hover:underline font-medium">Postpartum depression</Link> is common and treatable. This tool uses the Edinburgh Postnatal Depression Scale to help you screen for symptoms.</>}
       schema={[
         generateSoftwareAppSchema("EPDS Screener", "Screener for postpartum depression", "https://femhealth.com/epds-screener"),
         generateFAQSchema(faqs),
