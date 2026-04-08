@@ -81,8 +81,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-bg-light border border-primary-light rounded-full text-primary font-bold text-sm"
           >
-            <Sparkles className="w-4 h-4" />
-            30+ Free Health Tools • No Signup Required
+            30+ Absolutely Free Tools • No Signup or Credit Card Needed
           </motion.div>
           
           <motion.h1 
