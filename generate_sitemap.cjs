@@ -10,6 +10,7 @@ const routes = [
   '/conception-calculator',
   '/ovulation-calculator',
   '/pregnancy-weight-gain-calculator',
+  '/pregnancy-week-calculator',
   '/period-calculator',
   '/pregnancy-calorie-calculator',
   '/pcos-calculator',

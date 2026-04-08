@@ -58,7 +58,7 @@ export default function OvulationCalculator() {
     <CalculatorLayout
       title="Clinical Ovulation & Fertility Window Tracker"
       description="Predict your most fertile days with our free ovulation calculator. Find your fertile window, ovulation date, and next period based on your cycle. Accurate fertility tracking for conception."
-      intro={<>Trying to conceive? Our clinical ovulation calculator helps you identify your most fertile days by analyzing your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. By tracking the first day of your last period and your average cycle length, you can pinpoint the optimal window for conception based on standard obstetric guidelines.</>}
+      intro={<>Trying to conceive? Our clinical ovulation calculator helps you identify your most fertile days by analyzing your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. By tracking the first day of your last period and your average <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link>, you can pinpoint the optimal <Link to="/fertility-window-calculator" className="text-primary hover:underline font-medium">fertile window</Link> for conception based on standard obstetric guidelines.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Ovulation & Fertility Window Tracker",
@@ -75,7 +75,7 @@ export default function OvulationCalculator() {
       howItWorks={
         <>
           <p>This calculator utilizes the standard obstetric calendar method to estimate your ovulation date and fertile window, based on the physiological phases of the menstrual cycle:</p>
-          <ul>
+          <ul className="list-disc pl-5 mt-2 space-y-2">
             <li><strong>Luteal Phase Assumption:</strong> The luteal phase (the time between ovulation and the start of your next period) is relatively constant for most women, typically lasting 14 days. Therefore, ovulation is estimated by subtracting 14 days from your expected next period date.</li>
             <li><strong>Fertile Window:</strong> Sperm can survive in the female reproductive tract for up to 5 days, while an egg is viable for only 12-24 hours after ovulation. The "fertile window" encompasses the 5 days preceding ovulation and the day of ovulation itself.</li>
             <li><strong>Peak Fertility:</strong> The highest probability of conception occurs when intercourse takes place 1-2 days prior to ovulation, ensuring sperm are present when the egg is released.</li>
@@ -86,7 +86,7 @@ export default function OvulationCalculator() {
       relatedTools={[
         { name: "Due Date Calculator", path: "/due-date-calculator" },
         { name: "Period Tracker", path: "/period-calculator" },
-        { name: "Conception Date Calculator", path: "/conception-date-calculator" }
+        { name: "Conception Date Calculator", path: "/conception-calculator" }
       ]}
       medicalReferences={[
         {
@@ -100,14 +100,14 @@ export default function OvulationCalculator() {
           source: "NHS"
         },
         {
-          title: "Trying to Conceive",
-          url: "https://www.womenshealth.gov/pregnancy/trying-to-conceive",
-          source: "WomensHealth.gov"
+          title: "Getting Pregnant: Ovulation",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant/in-depth/ovulation-signs/art-20044133",
+          source: "Mayo Clinic"
         },
         {
-          title: "Ovulation & Menstrual Cycle",
-          url: "https://en.wikipedia.org/wiki/Ovulation",
-          source: "Wikipedia"
+          title: "Fertility Awareness-Based Methods",
+          url: "https://www.plannedparenthood.org/learn/birth-control/fertility-awareness",
+          source: "Planned Parenthood"
         }
       ]}
       results={results && (

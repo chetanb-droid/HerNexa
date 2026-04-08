@@ -105,7 +105,7 @@ export default function PregnancyWeekCalculator() {
     <CalculatorLayout
       title="Clinical Pregnancy Progress & Milestones"
       description="Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool."
-      intro={<>Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact gestational age (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception window</Link>.</>}
+      intro={<>Welcome to your comprehensive clinical pregnancy tracker. Accurate gestational dating is fundamental to obstetric care, influencing everything from screening schedules to assessing fetal growth. Select a tool below to determine your exact <Link to="/pregnancy-week-calculator" className="text-primary hover:underline font-medium">gestational age</Link> (weeks and days), review fetal developmental milestones based on clinical averages, or retrospectively estimate your <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception window</Link>.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Pregnancy Week Calculator",
@@ -124,7 +124,7 @@ export default function PregnancyWeekCalculator() {
           <p>This comprehensive clinical calculator integrates three essential obstetric tracking tools:</p>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Gestational Progress:</strong> Calculates your exact gestational age (weeks and days) and current trimester based on your LMP or <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Estimated Due Date (EDD)</Link>, utilizing the standard 280-day obstetric model (Naegele's rule).</li>
-            <li><strong>Fetal Development (Size):</strong> Provides estimates of fetal weight and length based on standardized fetal growth charts (e.g., Hadlock or WHO), alongside key embryological and fetal developmental milestones.</li>
+            <li><strong>Fetal Development (Size):</strong> Provides estimates of fetal weight and length based on standardized fetal growth charts (e.g., Hadlock or WHO), alongside key embryological and fetal developmental milestones. Use our <Link to="/baby-size-comparator" className="text-primary hover:underline font-medium">Baby Size Comparator</Link> for visual references.</li>
             <li><strong>Conception Estimation:</strong> Retrospectively calculates the probable window of fertilization by subtracting 266 days (38 weeks of fetal age) from your Estimated Due Date.</li>
           </ul>
         </div>
@@ -152,9 +152,9 @@ export default function PregnancyWeekCalculator() {
           source: "NHS"
         },
         {
-          title: "Gestational age",
-          url: "https://en.wikipedia.org/wiki/Gestational_age",
-          source: "Wikipedia"
+          title: "Fetal Growth Charts",
+          url: "https://www.who.int/tools/child-growth-standards/standards",
+          source: "WHO"
         }
       ]}
       results={results && (

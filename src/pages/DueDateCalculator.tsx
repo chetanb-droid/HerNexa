@@ -77,7 +77,7 @@ export default function DueDateCalculator() {
     <CalculatorLayout
       title="Clinical Due Date Calculator"
       description="Calculate your estimated due date (EDD) using LMP, conception date, IVF transfer, or ultrasound CRL. Accurate pregnancy due date predictor for prenatal planning."
-      intro={<>Knowing your <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, conception date, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible.</>}
+      intro={<>Knowing your <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> is the first step in your pregnancy journey. Our comprehensive clinical calculator supports multiple methods including Last Menstrual Period (LMP) with cycle adjustments, <Link to="/conception-calculator" className="text-primary hover:underline font-medium">conception date</Link>, IVF transfer dates, and ultrasound measurements (CRL) to give you the most accurate estimate possible.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Due Date Calculator",
@@ -94,8 +94,8 @@ export default function DueDateCalculator() {
       howItWorks={
         <>
           <p>This calculator utilizes standardized obstetric formulas to determine your Estimated Due Date (EDD) and <Link to="/pregnancy-week-calculator" className="text-primary hover:underline font-medium">gestational age</Link>:</p>
-          <ul>
-            <li><strong>Naegele's Rule (LMP):</strong> The standard obstetric method which adds 280 days (40 weeks) to the first day of your last menstrual period. Our calculator dynamically adjusts this based on your specific cycle length (e.g., adding days for cycles longer than 28 days).</li>
+          <ul className="list-disc pl-5 mt-2 space-y-2">
+            <li><strong>Naegele's Rule (LMP):</strong> The standard obstetric method which adds 280 days (40 weeks) to the first day of your last menstrual period. Our calculator dynamically adjusts this based on your specific <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link> (e.g., adding days for cycles longer than 28 days).</li>
             <li><strong>IVF Transfer Dating:</strong> Highly accurate dating calculated by adding 261 days for a Day 5 blastocyst transfer or 263 days for a Day 3 cleavage-stage embryo transfer.</li>
             <li><strong>Ultrasound (CRL):</strong> Uses the Crown-Rump Length (CRL) measurement. According to ACOG guidelines, ultrasound dating in the first trimester (up to 13 6/7 weeks) is the most accurate method to establish or confirm gestational age.</li>
           </ul>
@@ -119,14 +119,14 @@ export default function DueDateCalculator() {
           source: "NHS"
         },
         {
-          title: "Pregnancy: How it works",
-          url: "https://www.womenshealth.gov/pregnancy/youre-pregnant-now-what/stages-pregnancy",
-          source: "WomensHealth.gov"
+          title: "The Science of Pregnancy Dating",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/in-depth/due-date-calculator/art-20048514",
+          source: "Mayo Clinic"
         },
         {
-          title: "Gestational Age & Due Date",
-          url: "https://en.wikipedia.org/wiki/Gestational_age",
-          source: "Wikipedia"
+          title: "Ultrasonic fetal measurements",
+          url: "https://pubmed.ncbi.nlm.nih.gov/11829237/",
+          source: "PubMed (NIH)"
         }
       ]}
       results={results && (

@@ -54,7 +54,7 @@ export default function PeriodCalculator() {
     <CalculatorLayout
       title="Clinical Period & Cycle Tracker"
       description="Predict your next 6 period dates with our free clinical period calculator. Track your cycle, find your ovulation dates, and plan ahead with accuracy. Essential menstrual health tracking."
-      intro="Stay ahead of your cycle with our comprehensive clinical period calculator. By entering your last period date, average cycle length, and period duration, you can predict your next six periods, identify your upcoming fertile windows, and better understand your body's natural rhythm. Accurate tracking is a fundamental aspect of monitoring gynecological health."
+      intro={<>Stay ahead of your cycle with our comprehensive clinical period calculator. By entering your last period date, average <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link>, and period duration, you can predict your next six periods, identify your upcoming <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation dates</Link>, and better understand your body's natural rhythm. Accurate tracking is a fundamental aspect of monitoring gynecological health and identifying <Link to="/period-symptom-tracker" className="text-primary hover:underline font-medium">menstrual symptoms</Link>.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Period & Cycle Tracker",
@@ -71,7 +71,7 @@ export default function PeriodCalculator() {
       howItWorks={
         <>
           <p>This clinical tracker uses standard gynecological algorithms to project your future menstrual cycles:</p>
-          <ul>
+          <ul className="list-disc pl-5 mt-2 space-y-2">
             <li><strong>Cycle Projection:</strong> We add your average cycle length (the number of days from the first day of one period to the first day of the next) to your last period start date to predict subsequent cycles.</li>
             <li><strong>Menstruation Duration:</strong> We account for your typical bleeding duration to estimate the full window of your next menses.</li>
             <li><strong>Luteal Phase & Ovulation:</strong> Based on the standard medical assumption of a 14-day luteal phase, ovulation is estimated to occur 14 days prior to the onset of your next predicted period.</li>
@@ -97,14 +97,14 @@ export default function PeriodCalculator() {
           source: "ACOG"
         },
         {
+          title: "Menstrual cycle: What's normal, what's not",
+          url: "https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/menstrual-cycle/art-20047186",
+          source: "Mayo Clinic"
+        },
+        {
           title: "Periods and Fertility",
           url: "https://www.nhs.uk/conditions/periods/fertility-in-the-menstrual-cycle/",
           source: "NHS"
-        },
-        {
-          title: "Menstrual Cycle",
-          url: "https://en.wikipedia.org/wiki/Menstrual_cycle",
-          source: "Wikipedia"
         }
       ]}
       results={results && (

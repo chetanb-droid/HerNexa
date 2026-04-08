@@ -57,7 +57,7 @@ export default function ConceptionCalculator() {
     <CalculatorLayout
       title="Clinical Conception Date Calculator"
       description="Calculate your estimated conception date and fertile window based on your due date or last menstrual period. Understand the biological timeline of fertilization."
-      intro={<>Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development.</>}
+      intro={<>Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development. Understanding your <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation cycle</Link> is key to this calculation.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Conception Calculator",
@@ -76,7 +76,7 @@ export default function ConceptionCalculator() {
           <p>Conception (fertilization) occurs when a spermatozoon successfully penetrates an ovum. We calculate this using two primary clinical models:</p>
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>From Estimated Due Date (EDD):</strong> A standard term pregnancy lasts 280 days from the LMP, or 266 days from conception. We subtract exactly 266 days from your ultrasound-confirmed or calculated due date to find the probable fertilization moment.</li>
-            <li><strong>From Last Menstrual Period (LMP):</strong> If you know your average cycle length, we estimate your ovulation day (typically 14 days before the onset of the next menses, as the luteal phase is relatively constant). Conception almost always occurs within 12-24 hours of ovulation.</li>
+            <li><strong>From Last Menstrual Period (LMP):</strong> If you know your average <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link>, we estimate your ovulation day (typically 14 days before the onset of the next menses, as the luteal phase is relatively constant). Conception almost always occurs within 12-24 hours of ovulation.</li>
             <li><strong>The Biological Fertile Window:</strong> Spermatozoa can remain viable in the cervical mucus and upper reproductive tract for up to 5 days. Therefore, intercourse leading to conception could have occurred up to 5 days prior to the actual date of fertilization.</li>
           </ul>
         </div>
@@ -104,9 +104,9 @@ export default function ConceptionCalculator() {
           source: "NHS"
         },
         {
-          title: "Conception",
-          url: "https://en.wikipedia.org/wiki/Fertilisation",
-          source: "Wikipedia"
+          title: "Fertilization",
+          url: "https://my.clevelandclinic.org/health/articles/11585-conception",
+          source: "Cleveland Clinic"
         }
       ]}
       results={results && (

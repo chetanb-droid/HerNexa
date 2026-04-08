@@ -38,6 +38,7 @@ const HeartDiseaseRiskCalculator = lazy(() => import('./pages/HeartDiseaseRiskCa
 const EndometriosisRiskCalculator = lazy(() => import('./pages/EndometriosisRiskCalculator'));
 const EPDSScreener = lazy(() => import('./pages/EPDSScreener'));
 const BabyGrowthPercentile = lazy(() => import('./pages/BabyGrowthPercentile'));
+const PregnancyWeekCalculator = lazy(() => import('./pages/PregnancyWeekCalculator'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 const Loading = () => (
@@ -58,6 +59,7 @@ export default function App() {
             <Route path="conception-calculator" element={<ConceptionCalculator />} />
             <Route path="ovulation-calculator" element={<OvulationCalculator />} />
             <Route path="pregnancy-weight-gain-calculator" element={<PregnancyWeightGainCalculator />} />
+            <Route path="pregnancy-week-calculator" element={<PregnancyWeekCalculator />} />
             <Route path="period-calculator" element={<PeriodCalculator />} />
             <Route path="pregnancy-calorie-calculator" element={<PregnancyCalorieCalculator />} />
             <Route path="pcos-calculator" element={<PCOSCalculator />} />
