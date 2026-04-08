@@ -108,7 +108,7 @@ export default function Layout() {
 
       {/* Footer - SEO Rich */}
       <footer className="bg-white text-text-medium pt-24 pb-12 border-t border-primary/10">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           <div className="space-y-6 md:col-span-1">
             <Link to="/" className="flex items-center gap-3 text-text-dark group">
               <img src={logoBase64} alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
@@ -126,7 +126,7 @@ export default function Layout() {
               <li><Link to="/ovulation-calculator" className="hover:text-primary transition-colors">Ovulation Calculator</Link></li>
               <li><Link to="/period-calculator" className="hover:text-primary transition-colors">Period Calculator</Link></li>
               <li><Link to="/conception-calculator" className="hover:text-primary transition-colors">Conception Calculator</Link></li>
-              <li><Link to="/bbt-analyzer" className="hover:text-primary transition-colors">BBT Analyzer</Link></li>
+              <li><Link to="/menopause-checker" className="hover:text-primary transition-colors">Menopause Checker</Link></li>
             </ul>
           </div>
 
@@ -137,16 +137,6 @@ export default function Layout() {
               <li><Link to="/pregnancy-week-calculator" className="hover:text-primary transition-colors">Pregnancy Week Calculator</Link></li>
               <li><Link to="/baby-size-comparator" className="hover:text-primary transition-colors">Baby Size Comparator</Link></li>
               <li><Link to="/pregnancy-weight-gain-calculator" className="hover:text-primary transition-colors">Weight Gain Calculator</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Baby & Health</h4>
-            <ul className="space-y-3 text-sm font-medium">
-              <li><Link to="/baby-sleep-schedule" className="hover:text-primary transition-colors">Baby Sleep Schedule</Link></li>
-              <li><Link to="/solid-food-timeline" className="hover:text-primary transition-colors">Solid Food Timeline</Link></li>
-              <li><Link to="/hormone-balance-quiz" className="hover:text-primary transition-colors">Hormone Balance Quiz</Link></li>
-              <li><Link to="/tools" className="hover:text-primary transition-colors font-bold text-primary">View All Tools &rarr;</Link></li>
             </ul>
           </div>
         </div>
