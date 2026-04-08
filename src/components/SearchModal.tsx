@@ -91,8 +91,9 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
                 className="flex-1 h-12 text-lg outline-none bg-transparent pl-2"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                aria-label="Search for health tools"
               />
-              <button onClick={onClose} className="p-2 hover:bg-neutral-100 rounded-full transition-colors text-sm font-bold text-neutral-500">
+              <button onClick={onClose} className="p-2 hover:bg-neutral-100 rounded-full transition-colors text-sm font-bold text-neutral-600" aria-label="Close search modal">
                 Close
               </button>
             </div>
@@ -100,12 +101,13 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
             <div className="max-h-[60vh] overflow-y-auto p-4">
               {results.length > 0 ? (
                 <div className="space-y-2">
-                  <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest px-2 mb-2">Search Results</p>
+                  <p className="text-xs font-bold text-neutral-500 uppercase tracking-widest px-2 mb-2">Search Results</p>
                   {results.map((item, i) => (
                     <button 
                       key={i}
                       onClick={() => handleSelect(item.path)}
                       className="w-full flex items-center justify-between p-3 rounded-xl hover:bg-rose-50 transition-colors group"
+                      aria-label={`Go to ${item.name}`}
                     >
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-lg bg-rose-100 text-rose-600 font-bold text-xs">
@@ -124,13 +126,14 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
               ) : (
                 <div className="space-y-6 py-4">
                   <div>
-                    <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest px-2 mb-4">Popular Tools</p>
+                    <p className="text-xs font-bold text-neutral-500 uppercase tracking-widest px-2 mb-4">Popular Tools</p>
                     <div className="grid grid-cols-2 gap-2">
                       {allItems.slice(0, 4).map((item, i) => (
                         <button 
                           key={i}
                           onClick={() => handleSelect(item.path)}
                           className="flex items-center gap-3 p-3 rounded-xl border border-neutral-100 hover:border-rose-200 hover:bg-rose-50 transition-all text-left"
+                          aria-label={`Go to ${item.name}`}
                         >
                           <span className="text-sm font-medium text-neutral-600">{item.name}</span>
                         </button>
@@ -141,7 +144,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
               )}
             </div>
 
-            <div className="p-4 bg-neutral-50 border-t border-neutral-100 flex justify-center items-center text-[10px] font-bold text-neutral-400 uppercase tracking-wider">
+            <div className="p-4 bg-neutral-50 border-t border-neutral-100 flex justify-center items-center text-xs font-bold text-neutral-500 uppercase tracking-wider">
               <span>Press ESC to close</span>
             </div>
           </motion.div>

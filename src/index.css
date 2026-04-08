@@ -11,10 +11,10 @@
   --color-accent: #E67E22; /* Soft Gold/Amber */
   --color-success: #82E0AA; /* Soft Green */
   --color-warning: #F9E79F; /* Soft Yellow */
-  --color-text-dark: #4A235A; /* Deep Purple-Grey */
-  --color-text-medium: #7D6608; /* Muted Gold-Grey */
+  --color-text-dark: #2E1A36; /* Darker Purple-Grey for better contrast */
+  --color-text-medium: #5D4D06; /* Darker Muted Gold for better contrast */
   --color-bg-light: #FDFAFF; /* Off-white with hint of purple */
-  --color-border: #F2D7D5; /* Soft Rose Border */
+  --color-border: #E8C1BF; /* Slightly darker border */
 }
 
 @layer base {

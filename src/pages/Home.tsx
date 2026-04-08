@@ -77,7 +77,7 @@ export default function Home() {
       <section className="relative pt-12 md:pt-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-bg-light border border-primary-light rounded-full text-primary font-bold text-sm"
           >
@@ -93,7 +93,7 @@ export default function Home() {
           </p>
 
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex justify-center pt-4"
@@ -101,9 +101,10 @@ export default function Home() {
             <Link 
               to="/tools" 
               className="px-10 py-5 bg-primary text-white rounded-2xl font-bold text-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 flex items-center gap-3 group"
+              aria-label="Explore all health tools"
             >
               Explore Health Tools 
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
           </motion.div>
         </div>
@@ -115,10 +116,10 @@ export default function Home() {
           {mainCategories.map((cat, i) => (
             <motion.div 
               key={cat.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
               className="group bg-white border border-primary/5 rounded-[2.5rem] p-10 hover:shadow-2xl hover:shadow-primary/10 transition-all relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[5rem] -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500" />
@@ -154,9 +155,10 @@ export default function Home() {
                 <Link 
                   to={`/category/${cat.id}`}
                   className="flex items-center justify-between w-full p-4 bg-primary-light rounded-2xl text-primary font-bold hover:bg-primary hover:text-white transition-all group/btn"
+                  aria-label={`View all ${cat.title} tools`}
                 >
                   View All Tools
-                  <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </div>
             </motion.div>
@@ -171,8 +173,8 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-dark">Most Popular Tools</h2>
             <p className="text-text-medium max-w-2xl">Discover our most frequently used calculators, trusted by millions of women worldwide.</p>
           </div>
-          <Link to="/tools" className="text-primary font-bold hover:text-primary/80 flex items-center gap-2">
-            See All 30+ Tools <ArrowRight className="w-4 h-4" />
+          <Link to="/tools" className="text-primary font-bold hover:text-primary/80 flex items-center gap-2" aria-label="See all 30 plus tools">
+            See All 30+ Tools <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -199,12 +201,12 @@ export default function Home() {
               color: "bg-[#E91E63] text-white"
             }
           ].map((tool, i) => (
-            <Link key={i} to={tool.path} className="group bg-white border border-neutral-100 rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/20 transition-all">
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${tool.color}`}>
+            <Link key={i} to={tool.path} className="group bg-white border border-neutral-100 rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/20 transition-all" aria-label={`Go to ${tool.title}`}>
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${tool.color}`} aria-hidden="true">
                 {tool.icon}
               </div>
               <h3 className="text-xl font-bold text-text-dark mb-3 group-hover:text-primary transition-colors">{tool.title}</h3>
-              <p className="text-sm text-text-medium leading-relaxed">{tool.desc}</p>
+              <p className="text-sm text-text-dark/70 leading-relaxed">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -239,17 +241,17 @@ export default function Home() {
                 Medical Accuracy <br/>
                 <span className="text-secondary">You Can Trust.</span>
               </h2>
-              <p className="text-lg text-neutral-400 leading-relaxed">
+              <p className="text-lg text-neutral-200 leading-relaxed">
                 Our calculators are built using standardized medical formulas including Naegele's Rule for pregnancy and the Grobman nomogram for VBAC success rates. Every tool is designed to provide clarity, not confusion.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <p className="text-3xl font-bold text-primary-light">150+</p>
-                  <p className="text-sm text-neutral-500 uppercase font-bold tracking-wider">Countries Reached</p>
+                  <p className="text-sm text-neutral-300 uppercase font-bold tracking-wider">Countries Reached</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-secondary">30+</p>
-                  <p className="text-sm text-neutral-500 uppercase font-bold tracking-wider">Expert Tools</p>
+                  <p className="text-sm text-neutral-300 uppercase font-bold tracking-wider">Expert Tools</p>
                 </div>
               </div>
             </motion.div>
@@ -307,7 +309,7 @@ export default function Home() {
               className="p-6 bg-white border border-border rounded-2xl"
             >
               <h3 className="font-bold text-text-dark mb-2">{faq.q}</h3>
-              <p className="text-text-medium text-sm leading-relaxed">{faq.a}</p>
+              <p className="text-text-dark/80 text-sm leading-relaxed">{faq.a}</p>
             </motion.div>
           ))}
         </div>
