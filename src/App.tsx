@@ -2,8 +2,8 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
 
-const Home = lazy(() => import('./pages/Home'));
 const HealthTools = lazy(() => import('./pages/HealthTools'));
 const Category = lazy(() => import('./pages/Category'));
 const DueDateCalculator = lazy(() => import('./pages/DueDateCalculator'));

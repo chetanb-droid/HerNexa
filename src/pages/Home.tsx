@@ -84,23 +84,13 @@ export default function Home() {
             30+ Absolutely Free Tools • No Signup or Credit Card Needed
           </motion.div>
           
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-text-dark leading-[1.1]"
-          >
+          <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-text-dark leading-[1.1]">
             Your Journey, <span className="text-primary italic">Calculated.</span>
-          </motion.h1>
+          </h1>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-text-medium max-w-2xl mx-auto leading-relaxed"
-          >
+          <p className="text-xl text-text-medium max-w-2xl mx-auto leading-relaxed">
             The most comprehensive suite of women's health calculators. From fertility tracking to pregnancy milestones, get accurate insights powered by medical data.
-          </motion.p>
+          </p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -142,7 +132,8 @@ export default function Home() {
                       alt={cat.title} 
                       className={`w-full h-full object-cover transition-transform duration-700 ${cat.zoom ? 'scale-[1.5]' : ''}`}
                       referrerPolicy="no-referrer"
-                      loading="lazy"
+                      loading={i < 3 ? "eager" : "lazy"}
+                      fetchPriority={i < 3 ? "high" : "auto"}
                       decoding="async"
                     />
                   ) : (
