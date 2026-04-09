@@ -131,6 +131,8 @@ export default function Home() {
                       key={cat.image}
                       src={cat.image} 
                       alt={cat.title} 
+                      width={cat.zoom ? "400" : "128"}
+                      height={cat.zoom ? "192" : "128"}
                       className={`w-full h-full object-cover transition-transform duration-700 ${cat.zoom ? 'scale-[1.5]' : ''}`}
                       referrerPolicy="no-referrer"
                       loading={i < 3 ? "eager" : "lazy"}
@@ -213,30 +215,21 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+      <section 
         className="bg-text-dark py-20 text-white overflow-hidden relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
+        style={{ contentVisibility: 'auto', containIntrinsicSize: '0 500px' }}
       >
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
           <div className="grid grid-cols-6 gap-4 rotate-12 scale-150">
             {Array.from({ length: 24 }).map((_, i) => (
-              <Calculator key={i} className="w-12 h-12" />
+              <Calculator key={i} className="w-12 h-12" aria-hidden="true" />
             ))}
           </div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 Medical Accuracy <br/>
                 <span className="text-secondary">You Can Trust.</span>
@@ -254,14 +247,8 @@ export default function Home() {
                   <p className="text-sm text-neutral-300 uppercase font-bold tracking-wider">Expert Tools</p>
                 </div>
               </div>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl p-8 space-y-6"
-            >
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl p-8 space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-success/20 text-success rounded-full flex items-center justify-center">
                   <CheckCircle2 className="w-6 h-6" />
@@ -280,18 +267,15 @@ export default function Home() {
                 </div>
                 <p className="font-bold">Mobile-First Design</p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* FAQ Section */}
-      <motion.section 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+      <section 
         className="max-w-4xl mx-auto px-4"
+        style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}
       >
         <h2 className="text-3xl font-bold text-center mb-12">Common Questions</h2>
         <div className="space-y-4">
@@ -300,20 +284,16 @@ export default function Home() {
             { q: "Do I need to create an account to use the tools?", a: "No. We believe health information should be accessible. All 30+ calculators are free to use with zero login or data tracking required." },
             { q: "How do I know which calculator to use?", a: "Start with our Pregnancy section if you are already expecting, or the Fertility section if you are trying to conceive. Each tool includes a detailed guide on when and how to use it." }
           ].map((faq, i) => (
-            <motion.div 
+            <div 
               key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
               className="p-6 bg-white border border-border rounded-2xl"
             >
               <h3 className="font-bold text-text-dark mb-2">{faq.q}</h3>
               <p className="text-text-dark/80 text-sm leading-relaxed">{faq.a}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }

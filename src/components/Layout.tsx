@@ -36,7 +36,16 @@ export default function Layout() {
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
             <Link to="/" className="flex items-center gap-3 group" aria-label="HerNexa Home">
-              <img src={logoBase64} alt="HerNexa Logo" className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" referrerPolicy="no-referrer" loading="eager" decoding="async" />
+              <img 
+                src={logoBase64} 
+                alt="HerNexa Logo" 
+                width="40" 
+                height="40" 
+                className="w-10 h-10 object-contain group-hover:rotate-6 transition-all" 
+                referrerPolicy="no-referrer" 
+                loading="eager" 
+                decoding="async" 
+              />
               <span className="text-2xl font-serif font-bold tracking-tight text-text-dark">HerNexa</span>
             </Link>
             
@@ -113,7 +122,16 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           <div className="space-y-6 md:col-span-1">
             <Link to="/" className="flex items-center gap-3 text-text-dark group" aria-label="HerNexa Home">
-              <img src={logoBase64} alt="HerNexa Logo" className="w-8 h-8 object-contain" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+              <img 
+                src={logoBase64} 
+                alt="HerNexa Logo" 
+                width="32" 
+                height="32" 
+                className="w-8 h-8 object-contain" 
+                referrerPolicy="no-referrer" 
+                loading="lazy" 
+                decoding="async" 
+              />
               <span className="text-2xl font-serif font-bold tracking-tight">HerNexa</span>
             </Link>
             <p className="text-base leading-relaxed text-text-dark/80">
