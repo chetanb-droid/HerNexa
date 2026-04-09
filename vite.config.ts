@@ -16,19 +16,12 @@ export default defineConfig(({mode}) => {
       },
     },
     build: {
-      cssCodeSplit: true,
-      modulePreload: {
-        polyfill: false
-      },
       rollupOptions: {
         output: {
-          manualChunks: (id) => {
-            if (id.includes('node_modules')) {
-              if (id.includes('react')) return 'vendor-react';
-              if (id.includes('motion')) return 'vendor-motion';
-              if (id.includes('lucide')) return 'vendor-icons';
-              return 'vendor';
-            }
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'react-router-dom'],
+            motion: ['motion/react'],
+            icons: ['lucide-react']
           }
         }
       }
