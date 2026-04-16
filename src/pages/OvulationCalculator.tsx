@@ -56,9 +56,9 @@ export default function OvulationCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Ovulation & Fertility Window Tracker"
-      description="Predict your most fertile days with our free ovulation calculator. Find your fertile window, ovulation date, and next period based on your cycle. Accurate fertility tracking for conception."
-      intro={<>Trying to conceive? Our clinical ovulation calculator helps you identify your most fertile days by analyzing your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. By tracking the first day of your last period and your average <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link>, you can pinpoint the optimal <Link to="/fertility-window-calculator" className="text-primary hover:underline font-medium">fertile window</Link> for conception based on standard obstetric guidelines.</>}
+      title="Ovulation & Fertility Estimator | Best Time to Get Pregnant Calculator"
+      description="Use our free ovulation calculator to find the best time to get pregnant. Predict your fertile window and pregnancy probability based on your cycle."
+      intro={<>Trying to conceive? Our clinical ovulation calculator (or <strong>fertility estimator</strong>) helps you identify the <strong className="font-bold">best time to get pregnant</strong> by analyzing your <Link to="/period-calculator" className="text-primary hover:underline font-medium">menstrual cycle</Link>. By tracking the first day of your last period and your average <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link>, you can pinpoint the absolute <strong>best days to get pregnant calculator</strong> estimates based on standard obstetric guidelines. Stop wondering "when to have sex to get pregnant" and use our tool to track your peak fertility!</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Ovulation & Fertility Window Tracker",

@@ -55,9 +55,9 @@ export default function FertilityWindowCalculator() {
 
   return (
     <CalculatorLayout
-      title="Fertility Window Calculator"
-      description="Calculate your 6-day fertile window and exact ovulation date to maximize your chances of getting pregnant. Personalized fertility tracking based on your unique cycle."
-      intro={<>Timing is everything when trying to conceive. Our Fertility Window Calculator pinpoints your most fertile days based on your menstrual cycle, helping you identify the exact 6-day window when pregnancy is possible. By adjusting for your specific <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link> and luteal phase, we provide a more personalized estimate than standard calculators.</>}
+      title="Fertile Window Calculator | Pregnancy Probability Calculator Calendar"
+      description="Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant."
+      intro={<>Timing is everything when trying to conceive. Our <strong>fertile window calculator</strong> pinpoints your most fertile days based on your menstrual cycle, helping you identify the exact 6-day <strong>conception window</strong> when pregnancy is possible. By adjusting for your specific <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link> and luteal phase, we provide a more personalized estimate than standard <strong>fertility calculator</strong> tools. If you've been wondering, "<strong>what are my chances of getting pregnant calculator</strong>," this tool will give you clear insights.</>}
       schema={[
         generateSoftwareAppSchema(
           "Fertility Window Calculator",

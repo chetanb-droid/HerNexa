@@ -17,7 +17,8 @@ export default function ConceptionCalculator() {
     { q: "How clinically accurate is a conception calculator?", a: "It provides a highly educated estimate based on standard physiological models. Because spermatozoa can remain viable in the female reproductive tract for up to 5 days, and the exact moment of ovulation can vary slightly even in regular cycles, conception usually occurs within a 5-7 day biological window rather than on one exact, predictable day." },
     { q: "Is the conception date the same as the date of intercourse?", a: "Not necessarily. If coitus occurred on a Monday, but ovulation (release of the ovum) did not occur until Thursday, the actual date of conception (fertilization) would be Thursday, utilizing viable sperm from the earlier intercourse." },
     { q: "Can a dating ultrasound change my estimated conception date?", a: "Yes. Early first-trimester ultrasounds (specifically measuring the Crown-Rump Length or CRL between 7-12 weeks) are the clinical gold standard for determining gestational age. This measurement can shift your estimated conception date by a few days compared to calculations based solely on LMP." },
-    { q: "What if I have irregular menstrual cycles?", a: "If your cycles are irregular (e.g., due to PCOS or other factors), calculating by your estimated due date (EDD) derived from an early ultrasound is the most clinically accurate method to retrospectively determine your conception window." }
+    { q: "What if I have irregular menstrual cycles?", a: "If your cycles are irregular (e.g., due to PCOS or other factors), calculating by your estimated due date (EDD) derived from an early ultrasound is the most clinically accurate method to retrospectively determine your conception window." },
+    { q: "Is there a how to conceive a baby girl naturally calculator?", a: "While many look for a 'how to conceive a baby girl naturally calculator', there is no medically guaranteed way to select gender at home. Some methods, like the Shettles method, suggest having intercourse 2-4 days before ovulation to conceive a girl, theorizing that male-producing sperm die off faster than female-producing sperm. However, scientific evidence on its effectiveness is mixed." }
   ];
 
   const calculate = () => {
@@ -55,9 +56,9 @@ export default function ConceptionCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Conception Date Calculator"
-      description="Calculate your estimated conception date and fertile window based on your due date or last menstrual period. Understand the biological timeline of fertilization."
-      intro={<>Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development. Understanding your <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation cycle</Link> is key to this calculation.</>}
+      title="Conception Calculator | When to Have Sex to Conceive"
+      description="Use our clinical conception calculator to understand your biological fertile window. Find out when to have sex to conceive calculator estimates and conception probability."
+      intro={<>Determining the exact date of conception is a common question for expectant parents. While it's difficult to pinpoint the exact minute, this clinical calculator works backwards from your Estimated <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">Due Date</Link> (EDD) or Last Menstrual Period (LMP) to identify the most probable window of fertilization, providing insight into the very beginning of embryonic development. Understanding your <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation cycle</Link> is key to this calculation. If you are still trying to get pregnant, you can also use this as a <strong>when to have sex to conceive calculator</strong> to plan ahead.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Conception Calculator",

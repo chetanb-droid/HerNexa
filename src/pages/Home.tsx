@@ -190,15 +190,15 @@ export default function Home() {
             },
             {
               title: "Ovulation Calculator",
-              desc: "Pinpoint your most fertile days to maximize your chances of conception.",
+              desc: "Pinpoint your most fertile days to maximize your chances of conception. Also serves as a best time to get pregnant calculator.",
               path: "/ovulation-calculator",
               icon: <Activity className="w-6 h-6" />,
               color: "bg-accent text-white"
             },
             {
-              title: "Clinical Risk Assessments",
-              desc: "Assess your health risks with our evidence-based clinical calculators.",
-              path: "/category/health-risk",
+              title: "Time To Conceive",
+              desc: "A probability of pregnancy calculator that estimates your chances of getting pregnant by age.",
+              path: "/time-to-conceive-calculator",
               icon: <Heart className="w-6 h-6" />,
               color: "bg-[#E91E63] text-white"
             }

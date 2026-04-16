@@ -54,9 +54,9 @@ export default function TimeToConceiveCalculator() {
 
   return (
     <CalculatorLayout
-      title="Time to Conceive Calculator"
-      description="Estimate your probability of conception based on your age, health, and how long you've been trying. Understand the statistical timeline for getting pregnant. Accurate fertility predictor."
-      intro="How long does it take to get pregnant? Our time to conceive calculator uses statistical data to estimate your chances of conception over the next 6 to 12 months. While every couple is unique, understanding the averages can help you set realistic expectations and know when it's time to seek professional guidance."
+      title="Chances of Getting Pregnant Calculator | Probability of Pregnancy"
+      description="Estimate your probability of pregnancy based on your age, health, and how long you've been trying. Accurate chances of getting pregnant calculator."
+      intro="How long does it take to get pregnant? Our time to conceive calculator uses statistical data to estimate your chances of conception over the next 6 to 12 months. This serves as a reliable <strong>chance of getting pregnant by age calculator</strong>. While every couple is unique, understanding the averages can help you set realistic expectations and know when it's time to seek professional guidance. Use this <strong>chances of getting pregnant calculator</strong> to see your <strong>probability of pregnancy calculator</strong> results instantly."
       schema={[
         generateSoftwareAppSchema(
           "Time to Conceive Calculator",
@@ -185,7 +185,7 @@ export default function TimeToConceiveCalculator() {
           <section className="space-y-6">
             <h2 className="text-3xl font-serif font-bold text-text-dark">What Your Results Actually Mean</h2>
             <p>
-              The percentages provided by the calculator are statistical averages for a large population of healthy couples. Here is a detailed breakdown of how to interpret your specific results:
+              The percentages provided by the calculator are statistical averages for a large population of healthy couples. You can effectively use this as your personal <strong>pregnancy chance calendar</strong> over the coming months. Here is a detailed breakdown of how to interpret your specific results:
             </p>
             <div className="space-y-6 mt-6">
               <div className="bg-white p-6 rounded-2xl border border-primary/10 shadow-sm">
