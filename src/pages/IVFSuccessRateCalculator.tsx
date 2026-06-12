@@ -75,9 +75,9 @@ export default function IVFSuccessRateCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical IVF Success Rate Estimator"
-      description="Estimate your chances of IVF success and live birth based on age, BMI, diagnosis, and reproductive history using clinical data models. Accurate IVF probability predictor."
-      intro="In Vitro Fertilization (IVF) success rates depend on a variety of personal health factors. Our clinical calculator uses statistical models based on national ART (Assisted Reproductive Technology) data to give you an estimated probability of clinical pregnancy and live birth per embryo transfer. Understanding your baseline success rate is the first step in planning your fertility journey."
+      title="IVF Success Rate Calculator | Calculate IVF Success Rate"
+      description="Calculate ivf success rate and estimate your live birth probability based on your symptoms. Try our ivf success estimator calculator."
+      intro="In Vitro Fertilization (IVF) success rates depend on a variety of personal health factors. Our clinical calculator uses statistical models based on national ART (Assisted Reproductive Technology) data to give you an estimated probability of clinical pregnancy and a live birth per embryo transfer. Using this <strong>ivf success rate calculator</strong> acts as a reliable <strong>ivf success estimator</strong>. It helps you accurately <strong>calculate ivf success rate</strong> odds for your upcoming cycles. Understanding your baseline success rate is the first step in planning your fertility journey."
       schema={[
         generateSoftwareAppSchema(
           "Clinical IVF Success Rate Estimator",

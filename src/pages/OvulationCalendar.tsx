@@ -91,9 +91,9 @@ export default function OvulationCalendar() {
 
   return (
     <CalculatorLayout
-      title="Ovulation Calendar & Tracker"
-      description="Generate a personalized 3-month ovulation calendar to track your period, fertile window, and exact ovulation day."
-      intro={<>Planning a pregnancy? Our visual Ovulation Calendar maps out your next 3 menstrual cycles. See exactly when your period is due, when your <Link to="/fertility-window-calculator" className="text-primary hover:underline font-medium">fertile window</Link> opens, and your highest chance of conception.</>}
+      title="Ovulation Calendar & Tracker | Pregnancy Chance Calendar"
+      description="Generate a personalized 3-month ovulation calendar. Use our pregnancy probability calculator calendar and pregnancy chance calendar to track your cycle."
+      intro={<>Planning a pregnancy? Our visual Ovulation Calendar acts as a comprehensive <strong>pregnancy probability calculator calendar</strong> mapping out your next 3 menstrual cycles. See exactly when your period is due, when your <Link to="/fertility-window-calculator" className="text-primary hover:underline font-medium">fertile window</Link> opens, and use it as a <strong>pregnancy chance calendar</strong> to identify your highest probability of conception.</>}
       schema={[
         generateSoftwareAppSchema(
           "Ovulation Calendar",

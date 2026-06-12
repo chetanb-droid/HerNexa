@@ -116,17 +116,19 @@ export default function OvulationCalculator() {
           animate={{ opacity: 1, scale: 1 }}
           className="space-y-8"
         >
-          <div className="bg-primary text-white p-10 rounded-[3rem] text-center shadow-lg shadow-primary/20 relative overflow-hidden">
+          <div className="bg-rose-500 p-10 rounded-[3rem] border border-rose-600 text-center shadow-lg shadow-rose-500/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
             
-            <div className="flex justify-center mb-6 text-white">
-              <Sparkles className="w-16 h-16" />
+            <div className="flex justify-center mb-6 relative z-10">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Heart className="w-10 h-10 text-white fill-current" />
+              </div>
             </div>
-            <p className="text-sm font-bold uppercase tracking-widest text-primary-light mb-2 relative z-10">Estimated Ovulation Date</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-rose-100 mb-2 relative z-10">Estimated Ovulation Date</p>
             <h2 className="text-5xl md:text-6xl font-serif font-bold text-white relative z-10">{formatDate(results.ovulationDate)}</h2>
             <p className="text-white/90 mt-4 font-medium flex items-center justify-center gap-2 relative z-10">
-              <Heart className="w-4 h-4" />
+              <Sparkles className="w-4 h-4" />
               Peak Fertility Window
             </p>
           </div>

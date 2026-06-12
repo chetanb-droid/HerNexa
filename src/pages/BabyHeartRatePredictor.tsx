@@ -39,9 +39,9 @@ export default function BabyHeartRatePredictor() {
 
   return (
     <CalculatorLayout
-      title="Fetal Heart Rate Gender Myth Predictor"
-      description="Explore the popular folklore connecting fetal heart rate to gender, and learn the clinical realities of fetal cardiac monitoring."
-      intro="One of the most enduring pregnancy myths suggests that a fetal heart rate above 140 BPM indicates a female, while a rate below 140 BPM indicates a male. While this tool calculates the prediction based on the folklore, we also provide the clinical context regarding what fetal heart rate actually signifies."
+      title="Fetal Heart Rate Gender Myth Predictor | Is it a Boy or Girl Test"
+      description="Explore the popular folklore connecting fetal heart rate to gender. Try our is it a boy or girl test based on the heart rate myth and learn clinical facts."
+      intro="One of the most enduring pregnancy myths suggests that a fetal heart rate above 140 BPM indicates a female, while a rate below 140 BPM indicates a male. While this tool acts as a fun <strong>is it a boy or girl test</strong> based on the folklore, we also provide the clinical context regarding what fetal heart rate actually signifies."
       schema={[
         generateSoftwareAppSchema("Fetal Heart Rate Predictor", "Predict baby gender based on heart rate myth", "https://femhealth.com/baby-heart-rate-predictor"),
         generateFAQSchema(faqs),

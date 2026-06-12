@@ -85,9 +85,9 @@ export default function PregnancyWeightGainCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Pregnancy Weight Gain Tracker"
-      description="Track your healthy pregnancy weight gain based on your pre-pregnancy BMI. Get personalized recommendations for every week of your pregnancy. Expert guidance for a healthy baby."
-      intro={<>Healthy weight gain is a vital part of a successful pregnancy, supporting fetal growth, placental development, and maternal fat stores for breastfeeding. Our clinical calculator uses the Institute of Medicine (IOM) guidelines to provide a personalized weight gain trajectory based on your pre-pregnancy Body Mass Index (<Link to="/womens-bmi-calculator" className="text-primary hover:underline font-medium">BMI</Link>) and current gestational age.</>}
+      title="Pregnancy Weight Gain Calculator | Pregnancy BMI Calculator"
+      description="Track your pregnancy weight gain based on BMI with our pregnancy weight gain calculator. Your personalized pregnancy weight tracker."
+      intro={<>Healthy weight gain is a vital part of a successful pregnancy, supporting fetal growth, placental development, and maternal fat stores for breastfeeding. Our <strong>pregnancy weight gain calculator</strong> acts as a clinical <strong>pregnancy bmi calculator</strong>, using the Institute of Medicine (IOM) guidelines to provide a personalized weight gain trajectory based on your pre-pregnancy BMI. Use this tool as your weekly <strong>pregnancy weight tracker</strong> to ensure you stay within healthy limits.</>}
       schema={[
         generateSoftwareAppSchema(
           "Clinical Pregnancy Weight Gain Tracker",

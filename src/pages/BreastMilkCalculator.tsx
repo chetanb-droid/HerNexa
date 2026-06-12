@@ -82,9 +82,9 @@ export default function BreastMilkCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Infant Enteral Feeding Calculator"
-      description="Calculate estimated daily breast milk or formula volume requirements based on infant weight and age using pediatric clinical guidelines."
-      intro="Determining adequate enteral intake is a primary concern in pediatric nutrition. This clinical tool calculates the estimated daily volume requirements for both human milk and infant formula, utilizing standard weight-based pediatric formulas to support optimal growth trajectories."
+      title="Clinical Infant Enteral Feeding Calculator | Feeding Calculator"
+      description="Calculate estimated daily breast milk or formula volume requirements using our baby feeding calculator based on infant weight and age."
+      intro="Determining adequate enteral intake is a primary concern in pediatric nutrition. This clinical tool acts as a <strong>feeding calculator</strong>, estimating the daily volume requirements for both human milk and infant formula, utilizing standard weight-based pediatric formulas to support optimal growth trajectories."
       schema={[
         generateSoftwareAppSchema(
           "Clinical Infant Feeding Calculator",

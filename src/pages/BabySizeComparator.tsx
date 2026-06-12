@@ -59,9 +59,9 @@ export default function BabySizeComparator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Fetal Development & Size Tracker"
-      description="Track your baby's weekly growth milestones. Compare fetal size to everyday objects and understand key physiological developments throughout pregnancy."
-      intro="Understanding fetal development week-by-week provides valuable insight into the physiological changes occurring during pregnancy. This tool translates clinical biometry (average length and weight) into relatable visual comparisons while highlighting critical milestones in organogenesis and neurodevelopment."
+      title="Clinical Fetal Development & Size Tracker | Baby Size Comparator"
+      description="Track baby size by week using our pregnancy baby size comparator. Compare fetal size to everyday objects and predict baby gender based on heart rate myth."
+      intro="Understanding fetal development week-by-week provides valuable insight into the physiological changes occurring during pregnancy. This tool acts as a <strong>baby size comparator</strong>, translating clinical biometry (average length and weight) into relatable visual comparisons while highlighting critical milestones in organogenesis and neurodevelopment. Note that while fun, things like trying to <strong>predict baby gender based on heart rate myth</strong> are not scientifically accurate compared to clinical measurements."
       schema={[
         generateSoftwareAppSchema(
           "Clinical Fetal Development Tracker",

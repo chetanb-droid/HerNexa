@@ -56,8 +56,8 @@ export default function FertilityWindowCalculator() {
   return (
     <CalculatorLayout
       title="Fertile Window Calculator | Pregnancy Probability Calculator Calendar"
-      description="Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant."
-      intro={<>Timing is everything when trying to conceive. Our <strong>fertile window calculator</strong> pinpoints your most fertile days based on your menstrual cycle, helping you identify the exact 6-day <strong>conception window</strong> when pregnancy is possible. By adjusting for your specific <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link> and luteal phase, we provide a more personalized estimate than standard <strong>fertility calculator</strong> tools. If you've been wondering, "<strong>what are my chances of getting pregnant calculator</strong>," this tool will give you clear insights.</>}
+      description="Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant calculator estimates."
+      intro={<>Timing is everything when trying to conceive. Our <strong>fertile window calculator</strong> pinpoints your most fertile days based on your menstrual cycle, helping you identify the exact 6-day <strong>conception window</strong> when pregnancy is possible. By adjusting for your specific <Link to="/menstrual-cycle-length-calculator" className="text-primary hover:underline font-medium">cycle length</Link> and luteal phase, we provide a more personalized estimate than standard <strong>fertility calculator</strong> tools. If you've been wondering, "<strong>what are my chances of getting pregnant calculator</strong>," this tool will give you clear insights. You can also view this as a <strong>pregnancy probability calculator</strong> to understand your peak fertile days.</>}
       schema={[
         generateSoftwareAppSchema(
           "Fertility Window Calculator",
@@ -115,20 +115,26 @@ export default function FertilityWindowCalculator() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-8"
         >
-          <div className="bg-rose-50 p-10 rounded-[2.5rem] border border-rose-100 text-center shadow-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-6 opacity-10"><Heart className="w-32 h-32 fill-current text-rose-500" /></div>
-            <div className="flex justify-center mb-4 text-rose-500"><Zap className="w-12 h-12 fill-current" /></div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-rose-800 mb-3">Your Most Fertile Window</p>
-            <div className="flex items-center justify-center gap-4 text-3xl md:text-5xl font-serif font-bold text-rose-950">
+          <div className="bg-rose-500 p-10 rounded-[3rem] border border-rose-600 text-center shadow-lg shadow-rose-500/20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
+            
+            <div className="flex justify-center mb-6 relative z-10">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <Heart className="w-10 h-10 text-white fill-current" />
+              </div>
+            </div>
+            <p className="text-sm font-bold uppercase tracking-widest text-rose-100 mb-2 relative z-10">Your Most Fertile Window</p>
+            <div className="flex items-center justify-center gap-4 text-3xl md:text-5xl font-serif font-bold text-white relative z-10">
               <span>{formatDate(results.fertileStart)}</span>
-              <ArrowRight className="w-6 h-6 text-rose-400" />
+              <ArrowRight className="w-6 h-6 text-rose-200" />
               <span>{formatDate(results.fertileEnd)}</span>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <span className="px-4 py-2 bg-rose-100 text-rose-700 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 relative z-10">
+              <span className="px-4 py-2 bg-white/20 text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 backdrop-blur-sm">
                 <Sparkles className="w-3 h-3" /> Peak: {formatDate(results.peakDays[0])} - {formatDate(results.peakDays[1])}
               </span>
-              <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+              <span className="px-4 py-2 bg-white/20 text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 backdrop-blur-sm">
                 <TrendingUp className="w-3 h-3" /> High: {formatDate(results.highDays[0])} - {formatDate(results.highDays[1])}
               </span>
             </div>

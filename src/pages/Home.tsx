@@ -200,7 +200,7 @@ export default function Home() {
               desc: "A probability of pregnancy calculator that estimates your chances of getting pregnant by age.",
               path: "/time-to-conceive-calculator",
               icon: <Heart className="w-6 h-6" />,
-              color: "bg-[#E91E63] text-white"
+              color: "bg-rose-500 text-white"
             }
           ].map((tool, i) => (
             <Link key={i} to={tool.path} className="group bg-white border border-neutral-100 rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/20 transition-all" aria-label={`Go to ${tool.title}`}>

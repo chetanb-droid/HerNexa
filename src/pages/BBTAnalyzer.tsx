@@ -48,9 +48,9 @@ export default function BBTAnalyzer() {
 
   return (
     <CalculatorLayout
-      title="BBT Analyzer & Charting Tool"
-      description="Analyze your Basal Body Temperature patterns to confirm ovulation. Track your thermal shift and luteal phase with our advanced charting tool."
-      intro={<>Tracking your Basal Body Temperature (BBT) is one of the most reliable ways to confirm that <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation</Link> has actually occurred. Unlike ovulation tests which predict when ovulation *might* happen, BBT confirms it *after* the fact. This tool helps you visualize your temperature shift and identify your fertile patterns.</>}
+      title="BBT Analyzer & Charting Tool | Fertility Calculator"
+      description="Analyze your Basal Body Temperature patterns to confirm ovulation. Track your thermal shift with our advanced charting tool and fertility calculator."
+      intro={<>Tracking your Basal Body Temperature (BBT) is one of the most reliable ways to confirm that <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">ovulation</Link> has actually occurred. Unlike ovulation tests which predict when ovulation *might* happen, BBT confirms it *after* the fact. This tool goes beyond a basic <strong>fertility calculator</strong>, helping you visualize your temperature shift and identify your unique fertile patterns to better understand your reproductive health.</>}
       schema={[
         generateSoftwareAppSchema("BBT Analyzer", "Analyze BBT patterns and confirm ovulation", "https://femhealth.com/bbt-analyzer"),
         generateFAQSchema(faqs),

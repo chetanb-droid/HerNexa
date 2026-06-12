@@ -46,9 +46,9 @@ export default function BishopScoreCalculator() {
 
   return (
     <CalculatorLayout
-      title="Bishop Score Calculator"
-      description="Assess cervical ripeness to predict the likelihood of a successful labor induction. Expert guidance on labor readiness and cervical health."
-      intro="The Bishop Score is the gold standard used by obstetricians and midwives to determine how prepared your body is for labor. By evaluating five key cervical factors, this tool helps you understand your 'readiness' score and what it might mean for a potential induction."
+      title="Bishop Score Calculator | Due Date Calculator"
+      description="Assess cervical ripeness to predict labor induction success. Expert guidance on labor readiness, tracking progression, and using a due date calculator."
+      intro="The Bishop Score is the gold standard used by obstetricians and midwives to determine how prepared your body is for labor, often monitored closely as you approach your date from a <strong>due date calculator</strong>. By evaluating five key cervical factors, this tool helps you understand your 'readiness' score and what it might mean for a potential induction."
       schema={[
         generateSoftwareAppSchema(
           "Bishop Score Calculator", 

@@ -66,9 +66,9 @@ export default function BabyGrowthPercentile() {
 
   return (
     <CalculatorLayout
-      title="Baby Growth Percentile Calculator"
-      description="Track your baby's weight, height, and head circumference against WHO growth standards. Understand your baby's growth curve and milestones."
-      intro="Monitoring your baby's growth is a vital part of tracking their overall health and development. This tool uses World Health Organization (WHO) growth standards to help you understand where your baby's measurements fall compared to other healthy infants of the same age and sex."
+      title="Baby Growth Percentile Calculator | Baby Size Comparator"
+      description="Track your baby's weight and height against WHO growth standards. Compare percentiles with our baby size comparator and understand sleep schedules."
+      intro="Monitoring your baby's growth is a vital part of tracking their overall health and development. This tool uses World Health Organization (WHO) growth standards to act as a <strong>baby size comparator</strong>, helping you understand where your baby's measurements fall compared to other healthy infants of the same age and sex. Remember that growth is just one aspect of development; tracking your baby's <strong>baby sleep schedule</strong> is also important for their well-being."
       schema={[
         generateSoftwareAppSchema(
           "Baby Growth Percentile Calculator", 

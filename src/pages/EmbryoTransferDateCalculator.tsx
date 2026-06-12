@@ -47,9 +47,9 @@ export default function EmbryoTransferDateCalculator() {
 
   return (
     <CalculatorLayout
-      title="IVF Embryo Transfer Due Date Calculator"
-      description="Calculate your exact pregnancy due date and important milestones based on your IVF embryo transfer date. Precise IVF pregnancy tracking."
-      intro={<>If you conceived through IVF (In Vitro Fertilization) or FET (Frozen Embryo Transfer), standard due date calculators using your last menstrual period won't be accurate. This specialized calculator uses your transfer date and embryo age to provide the most mathematically precise <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> possible.</>}
+      title="IVF Due Date Calculator | Embryo Transfer Due Date"
+      description="Calculate your exact pregnancy due date using our IVF due date calculator. Predict your fet due date and ivf pregnancy tracker milestones based on transfer."
+      intro={<>If you conceived through IVF (In Vitro Fertilization) or FET (Frozen Embryo Transfer), standard subjective tools using your last menstrual period won't be accurate. This specialized <strong>IVF due date calculator</strong> uses your transfer date and embryo age to provide the most mathematically precise <strong>ivf pregnancy calculator</strong> estimates. Whether you need a <strong>fet due date calculator</strong> or a general <strong>ivf calculator</strong>, tracking your <Link to="/due-date-calculator" className="text-primary hover:underline font-medium">due date</Link> with precision is critical for the next milestones.</>}
       schema={[
         generateSoftwareAppSchema(
           "Embryo Transfer Date Calculator",

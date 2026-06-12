@@ -71,9 +71,9 @@ export default function MiscarriageRiskCalculator() {
 
   return (
     <CalculatorLayout
-      title="Clinical Miscarriage Risk Assessment"
-      description="Estimate your statistical risk of miscarriage based on maternal age, health history, and clinical factors. Understand how risk decreases as pregnancy progresses."
-      intro="Understanding your risk of miscarriage can help you have informed discussions with your healthcare provider. This calculator uses clinical data and ACOG (American College of Obstetricians and Gynecologists) statistics to estimate the probability of pregnancy loss. We focus on the probability of a healthy pregnancy, which remains high for the vast majority of women."
+      title="Miscarriage Probability Calculator Online | Assess Risk Factors"
+      description="Calculate your miscarriage by day calculator and check miscarriage probability percentage calculator easily. Trusted tool."
+      intro="Understanding your risk of miscarriage can help you have informed discussions with your healthcare provider. This <strong>miscarriage probability calculator online</strong> uses clinical data and ACOG (American College of Obstetricians and Gynecologists) statistics to estimate the probability of pregnancy loss. Use this as your <strong>miscarriage by day calculator</strong> to see how odds improve over time, providing a clear <strong>miscarriage probability percentage calculator</strong> value. We focus on the probability of a healthy pregnancy, which remains high for the vast majority of women."
       schema={[
         generateSoftwareAppSchema(
           "Clinical Miscarriage Risk Assessment",

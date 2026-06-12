@@ -56,7 +56,7 @@ export default function TimeToConceiveCalculator() {
     <CalculatorLayout
       title="Chances of Getting Pregnant Calculator | Probability of Pregnancy"
       description="Estimate your probability of pregnancy based on your age, health, and how long you've been trying. Accurate chances of getting pregnant calculator."
-      intro="How long does it take to get pregnant? Our time to conceive calculator uses statistical data to estimate your chances of conception over the next 6 to 12 months. This serves as a reliable <strong>chance of getting pregnant by age calculator</strong>. While every couple is unique, understanding the averages can help you set realistic expectations and know when it's time to seek professional guidance. Use this <strong>chances of getting pregnant calculator</strong> to see your <strong>probability of pregnancy calculator</strong> results instantly."
+      intro="How long does it take to get pregnant? Our time to conceive calculator uses statistical data to estimate your chances of conception over the next 6 to 12 months. This serves as a reliable <strong>chance of getting pregnant by age calculator</strong>. While every couple is unique, understanding the averages can help you set realistic expectations and know when it's time to seek professional guidance. Use this <strong>what are my chances of getting pregnant calculator</strong> to see your <strong>probability of pregnancy calculator</strong> results instantly."
       schema={[
         generateSoftwareAppSchema(
           "Time to Conceive Calculator",

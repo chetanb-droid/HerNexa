@@ -59,9 +59,9 @@ export default function PCOSCalculator() {
 
   return (
     <CalculatorLayout
-      title="PCOS Symptom Checker & Predictor"
-      description="Assess your risk for Polycystic Ovary Syndrome (PCOS) based on common symptoms. Get expert guidance on next steps and diagnosis. Essential women's health tracking."
-      intro="Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder affecting 1 in 10 women of childbearing age. Our PCOS symptom checker helps you evaluate your risk by analyzing common indicators like cycle regularity, skin changes, and hair growth patterns. Understanding your risk profile is the first step toward effective management."
+      title="PCOS Symptom Quiz | PCOS Test Online"
+      description="Take our free PCOS test online to check your symptoms. This PCOS symptoms quiz helps evaluate your risk for Polycystic Ovary Syndrome."
+      intro="Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder affecting 1 in 10 women of childbearing age. If you're looking for a <strong>free PCOS test</strong>, our <strong>PCOS test online</strong> acts as a comprehensive symptom checker to help you evaluate your risk. By taking this <strong>PCOS symptoms quiz</strong>, you can analyze common indicators like cycle regularity, skin changes, and hair growth patterns. Understanding your risk profile is the first step toward effective management."
       schema={[
         generateSoftwareAppSchema(
           "PCOS Symptom Checker",

@@ -50,8 +50,8 @@ export default function BreastfeedingCalorieCalculator() {
   return (
     <CalculatorLayout
       title="Breastfeeding Calorie Calculator"
-      description="Calculate your daily calorie needs while breastfeeding. Get personalized recommendations based on your activity level and breastfeeding type. Essential nutrition tracking for nursing mothers."
-      intro="Producing breast milk is an energy-intensive process for your body. Our breastfeeding calorie calculator helps you determine how many additional calories you need to support both your own health and your baby's nutrition during the postpartum period."
+      description="Calculate your daily calorie needs while breastfeeding and determine your chances of getting pregnant calculator for postpartum fertility. Essential nutrition tracking."
+      intro="Producing breast milk is an energy-intensive process for your body. Our breastfeeding calorie calculator helps you determine how many additional calories you need to support both your own health and your baby's nutrition during the postpartum period. Mothers also frequently use our <strong>chances of getting pregnant calculator</strong> to understand their return to fertility while breastfeeding."
       schema={[
         generateSoftwareAppSchema(
           "Breastfeeding Calorie Calculator",

@@ -86,9 +86,9 @@ export default function MenstrualCycleLengthCalculator() {
 
   return (
     <CalculatorLayout
-      title="Menstrual Cycle Length Calculator"
-      description="Calculate your average menstrual cycle length and determine if your periods are regular, short, or long. Foundation for tracking reproductive health."
-      intro={<>Knowing your exact menstrual cycle length is the foundation of tracking your reproductive health. By analyzing the dates of your last few <Link to="/period-calculator" className="text-primary hover:underline font-medium">periods</Link>, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique rhythm.</>}
+      title="Cycle Length Calculator | Irregular Menstrual Cycle Calculator"
+      description="Use our cycle length calculator to determine if your menstrual cycle is regular. Highly accurate irregular menstrual cycle calculator."
+      intro={<>Knowing your exact menstrual cycle length is the foundation of tracking your reproductive health. Whether you need a standard <strong>cycle length calculator</strong> or an <strong>irregular menstrual cycle calculator</strong>, this tool helps you find your rhythm. By analyzing the dates of your last few <Link to="/period-calculator" className="text-primary hover:underline font-medium">periods</Link>, our calculator identifies your average cycle length, checks for irregularities, and helps you understand your body's unique timeline.</>}
       schema={[
         generateSoftwareAppSchema(
           "Menstrual Cycle Length Calculator",
@@ -146,13 +146,18 @@ export default function MenstrualCycleLengthCalculator() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-8"
         >
-          <div className="text-center space-y-4">
-            <p className="text-primary font-bold uppercase tracking-widest text-sm">Average Cycle Length</p>
-            <h2 className="text-5xl md:text-6xl font-serif font-bold text-text-dark">{results.averageLength} Days</h2>
-            <p className={`${results.color} font-bold flex items-center justify-center gap-2 text-sm`}>
-              <Activity className="w-5 h-5" />
-              Status: {results.status}
-            </p>
+          <div className="bg-rose-500 p-10 rounded-[3rem] border border-rose-600 text-center shadow-lg shadow-rose-500/20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
+            
+            <p className="text-rose-100 font-bold uppercase tracking-widest text-sm relative z-10 mb-2">Average Cycle Length</p>
+            <h2 className="text-5xl md:text-6xl font-serif font-bold text-white relative z-10">{results.averageLength} Days</h2>
+            <div className="flex justify-center mt-4">
+              <span className={`px-4 py-2 bg-white/20 text-white rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 backdrop-blur-sm relative z-10`}>
+                <Activity className="w-4 h-4" />
+                Status: {results.status}
+              </span>
+            </div>
           </div>
 
           <div className="bg-white p-8 rounded-[2rem] border border-primary-light shadow-sm space-y-6">

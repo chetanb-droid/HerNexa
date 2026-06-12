@@ -68,9 +68,9 @@ export default function BloodVolumeCalculator() {
 
   return (
     <CalculatorLayout
-      title="Pregnancy Blood Volume Calculator"
-      description="Estimate the increase in your blood volume during pregnancy. Understand how your body adapts to support your growing baby. Essential pregnancy health tracking."
-      intro="During pregnancy, your body undergoes remarkable changes to support your developing baby. One of the most significant adaptations is a massive increase in blood volume, which helps provide oxygen and nutrients to the placenta. Our calculator estimates this increase based on your weight and stage of pregnancy."
+      title="Pregnancy Blood Volume Calculator | Pregnancy Symptoms"
+      description="Estimate your pregnancy blood volume increase. Understand how your body adapts to support your baby and what pregnancy symptoms to expect."
+      intro="During pregnancy, your body undergoes remarkable changes to support your developing baby. One of the most significant adaptations is a massive increase in blood volume, which helps provide oxygen and nutrients to the placenta, and can contribute to various common <strong>pregnancy symptoms</strong>. Our calculator estimates this increase based on your weight and stage of pregnancy."
       schema={[
         generateSoftwareAppSchema(
           "Blood Volume Calculator",

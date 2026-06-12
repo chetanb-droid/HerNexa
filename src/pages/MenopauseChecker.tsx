@@ -62,9 +62,9 @@ export default function MenopauseChecker() {
 
   return (
     <CalculatorLayout
-      title="Menopause Symptom Checker"
-      description="Assess your menopause stage based on your age and common symptoms. Understand the transition into perimenopause and beyond. Essential women's health tracking."
-      intro="Menopause is a natural biological process, but the transition can be challenging. Our menopause checker helps you identify where you are in your journey by analyzing common symptoms like hot flashes, sleep issues, and cycle changes."
+      title="Menopause Test Online | Menopause Age Calculator UK"
+      description="Take our free menopause test online to check your symptoms. Use our menopause age calculator and menopause checker to understand your transition."
+      intro="Menopause is a natural biological process, but the transition can be challenging. Our <strong>menopause checker</strong> acts as a comprehensive <strong>menopause test online</strong> to help you identify where you are in your journey. Find out if you are experiencing perimenopause by using our <strong>menopause age calculator</strong>, which analyzes common symptoms like hot flashes, sleep issues, and cycle changes."
       schema={[
         generateSoftwareAppSchema(
           "Menopause Symptom Checker",
@@ -97,9 +97,12 @@ export default function MenopauseChecker() {
       ]}
       results={results && (
         <div className="space-y-8">
-          <div className="text-center space-y-2">
-            <p className="text-primary font-bold uppercase tracking-widest text-sm">Your Likely Stage</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-text-dark">
+          <div className="bg-rose-500 p-10 rounded-[3rem] border border-rose-600 text-center shadow-lg shadow-rose-500/20 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
+            
+            <p className="text-rose-100 font-bold uppercase tracking-widest text-sm relative z-10 mb-2">Your Likely Stage</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white relative z-10">
               {results.stage}
             </h2>
           </div>

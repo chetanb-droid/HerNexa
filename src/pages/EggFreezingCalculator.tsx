@@ -52,9 +52,9 @@ export default function EggFreezingCalculator() {
 
   return (
     <CalculatorLayout
-      title="Egg Freezing Success Estimator"
-      description="Estimate your probability of a future live birth based on your age at freezing and the number of mature eggs retrieved."
-      intro="Egg freezing is a powerful tool for fertility preservation, but understanding the statistics is key to making informed decisions. Our estimator uses published clinical data to help you understand how age and egg quantity impact your future chances of a live birth."
+      title="Egg Freezing Calculator | Egg Freezing Success Rate Calculator"
+      description="Calculate your egg freezing success probability based on AMH and age. Use our egg freezing success rate calculator to estimate chances."
+      intro="Egg freezing is a powerful tool for fertility preservation, but understanding the statistics is key to making informed decisions. Our <strong>egg freezing calculator</strong> uses published clinical data—often correlating with an <strong>egg freezing calculator amh</strong> level—to help you understand how age and egg quantity impact your future chances. This <strong>egg freezing success rate calculator</strong> provides a probability of a live birth."
       schema={[
         generateSoftwareAppSchema("Egg Freezing Calculator", "Estimate egg freezing success probability", "https://femhealth.com/egg-freezing-calculator"),
         generateFAQSchema(faqs),

@@ -68,9 +68,9 @@ export default function BabySleepSchedule() {
 
   return (
     <CalculatorLayout
-      title="Clinical Infant Sleep & Wake Window Guide"
-      description="Understand your baby's age-appropriate sleep needs, wake windows, and sample schedules. Expert guidance on infant sleep hygiene and neurodevelopment."
-      intro="Sleep is a critical physiological process essential for infant neurodevelopment, physical growth, and emotional regulation. However, infant sleep architecture changes rapidly in the first two years. This clinical tool provides evidence-based recommendations for sleep duration and 'wake windows' based on your infant's developmental stage, supporting the establishment of healthy circadian rhythms."
+      title="Clinical Infant Sleep & Wake Window Guide | Baby Sleep Schedule"
+      description="Understand your baby sleep schedule needs, wake windows, and sample schedules. Expert guidance on infant sleep hygiene and baby growth percentiles."
+      intro="Sleep is a critical physiological process essential for infant neurodevelopment, physical growth, and emotional regulation. However, infant sleep architecture changes rapidly in the first two years. This clinical tool provides evidence-based recommendations to build your <strong>baby sleep schedule</strong>, outlining sleep duration and 'wake windows' based on your infant's developmental stage. This can be used alongside a <strong>baby growth percentile</strong> chart to track overall well-being."
       schema={[
         generateSoftwareAppSchema(
           "Clinical Baby Sleep Schedule Guide", 
