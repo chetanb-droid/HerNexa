@@ -89,13 +89,13 @@ export default function BreastMilkCalculator() {
         generateSoftwareAppSchema(
           "Clinical Infant Feeding Calculator",
           "Calculate daily breast milk and formula requirements for infants based on pediatric guidelines.",
-          "https://femhealth.com/breast-milk-calculator"
+          "https://hernexa.com/breast-milk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Infant Feeding Calculator", item: "https://femhealth.com/breast-milk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Infant Feeding Calculator", item: "https://hernexa.com/breast-milk-calculator" }
         ])
       ]}
       howItWorks={

@@ -88,13 +88,13 @@ export default function WomensBMICalculator() {
         generateSoftwareAppSchema(
           "Women's BMI Calculator",
           "Calculate Body Mass Index and health ratios for women.",
-          "https://femhealth.com/womens-bmi-calculator"
+          "https://hernexa.com/womens-bmi-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Women's BMI Calculator", item: "https://femhealth.com/womens-bmi-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Women's BMI Calculator", item: "https://hernexa.com/womens-bmi-calculator" }
         ])
       ]}
       howItWorks={

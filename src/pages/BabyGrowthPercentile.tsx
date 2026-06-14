@@ -73,13 +73,13 @@ export default function BabyGrowthPercentile() {
         generateSoftwareAppSchema(
           "Baby Growth Percentile Calculator", 
           "Calculate baby weight, height, and head circumference percentiles based on WHO standards.", 
-          "https://femhealth.com/baby-growth-percentile"
+          "https://hernexa.com/baby-growth-percentile"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Baby Growth Percentile", item: "https://femhealth.com/baby-growth-percentile" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Baby Growth Percentile", item: "https://hernexa.com/baby-growth-percentile" }
         ])
       ]}
       faqs={faqs}

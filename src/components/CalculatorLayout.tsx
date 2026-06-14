@@ -43,13 +43,13 @@ export default function CalculatorLayout({
       <nav aria-label="Breadcrumb" className="py-4">
         <ol className="flex items-center space-x-2 text-xs font-bold text-text-medium uppercase tracking-wider">
           <li>
-            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            <a href="/" className="hover:text-primary transition-colors">Home</a>
           </li>
           <li>
             <span className="text-text-medium/50 mx-1">/</span>
           </li>
           <li>
-            <Link to="/tools" className="hover:text-primary transition-colors">Tools</Link>
+            <a href="/tools" className="hover:text-primary transition-colors">Tools</a>
           </li>
           <li>
             <span className="text-text-medium/50 mx-1">/</span>
@@ -119,14 +119,14 @@ export default function CalculatorLayout({
           </div>
           <div className="grid grid-cols-1 gap-4">
             {relatedTools.map((tool, idx) => (
-              <Link 
+              <a
                 key={idx} 
-                to={tool.path}
+                href={tool.path}
                 className="bg-white p-6 rounded-2xl border border-border/50 hover:border-primary hover:shadow-xl hover:shadow-primary/5 transition-all group flex items-center justify-between"
               >
                 <span className="font-bold text-text-dark group-hover:text-primary transition-colors">{tool.name}</span>
                 <ChevronLeft className="w-4 h-4 rotate-180 text-text-medium group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>

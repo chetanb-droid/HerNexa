@@ -85,13 +85,13 @@ export default function PeriodSymptomTracker() {
         generateSoftwareAppSchema(
           "Period Symptom Tracker",
           "Analyze menstrual symptom severity and impact.",
-          "https://femhealth.com/period-symptom-tracker"
+          "https://hernexa.com/period-symptom-tracker"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Period Symptom Tracker", item: "https://femhealth.com/period-symptom-tracker" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Period Symptom Tracker", item: "https://hernexa.com/period-symptom-tracker" }
         ])
       ]}
       howItWorks={

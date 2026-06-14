@@ -34,12 +34,12 @@ export default function VaginalPHGuide() {
       description="Understand what your vaginal pH levels mean for your overall health."
       intro="Your vaginal pH is a key indicator of your vaginal microbiome health. This tool helps you interpret your pH test results."
       schema={[
-        generateSoftwareAppSchema("Vaginal pH Guide", "Guide for vaginal pH", "https://femhealth.com/vaginal-ph-guide"),
+        generateSoftwareAppSchema("Vaginal pH Guide", "Guide for vaginal pH", "https://hernexa.com/vaginal-ph-guide"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Vaginal pH", item: "https://femhealth.com/vaginal-ph-guide" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Vaginal pH", item: "https://hernexa.com/vaginal-ph-guide" }
         ])
       ]}
       faqs={faqs}

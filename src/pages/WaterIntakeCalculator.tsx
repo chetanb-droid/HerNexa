@@ -70,13 +70,13 @@ export default function WaterIntakeCalculator() {
         generateSoftwareAppSchema(
           "Water Intake Calculator",
           "Calculate personalized daily water intake needs.",
-          "https://femhealth.com/water-intake-calculator"
+          "https://hernexa.com/water-intake-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Water Intake Calculator", item: "https://femhealth.com/water-intake-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Water Intake Calculator", item: "https://hernexa.com/water-intake-calculator" }
         ])
       ]}
       howItWorks={

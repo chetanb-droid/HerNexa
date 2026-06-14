@@ -68,12 +68,12 @@ export default function SolidFoodTimeline() {
       description="Evidence-based timeline for introducing complementary foods. Understand developmental readiness, appropriate textures, and allergen introduction."
       intro="The transition to complementary foods (solids) is a critical period for nutritional intake, oral-motor development, and the establishment of lifelong dietary habits. This clinical guide provides age-appropriate recommendations for food textures, developmental milestones, and safe allergen introduction based on current pediatric guidelines."
       schema={[
-        generateSoftwareAppSchema("Clinical Solid Food Timeline", "Guide for starting solids and complementary feeding", "https://femhealth.com/solid-food-timeline"),
+        generateSoftwareAppSchema("Clinical Solid Food Timeline", "Guide for starting solids and complementary feeding", "https://hernexa.com/solid-food-timeline"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Solid Food Timeline", item: "https://femhealth.com/solid-food-timeline" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Solid Food Timeline", item: "https://hernexa.com/solid-food-timeline" }
         ])
       ]}
       faqs={faqs}

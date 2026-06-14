@@ -1,0 +1,53 @@
+---
+import '../index.css';
+import ReactLayout from '../components/Layout.tsx';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  image?: string;
+}
+
+const { 
+  title = "HerNexa - Women's Wellness & Health Insights", 
+  description = "Empowering women with expert health advice, wellness tips, and medical insights. Your global resource for evergreen health content.",
+  canonical = "https://hernexa.com",
+  image = "https://picsum.photos/seed/hernexa/1200/630"
+} = Astro.props;
+
+// Determine current URL for canonical fallback
+const currentUrl = Astro.url.href;
+const finalCanonical = canonical || currentUrl;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={finalCanonical} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={finalCanonical} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  </head>
+  <body class="bg-bg-light text-text-medium font-sans antialiased min-h-screen flex flex-col">
+    <ReactLayout client:load>
+      <slot />
+    </ReactLayout>
+  </body>
+</html>

@@ -109,13 +109,13 @@ export default function ThyroidRiskCalculator() {
         generateSoftwareAppSchema(
           "Thyroid Risk Calculator",
           "Assess symptoms for hypo and hyperthyroidism.",
-          "https://femhealth.com/thyroid-risk-calculator"
+          "https://hernexa.com/thyroid-risk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Thyroid Risk Calculator", item: "https://femhealth.com/thyroid-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Thyroid Risk Calculator", item: "https://hernexa.com/thyroid-risk-calculator" }
         ])
       ]}
       howItWorks={

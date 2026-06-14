@@ -75,13 +75,13 @@ export default function BloodVolumeCalculator() {
         generateSoftwareAppSchema(
           "Blood Volume Calculator",
           "Estimate pregnancy blood volume increase.",
-          "https://femhealth.com/blood-volume-calculator"
+          "https://hernexa.com/blood-volume-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Blood Volume Calculator", item: "https://femhealth.com/blood-volume-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Blood Volume Calculator", item: "https://hernexa.com/blood-volume-calculator" }
         ])
       ]}
       howItWorks={

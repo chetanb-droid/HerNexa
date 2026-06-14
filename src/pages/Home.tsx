@@ -272,6 +272,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SEO Semantic Content Block */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <div className="bg-white/50 rounded-3xl p-8 md:p-12 space-y-8 prose prose-lg prose-rose max-w-none text-text-medium border border-primary/5">
+          <h2 className="text-3xl font-serif font-bold text-text-dark">Your Trusted Pregnancy Probability & Fertility Journey Toolkit</h2>
+          <p>
+            Navigating the path to parenthood requires clarity, which is why HerNexa provides a comprehensive suite of clinical <strong>pregnancy probability calculators</strong> and tracking tools. Whether you need a <strong>chances of getting pregnant calculator</strong> to understand statistical data on <strong>getting pregnant by age</strong>, or a visual <strong>pregnancy probability calculator calendar</strong> to map out your upcoming cycles, our platform operates on evidence-based formulas used by global obstetricians.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div>
+              <h3 className="text-xl font-bold text-text-dark">Pinpoint the Best Time to Get Pregnant</h3>
+              <p>
+                Timing is the single most critical factor in conception. Our <strong>best time to get pregnant calculator</strong> (also known as an ovulation or fertile window calculator) analyzes your luteal phase and cycle length to dynamically calculate the 6-day window when an egg can be fertilized. This eliminates the guesswork of standard 28-day assumptions, giving you an accurate <strong>pregnancy chance calendar</strong> tailored precisely to your own body's rhythms.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-text-dark">Conception Limits & Averages By Age</h3>
+              <p>
+                A common question is, "what are my chances of getting pregnant?" Because fecundability (the monthly probability of conception) declines with maternal age, we built an intuitive <strong>chance of getting pregnant by age calculator</strong>. By inputting your age and how many months you have been actively trying, our <strong>probability of pregnancy calculator</strong> provides statistical insights on your likelihood to naturally conceive within the next 6 to 12 months.
+              </p>
+            </div>
+          </div>
+          <p className="border-t border-border pt-6 italic text-sm mt-8">
+            <strong>Disclaimer:</strong> While our <strong>chances of getting pregnant calculator</strong> and date prediction tools are built on rigorous clinical equations, they function as statistical guides, not personal medical diagnoses. Always seek advice from a qualified healthcare practitioner regarding your individual fertility journey.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section 
         className="max-w-4xl mx-auto px-4"

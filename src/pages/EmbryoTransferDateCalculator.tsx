@@ -54,13 +54,13 @@ export default function EmbryoTransferDateCalculator() {
         generateSoftwareAppSchema(
           "Embryo Transfer Date Calculator",
           "Calculate IVF due dates based on embryo transfer.",
-          "https://femhealth.com/embryo-transfer-date-calculator"
+          "https://hernexa.com/embryo-transfer-date-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Embryo Transfer Due Date", item: "https://femhealth.com/embryo-transfer-date-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Embryo Transfer Due Date", item: "https://hernexa.com/embryo-transfer-date-calculator" }
         ])
       ]}
       howItWorks={

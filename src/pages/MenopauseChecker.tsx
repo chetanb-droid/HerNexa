@@ -69,13 +69,13 @@ export default function MenopauseChecker() {
         generateSoftwareAppSchema(
           "Menopause Symptom Checker",
           "Assess menopause stage based on symptoms.",
-          "https://femhealth.com/menopause-calculator"
+          "https://hernexa.com/menopause-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Menopause Symptom Checker", item: "https://femhealth.com/menopause-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Menopause Symptom Checker", item: "https://hernexa.com/menopause-calculator" }
         ])
       ]}
       howItWorks={

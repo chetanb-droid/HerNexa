@@ -42,13 +42,13 @@ export default function ChineseGenderPredictor() {
         generateSoftwareAppSchema(
           "Chinese Gender Predictor",
           "Predict baby's gender using the Chinese Gender Chart.",
-          "https://femhealth.com/chinese-gender-predictor"
+          "https://hernexa.com/chinese-gender-predictor"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Chinese Gender Predictor", item: "https://femhealth.com/chinese-gender-predictor" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Chinese Gender Predictor", item: "https://hernexa.com/chinese-gender-predictor" }
         ])
       ]}
       howItWorks={

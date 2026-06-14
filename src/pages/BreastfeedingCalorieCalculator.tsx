@@ -56,13 +56,13 @@ export default function BreastfeedingCalorieCalculator() {
         generateSoftwareAppSchema(
           "Breastfeeding Calorie Calculator",
           "Calculate daily calorie requirements for breastfeeding mothers.",
-          "https://femhealth.com/breastfeeding-calorie-calculator"
+          "https://hernexa.com/breastfeeding-calorie-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Breastfeeding Calorie Calculator", item: "https://femhealth.com/breastfeeding-calorie-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Breastfeeding Calorie Calculator", item: "https://hernexa.com/breastfeeding-calorie-calculator" }
         ])
       ]}
       howItWorks={

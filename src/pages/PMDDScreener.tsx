@@ -67,13 +67,13 @@ export default function PMDDScreener() {
         generateSoftwareAppSchema(
           "PMDD Clinical Screener", 
           "Clinical screening tool for PMDD based on DSM-5 criteria.", 
-          "https://femhealth.com/pmdd-screener"
+          "https://hernexa.com/pmdd-screener"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "PMDD Clinical Screener", item: "https://femhealth.com/pmdd-screener" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "PMDD Clinical Screener", item: "https://hernexa.com/pmdd-screener" }
         ])
       ]}
       faqs={faqs}

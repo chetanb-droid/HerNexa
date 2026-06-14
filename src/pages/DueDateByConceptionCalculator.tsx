@@ -48,13 +48,13 @@ export default function DueDateByConceptionCalculator() {
         generateSoftwareAppSchema(
           "Clinical Due Date by Conception Calculator",
           "Calculate precise due dates from an exact conception or ovulation date.",
-          "https://femhealth.com/due-date-by-conception"
+          "https://hernexa.com/due-date-by-conception"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Due Date by Conception", item: "https://femhealth.com/due-date-by-conception" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Due Date by Conception", item: "https://hernexa.com/due-date-by-conception" }
         ])
       ]}
       howItWorks={

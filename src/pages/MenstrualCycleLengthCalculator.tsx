@@ -93,13 +93,13 @@ export default function MenstrualCycleLengthCalculator() {
         generateSoftwareAppSchema(
           "Menstrual Cycle Length Calculator",
           "Calculate average menstrual cycle length and regularity.",
-          "https://femhealth.com/menstrual-cycle-length-calculator"
+          "https://hernexa.com/menstrual-cycle-length-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Cycle Length Calculator", item: "https://femhealth.com/menstrual-cycle-length-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Cycle Length Calculator", item: "https://hernexa.com/menstrual-cycle-length-calculator" }
         ])
       ]}
       howItWorks={

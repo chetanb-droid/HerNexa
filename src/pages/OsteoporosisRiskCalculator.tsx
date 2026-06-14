@@ -89,13 +89,13 @@ export default function OsteoporosisRiskCalculator() {
         generateSoftwareAppSchema(
           "Osteoporosis Risk Calculator",
           "Assess risk for osteoporosis and bone fractures.",
-          "https://femhealth.com/osteoporosis-risk-calculator"
+          "https://hernexa.com/osteoporosis-risk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Osteoporosis Risk Calculator", item: "https://femhealth.com/osteoporosis-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Osteoporosis Risk Calculator", item: "https://hernexa.com/osteoporosis-risk-calculator" }
         ])
       ]}
       howItWorks={

@@ -92,13 +92,13 @@ export default function PregnancyWeightGainCalculator() {
         generateSoftwareAppSchema(
           "Clinical Pregnancy Weight Gain Tracker",
           "Personalized pregnancy weight gain tracker based on IOM guidelines.",
-          "https://femhealth.com/pregnancy-weight-gain-calculator"
+          "https://hernexa.com/pregnancy-weight-gain-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Pregnancy Weight Gain Calculator", item: "https://femhealth.com/pregnancy-weight-gain-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Pregnancy Weight Gain Calculator", item: "https://hernexa.com/pregnancy-weight-gain-calculator" }
         ])
       ]}
       howItWorks={

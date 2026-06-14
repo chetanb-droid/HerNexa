@@ -45,12 +45,12 @@ export default function EPDSScreener() {
       description="A clinical tool (EPDS) to help identify signs of postpartum depression."
       intro={<><Link to="/postpartum-depression-screener" className="text-primary hover:underline font-medium">Postpartum depression</Link> is common and treatable. This tool uses the Edinburgh Postnatal Depression Scale to help you screen for symptoms.</>}
       schema={[
-        generateSoftwareAppSchema("EPDS Screener", "Screener for postpartum depression", "https://femhealth.com/epds-screener"),
+        generateSoftwareAppSchema("EPDS Screener", "Screener for postpartum depression", "https://hernexa.com/epds-screener"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "EPDS Screener", item: "https://femhealth.com/epds-screener" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "EPDS Screener", item: "https://hernexa.com/epds-screener" }
         ])
       ]}
       faqs={faqs}

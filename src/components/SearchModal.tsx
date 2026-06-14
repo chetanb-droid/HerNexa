@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface SearchResult {
@@ -46,7 +45,6 @@ const allItems: SearchResult[] = [
 export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (query.trim().length > 1) {
@@ -60,7 +58,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
   }, [query]);
 
   const handleSelect = (path: string) => {
-    navigate(path);
+    window.location.href = path;
     onClose();
     setQuery('');
   };

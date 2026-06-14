@@ -82,13 +82,13 @@ export default function IVFSuccessRateCalculator() {
         generateSoftwareAppSchema(
           "Clinical IVF Success Rate Estimator",
           "Estimate IVF success and live birth probabilities.",
-          "https://femhealth.com/ivf-success-rate-calculator"
+          "https://hernexa.com/ivf-success-rate-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "IVF Success Rate Calculator", item: "https://femhealth.com/ivf-success-rate-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "IVF Success Rate Calculator", item: "https://hernexa.com/ivf-success-rate-calculator" }
         ])
       ]}
       howItWorks={

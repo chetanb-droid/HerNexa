@@ -80,13 +80,13 @@ export default function PregnancyCalorieCalculator() {
         generateSoftwareAppSchema(
           "Pregnancy Nutrition Calculator",
           "Calculate daily calorie, iron, folic acid, and hydration requirements for pregnancy.",
-          "https://femhealth.com/pregnancy-calorie-calculator"
+          "https://hernexa.com/pregnancy-calorie-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Pregnancy Nutrition Calculator", item: "https://femhealth.com/pregnancy-calorie-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Pregnancy Nutrition Calculator", item: "https://hernexa.com/pregnancy-calorie-calculator" }
         ])
       ]}
       howItWorks={

@@ -65,13 +65,13 @@ export default function WomensTDEECalculator() {
         generateSoftwareAppSchema(
           "Women's TDEE Calculator",
           "Calculate Total Daily Energy Expenditure for women.",
-          "https://femhealth.com/womens-tdee-calculator"
+          "https://hernexa.com/womens-tdee-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Women's TDEE Calculator", item: "https://femhealth.com/womens-tdee-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Women's TDEE Calculator", item: "https://hernexa.com/womens-tdee-calculator" }
         ])
       ]}
       howItWorks={

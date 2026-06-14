@@ -49,12 +49,12 @@ export default function VBACCalculator() {
       description="Estimate your probability of a successful vaginal birth after a cesarean (VBAC) using medical risk factors."
       intro={<>Considering a vaginal birth after a previous C-section? This calculator helps estimate your success probability based on factors like age, <Link to="/womens-bmi-calculator" className="text-primary hover:underline font-medium">BMI</Link>, and previous birth history, based on the Grobman nomogram.</>}
       schema={[
-        generateSoftwareAppSchema("VBAC Calculator", "Estimate VBAC success probability", "https://femhealth.com/vbac-calculator"),
+        generateSoftwareAppSchema("VBAC Calculator", "Estimate VBAC success probability", "https://hernexa.com/vbac-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "VBAC Calculator", item: "https://femhealth.com/vbac-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "VBAC Calculator", item: "https://hernexa.com/vbac-calculator" }
         ])
       ]}
       faqs={faqs}

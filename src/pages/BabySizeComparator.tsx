@@ -66,13 +66,13 @@ export default function BabySizeComparator() {
         generateSoftwareAppSchema(
           "Clinical Fetal Development Tracker",
           "Compare fetal size to fruits and vegetables week by week.",
-          "https://femhealth.com/baby-size-comparator"
+          "https://hernexa.com/baby-size-comparator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Baby Size Comparator", item: "https://femhealth.com/baby-size-comparator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Baby Size Comparator", item: "https://hernexa.com/baby-size-comparator" }
         ])
       ]}
       howItWorks={

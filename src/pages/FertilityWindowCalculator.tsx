@@ -62,13 +62,13 @@ export default function FertilityWindowCalculator() {
         generateSoftwareAppSchema(
           "Fertility Window Calculator",
           "Calculate the 6-day fertile window for conception.",
-          "https://femhealth.com/fertility-window-calculator"
+          "https://hernexa.com/fertility-window-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Fertility Window Calculator", item: "https://femhealth.com/fertility-window-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Fertility Window Calculator", item: "https://hernexa.com/fertility-window-calculator" }
         ])
       ]}
       howItWorks={

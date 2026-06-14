@@ -61,13 +61,13 @@ export default function TimeToConceiveCalculator() {
         generateSoftwareAppSchema(
           "Time to Conceive Calculator",
           "Estimate probability of conception over time.",
-          "https://femhealth.com/time-to-conceive-calculator"
+          "https://hernexa.com/time-to-conceive-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Time to Conceive Calculator", item: "https://femhealth.com/time-to-conceive-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Time to Conceive Calculator", item: "https://hernexa.com/time-to-conceive-calculator" }
         ])
       ]}
       howItWorks={

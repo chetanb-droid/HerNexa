@@ -82,13 +82,13 @@ export default function DueDateCalculator() {
         generateSoftwareAppSchema(
           "Clinical Due Date Calculator",
           "Calculate your estimated due date using multiple medical methods.",
-          "https://femhealth.com/due-date-calculator"
+          "https://hernexa.com/due-date-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Due Date Calculator", item: "https://femhealth.com/due-date-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Due Date Calculator", item: "https://hernexa.com/due-date-calculator" }
         ])
       ]}
       howItWorks={

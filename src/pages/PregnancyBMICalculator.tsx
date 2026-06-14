@@ -51,13 +51,13 @@ export default function PregnancyBMICalculator() {
         generateSoftwareAppSchema(
           "Pregnancy BMI Calculator",
           "Calculate pre-pregnancy BMI and weight gain range.",
-          "https://femhealth.com/pregnancy-bmi-calculator"
+          "https://hernexa.com/pregnancy-bmi-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Pregnancy BMI Calculator", item: "https://femhealth.com/pregnancy-bmi-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Pregnancy BMI Calculator", item: "https://hernexa.com/pregnancy-bmi-calculator" }
         ])
       ]}
       howItWorks={

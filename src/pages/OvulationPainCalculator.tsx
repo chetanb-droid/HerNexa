@@ -82,13 +82,13 @@ export default function OvulationPainCalculator() {
         generateSoftwareAppSchema(
           "Ovulation Pain Calculator",
           "Analyze mid-cycle pain symptoms for Mittelschmerz.",
-          "https://femhealth.com/ovulation-pain-calculator"
+          "https://hernexa.com/ovulation-pain-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Ovulation Pain Calculator", item: "https://femhealth.com/ovulation-pain-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Ovulation Pain Calculator", item: "https://hernexa.com/ovulation-pain-calculator" }
         ])
       ]}
       howItWorks={

@@ -110,13 +110,13 @@ export default function PregnancyWeekCalculator() {
         generateSoftwareAppSchema(
           "Clinical Pregnancy Week Calculator",
           "Calculate your current gestational age and track fetal development.",
-          "https://femhealth.com/pregnancy-week-calculator"
+          "https://hernexa.com/pregnancy-week-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Pregnancy Week Calculator", item: "https://femhealth.com/pregnancy-week-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Pregnancy Week Calculator", item: "https://hernexa.com/pregnancy-week-calculator" }
         ])
       ]}
       howItWorks={

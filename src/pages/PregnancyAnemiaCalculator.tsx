@@ -33,12 +33,12 @@ export default function PregnancyAnemiaCalculator() {
       description="Evaluate your risk factors for iron-deficiency anemia during pregnancy based on hemoglobin levels."
       intro="Iron-deficiency anemia is common during pregnancy. This tool helps you understand if your hemoglobin levels are within the normal range for your specific trimester."
       schema={[
-        generateSoftwareAppSchema("Pregnancy Anemia Calculator", "Evaluate anemia risk", "https://femhealth.com/pregnancy-anemia-calculator"),
+        generateSoftwareAppSchema("Pregnancy Anemia Calculator", "Evaluate anemia risk", "https://hernexa.com/pregnancy-anemia-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Anemia Risk", item: "https://femhealth.com/pregnancy-anemia-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Anemia Risk", item: "https://hernexa.com/pregnancy-anemia-calculator" }
         ])
       ]}
       faqs={faqs}

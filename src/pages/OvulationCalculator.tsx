@@ -63,13 +63,13 @@ export default function OvulationCalculator() {
         generateSoftwareAppSchema(
           "Clinical Ovulation & Fertility Window Tracker",
           "Predict your fertile window and ovulation date accurately.",
-          "https://femhealth.com/ovulation-calculator"
+          "https://hernexa.com/ovulation-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Ovulation Calculator", item: "https://femhealth.com/ovulation-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Ovulation Calculator", item: "https://hernexa.com/ovulation-calculator" }
         ])
       ]}
       howItWorks={

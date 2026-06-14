@@ -59,13 +59,13 @@ export default function PeriodCalculator() {
         generateSoftwareAppSchema(
           "Clinical Period & Cycle Tracker",
           "Predict future period dates and fertile windows.",
-          "https://femhealth.com/period-calculator"
+          "https://hernexa.com/period-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Period Calculator", item: "https://femhealth.com/period-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Period Calculator", item: "https://hernexa.com/period-calculator" }
         ])
       ]}
       howItWorks={

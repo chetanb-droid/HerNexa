@@ -97,13 +97,13 @@ export default function BreastCancerRiskCalculator() {
         generateSoftwareAppSchema(
           "Breast Cancer Risk Calculator",
           "Estimate 5-year and lifetime breast cancer risk.",
-          "https://femhealth.com/breast-cancer-risk-calculator"
+          "https://hernexa.com/breast-cancer-risk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Breast Cancer Risk Calculator", item: "https://femhealth.com/breast-cancer-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Breast Cancer Risk Calculator", item: "https://hernexa.com/breast-cancer-risk-calculator" }
         ])
       ]}
       howItWorks={

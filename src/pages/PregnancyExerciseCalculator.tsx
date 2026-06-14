@@ -28,12 +28,12 @@ export default function PregnancyExerciseCalculator() {
       description="Find your safe target heart rate zones for exercise during pregnancy based on your age."
       intro="Staying active during pregnancy has many benefits. This tool helps you identify the safe heart rate zones for moderate-intensity exercise."
       schema={[
-        generateSoftwareAppSchema("Pregnancy Exercise Calculator", "Calculate exercise heart rate", "https://femhealth.com/pregnancy-exercise-calculator"),
+        generateSoftwareAppSchema("Pregnancy Exercise Calculator", "Calculate exercise heart rate", "https://hernexa.com/pregnancy-exercise-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Exercise Intensity", item: "https://femhealth.com/pregnancy-exercise-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Exercise Intensity", item: "https://hernexa.com/pregnancy-exercise-calculator" }
         ])
       ]}
       faqs={faqs}

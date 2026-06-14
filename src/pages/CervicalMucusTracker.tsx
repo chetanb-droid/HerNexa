@@ -52,12 +52,12 @@ export default function CervicalMucusTracker() {
       description="Track and interpret changes in your cervical fluid to identify your most fertile days and peak conception window."
       intro={<>Your cervical mucus is one of the most reliable physical indicators of your fertility status. By observing its changes in color and consistency, you can pinpoint your fertile window and optimize your chances of conception. This tracker helps you interpret your observations based on the Billings <Link to="/ovulation-calculator" className="text-primary hover:underline font-medium">Ovulation</Link> Method.</>}
       schema={[
-        generateSoftwareAppSchema("Cervical Mucus Tracker", "Analyze cervical fluid for fertility tracking", "https://femhealth.com/cervical-mucus-tracker"),
+        generateSoftwareAppSchema("Cervical Mucus Tracker", "Analyze cervical fluid for fertility tracking", "https://hernexa.com/cervical-mucus-tracker"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Cervical Mucus Tracker", item: "https://femhealth.com/cervical-mucus-tracker" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Cervical Mucus Tracker", item: "https://hernexa.com/cervical-mucus-tracker" }
         ])
       ]}
       faqs={faqs}

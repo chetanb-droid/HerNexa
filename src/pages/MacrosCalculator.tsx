@@ -80,13 +80,13 @@ export default function MacrosCalculator() {
         generateSoftwareAppSchema(
           "Macro Calculator",
           "Calculate daily macronutrient targets.",
-          "https://femhealth.com/macros-calculator"
+          "https://hernexa.com/macros-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Macro Calculator", item: "https://femhealth.com/macros-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Macro Calculator", item: "https://hernexa.com/macros-calculator" }
         ])
       ]}
       howItWorks={

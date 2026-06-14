@@ -46,12 +46,12 @@ export default function DiaperCalculator() {
       description="Estimate daily, weekly, and monthly infant diaper requirements based on pediatric developmental milestones and average output."
       intro="Monitoring an infant's diaper output is a fundamental clinical indicator of adequate hydration, nutrition, and gastrointestinal function. This tool estimates the anticipated diaper usage based on average pediatric developmental stages, assisting parents in practical planning and recognizing normal physiological patterns."
       schema={[
-        generateSoftwareAppSchema("Clinical Diaper Calculator", "Estimate baby diaper needs based on pediatric averages", "https://femhealth.com/diaper-calculator"),
+        generateSoftwareAppSchema("Clinical Diaper Calculator", "Estimate baby diaper needs based on pediatric averages", "https://hernexa.com/diaper-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Diaper Calculator", item: "https://femhealth.com/diaper-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Diaper Calculator", item: "https://hernexa.com/diaper-calculator" }
         ])
       ]}
       faqs={faqs}

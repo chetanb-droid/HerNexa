@@ -60,12 +60,12 @@ export default function EndometriosisRiskCalculator() {
       description="Assess your risk factors and symptom patterns related to endometriosis. Identify if your symptoms warrant a specialist consultation."
       intro="Endometriosis is a chronic condition that is often underdiagnosed, with an average delay of 7-10 years from symptom onset to diagnosis. This assessment tool helps you identify if your symptoms align with common patterns of the condition, providing you with a structured way to discuss your health with a medical professional."
       schema={[
-        generateSoftwareAppSchema("Endometriosis Risk", "Assess endometriosis risk", "https://femhealth.com/endometriosis-risk-calculator"),
+        generateSoftwareAppSchema("Endometriosis Risk", "Assess endometriosis risk", "https://hernexa.com/endometriosis-risk-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Endometriosis Risk", item: "https://femhealth.com/endometriosis-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Endometriosis Risk", item: "https://hernexa.com/endometriosis-risk-calculator" }
         ])
       ]}
       faqs={faqs}

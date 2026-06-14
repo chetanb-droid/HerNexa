@@ -27,12 +27,12 @@ export default function PelvicFloorTracker() {
       description="Monitor your Kegel exercise progress and pelvic floor health milestones."
       intro="Strengthening your pelvic floor is essential for overall health. This tool helps you track your daily exercise progress and stay consistent."
       schema={[
-        generateSoftwareAppSchema("Pelvic Floor Tracker", "Track Kegel exercises", "https://femhealth.com/pelvic-floor-tracker"),
+        generateSoftwareAppSchema("Pelvic Floor Tracker", "Track Kegel exercises", "https://hernexa.com/pelvic-floor-tracker"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Pelvic Floor", item: "https://femhealth.com/pelvic-floor-tracker" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Pelvic Floor", item: "https://hernexa.com/pelvic-floor-tracker" }
         ])
       ]}
       faqs={faqs}

@@ -153,13 +153,13 @@ export default function HeartDiseaseRiskCalculator() {
         generateSoftwareAppSchema(
           "Heart Disease Risk Calculator",
           "Estimate 10-year cardiovascular risk for women.",
-          "https://femhealth.com/heart-disease-risk-calculator"
+          "https://hernexa.com/heart-disease-risk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Heart Disease Risk Calculator", item: "https://femhealth.com/heart-disease-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Heart Disease Risk Calculator", item: "https://hernexa.com/heart-disease-risk-calculator" }
         ])
       ]}
       howItWorks={

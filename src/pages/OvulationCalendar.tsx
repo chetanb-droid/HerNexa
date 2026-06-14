@@ -98,13 +98,13 @@ export default function OvulationCalendar() {
         generateSoftwareAppSchema(
           "Ovulation Calendar",
           "Generate a 3-month visual ovulation and period calendar.",
-          "https://femhealth.com/ovulation-calendar"
+          "https://hernexa.com/ovulation-calendar"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Ovulation Calendar", item: "https://femhealth.com/ovulation-calendar" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Ovulation Calendar", item: "https://hernexa.com/ovulation-calendar" }
         ])
       ]}
       howItWorks={

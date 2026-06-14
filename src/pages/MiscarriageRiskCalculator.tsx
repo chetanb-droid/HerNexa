@@ -78,13 +78,13 @@ export default function MiscarriageRiskCalculator() {
         generateSoftwareAppSchema(
           "Clinical Miscarriage Risk Assessment",
           "Estimate miscarriage probability based on clinical factors.",
-          "https://femhealth.com/miscarriage-risk-calculator"
+          "https://hernexa.com/miscarriage-risk-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Miscarriage Risk Calculator", item: "https://femhealth.com/miscarriage-risk-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Miscarriage Risk Calculator", item: "https://hernexa.com/miscarriage-risk-calculator" }
         ])
       ]}
       howItWorks={

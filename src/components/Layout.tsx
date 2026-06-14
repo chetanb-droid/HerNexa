@@ -1,15 +1,17 @@
-import { useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { useState, ReactNode } from 'react';
 import { Menu, Search, Heart, Globe, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import SearchModal from './SearchModal';
 import BackToTop from './BackToTop';
 import { logoBase64 } from '../assets/logoBase64';
 
-export default function Layout() {
+interface LayoutProps {
+  children?: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navLinks = [
     { name: 'Pregnancy', path: '/category/pregnancy' },
@@ -35,7 +37,7 @@ export default function Layout() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-primary/10">
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-12">
-            <Link to="/" className="flex items-center gap-3 group" aria-label="HerNexa Home">
+            <a href="/" className="flex items-center gap-3 group" aria-label="HerNexa Home">
               <img 
                 src={logoBase64} 
                 alt="HerNexa Logo" 
@@ -47,11 +49,11 @@ export default function Layout() {
                 decoding="async" 
               />
               <span className="text-2xl font-serif font-bold tracking-tight text-text-dark">HerNexa</span>
-            </Link>
+            </a>
             
             <div className="hidden lg:flex items-center gap-8 text-sm font-semibold text-text-medium uppercase tracking-wider">
               {navLinks.map((link) => (
-                <Link key={link.path} to={link.path} className="hover:text-primary transition-colors">{link.name}</Link>
+                <a key={link.path} href={link.path} className="hover:text-primary transition-colors">{link.name}</a>
               ))}
             </div>
           </div>
@@ -85,14 +87,14 @@ export default function Layout() {
             >
               <div className="px-6 py-6 space-y-2">
                 {navLinks.map((link) => (
-                  <Link 
+                  <a 
                     key={link.path} 
-                    to={link.path} 
+                    href={link.path} 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block py-3 text-xl font-serif font-bold text-text-dark hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -106,13 +108,12 @@ export default function Layout() {
       <main className="max-w-7xl mx-auto px-6 py-12">
         <AnimatePresence mode="wait">
           <motion.div
-            key={location.pathname}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <Outlet />
+            {children || <Outlet />}
           </motion.div>
         </AnimatePresence>
       </main>
@@ -121,7 +122,7 @@ export default function Layout() {
       <footer className="bg-white text-text-medium pt-24 pb-12 border-t border-primary/10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           <div className="space-y-6 md:col-span-1">
-            <Link to="/" className="flex items-center gap-3 text-text-dark group" aria-label="HerNexa Home">
+            <a href="/" className="flex items-center gap-3 text-text-dark group" aria-label="HerNexa Home">
               <img 
                 src={logoBase64} 
                 alt="HerNexa Logo" 
@@ -133,7 +134,7 @@ export default function Layout() {
                 decoding="async" 
               />
               <span className="text-2xl font-serif font-bold tracking-tight">HerNexa</span>
-            </Link>
+            </a>
             <p className="text-base leading-relaxed text-text-dark/80">
               The world's leading resource for evergreen women's health content. 
               Scientifically backed, expert-reviewed, and accessible globally.
@@ -143,20 +144,20 @@ export default function Layout() {
           <div>
             <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Fertility Tools</h4>
             <ul className="space-y-3 text-sm font-medium">
-              <li><Link to="/ovulation-calculator" className="hover:text-primary transition-colors">Ovulation Calculator</Link></li>
-              <li><Link to="/period-calculator" className="hover:text-primary transition-colors">Period Calculator</Link></li>
-              <li><Link to="/conception-calculator" className="hover:text-primary transition-colors">Conception Calculator</Link></li>
-              <li><Link to="/menopause-checker" className="hover:text-primary transition-colors">Menopause Checker</Link></li>
+              <li><a href="/ovulation-calculator" className="hover:text-primary transition-colors">Ovulation Calculator</a></li>
+              <li><a href="/period-calculator" className="hover:text-primary transition-colors">Period Calculator</a></li>
+              <li><a href="/conception-calculator" className="hover:text-primary transition-colors">Conception Calculator</a></li>
+              <li><a href="/menopause-checker" className="hover:text-primary transition-colors">Menopause Checker</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-text-dark font-serif font-bold text-lg mb-6">Pregnancy Tools</h4>
             <ul className="space-y-3 text-sm font-medium">
-              <li><Link to="/due-date-calculator" className="hover:text-primary transition-colors">Due Date Calculator</Link></li>
-              <li><Link to="/pregnancy-week-calculator" className="hover:text-primary transition-colors">Pregnancy Week Calculator</Link></li>
-              <li><Link to="/baby-size-comparator" className="hover:text-primary transition-colors">Baby Size Comparator</Link></li>
-              <li><Link to="/pregnancy-weight-gain-calculator" className="hover:text-primary transition-colors">Weight Gain Calculator</Link></li>
+              <li><a href="/due-date-calculator" className="hover:text-primary transition-colors">Due Date Calculator</a></li>
+              <li><a href="/pregnancy-week-calculator" className="hover:text-primary transition-colors">Pregnancy Week Calculator</a></li>
+              <li><a href="/baby-size-comparator" className="hover:text-primary transition-colors">Baby Size Comparator</a></li>
+              <li><a href="/pregnancy-weight-gain-calculator" className="hover:text-primary transition-colors">Weight Gain Calculator</a></li>
             </ul>
           </div>
         </div>

@@ -88,13 +88,13 @@ export default function IdealBodyWeightCalculator() {
         generateSoftwareAppSchema(
           "Ideal Body Weight Calculator",
           "Calculate Ideal Body Weight for women using medical formulas.",
-          "https://femhealth.com/ideal-body-weight-calculator"
+          "https://hernexa.com/ideal-body-weight-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Ideal Body Weight Calculator", item: "https://femhealth.com/ideal-body-weight-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Ideal Body Weight Calculator", item: "https://hernexa.com/ideal-body-weight-calculator" }
         ])
       ]}
       howItWorks={

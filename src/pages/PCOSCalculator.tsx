@@ -66,13 +66,13 @@ export default function PCOSCalculator() {
         generateSoftwareAppSchema(
           "PCOS Symptom Checker",
           "Assess PCOS risk based on symptoms.",
-          "https://femhealth.com/pcos-calculator"
+          "https://hernexa.com/pcos-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "PCOS Symptom Checker", item: "https://femhealth.com/pcos-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "PCOS Symptom Checker", item: "https://hernexa.com/pcos-calculator" }
         ])
       ]}
       howItWorks={

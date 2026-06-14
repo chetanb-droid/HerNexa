@@ -56,12 +56,12 @@ export default function EggFreezingCalculator() {
       description="Calculate your egg freezing success probability based on AMH and age. Use our egg freezing success rate calculator to estimate chances."
       intro="Egg freezing is a powerful tool for fertility preservation, but understanding the statistics is key to making informed decisions. Our <strong>egg freezing calculator</strong> uses published clinical data—often correlating with an <strong>egg freezing calculator amh</strong> level—to help you understand how age and egg quantity impact your future chances. This <strong>egg freezing success rate calculator</strong> provides a probability of a live birth."
       schema={[
-        generateSoftwareAppSchema("Egg Freezing Calculator", "Estimate egg freezing success probability", "https://femhealth.com/egg-freezing-calculator"),
+        generateSoftwareAppSchema("Egg Freezing Calculator", "Estimate egg freezing success probability", "https://hernexa.com/egg-freezing-calculator"),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Egg Freezing Success Estimator", item: "https://femhealth.com/egg-freezing-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Egg Freezing Success Estimator", item: "https://hernexa.com/egg-freezing-calculator" }
         ])
       ]}
       faqs={faqs}

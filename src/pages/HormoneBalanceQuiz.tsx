@@ -72,13 +72,13 @@ export default function HormoneBalanceQuiz() {
         generateSoftwareAppSchema(
           "Hormone Balance Quiz",
           "Identify potential signs of hormonal imbalance.",
-          "https://femhealth.com/hormone-balance-quiz"
+          "https://hernexa.com/hormone-balance-quiz"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Hormone Balance Quiz", item: "https://femhealth.com/hormone-balance-quiz" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Hormone Balance Quiz", item: "https://hernexa.com/hormone-balance-quiz" }
         ])
       ]}
       howItWorks={

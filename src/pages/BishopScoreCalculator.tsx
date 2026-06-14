@@ -53,13 +53,13 @@ export default function BishopScoreCalculator() {
         generateSoftwareAppSchema(
           "Bishop Score Calculator", 
           "Assess cervical ripeness and labor induction success probability.", 
-          "https://femhealth.com/bishop-score-calculator"
+          "https://hernexa.com/bishop-score-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Bishop Score Calculator", item: "https://femhealth.com/bishop-score-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Bishop Score Calculator", item: "https://hernexa.com/bishop-score-calculator" }
         ])
       ]}
       faqs={faqs}

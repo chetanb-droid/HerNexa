@@ -75,13 +75,13 @@ export default function BabySleepSchedule() {
         generateSoftwareAppSchema(
           "Clinical Baby Sleep Schedule Guide", 
           "Calculate baby sleep needs and wake windows by age based on pediatric guidelines.", 
-          "https://femhealth.com/baby-sleep-schedule"
+          "https://hernexa.com/baby-sleep-schedule"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Baby Sleep Schedule", item: "https://femhealth.com/baby-sleep-schedule" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Baby Sleep Schedule", item: "https://hernexa.com/baby-sleep-schedule" }
         ])
       ]}
       faqs={faqs}

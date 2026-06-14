@@ -63,13 +63,13 @@ export default function ConceptionCalculator() {
         generateSoftwareAppSchema(
           "Clinical Conception Calculator",
           "Calculate estimated conception dates and biological fertile windows.",
-          "https://femhealth.com/conception-calculator"
+          "https://hernexa.com/conception-calculator"
         ),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([
-          { name: "Home", item: "https://femhealth.com" },
-          { name: "Tools", item: "https://femhealth.com/tools" },
-          { name: "Conception Calculator", item: "https://femhealth.com/conception-calculator" }
+          { name: "Home", item: "https://hernexa.com" },
+          { name: "Tools", item: "https://hernexa.com/tools" },
+          { name: "Conception Calculator", item: "https://hernexa.com/conception-calculator" }
         ])
       ]}
       howItWorks={
