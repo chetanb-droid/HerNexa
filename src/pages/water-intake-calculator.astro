@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/WaterIntakeCalculator.tsx';
 ---
 
-<Layout title="Daily Water Intake Calculator" description="Calculate exactly how much water you should drink daily based on your weight, activity level, and pregnancy status.">
+<Layout title="Daily Water Intake Calculator" description="Calculate exactly how much water you should drink daily based on your weight, activity level, and pregnancy status." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Daily Water Intake Calculator","description":"Calculate exactly how much water you should drink daily based on your weight, activity level, and pregnancy status.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

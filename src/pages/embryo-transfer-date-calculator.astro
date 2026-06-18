@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/EmbryoTransferDateCalculator.tsx';
 ---
 
-<Layout title="IVF Due Date Calculator | Embryo Transfer Due Date" description="Calculate your exact pregnancy due date using our IVF due date calculator. Predict your fet due date and ivf pregnancy tracker milestones based on transfer.">
+<Layout title="IVF Due Date Calculator | Embryo Transfer Due Date" description="Calculate your exact pregnancy due date using our IVF due date calculator. Predict your fet due date and ivf pregnancy tracker milestones based on transfer." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"IVF Due Date Calculator | Embryo Transfer Due Date","description":"Calculate your exact pregnancy due date using our IVF due date calculator. Predict your fet due date and ivf pregnancy tracker milestones based on transfer.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

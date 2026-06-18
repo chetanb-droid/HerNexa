@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PeriodCalculator.tsx';
 ---
 
-<Layout title="Clinical Period & Cycle Tracker" description="Predict your next 6 period dates with our free clinical period calculator. Track your cycle, find your ovulation dates, and plan ahead with accuracy. Essential menstrual health tracking.">
+<Layout title="Clinical Period & Cycle Tracker" description="Predict your next 6 period dates with our free clinical period calculator. Track your cycle, find your ovulation dates, and plan ahead with accuracy. Essential menstrual health tracking." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Period & Cycle Tracker","description":"Predict your next 6 period dates with our free clinical period calculator. Track your cycle, find your ovulation dates, and plan ahead with accuracy. Essential menstrual health tracking.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

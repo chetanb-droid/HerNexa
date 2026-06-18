@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/OsteoporosisRiskCalculator.tsx';
 ---
 
-<Layout title="Osteoporosis Risk Assessment for Women" description="Assess your risk of osteoporosis and bone fractures based on age, weight, and clinical history. Expert guidance on bone health and prevention.">
+<Layout title="Osteoporosis Risk Assessment for Women" description="Assess your risk of osteoporosis and bone fractures based on age, weight, and clinical history. Expert guidance on bone health and prevention." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Osteoporosis Risk Assessment for Women","description":"Assess your risk of osteoporosis and bone fractures based on age, weight, and clinical history. Expert guidance on bone health and prevention.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

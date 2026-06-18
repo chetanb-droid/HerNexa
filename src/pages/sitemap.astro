@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/Sitemap.tsx';
 ---
 
-<Layout title="Sitemap" description="A complete directory of all health tools, calculators, and content on HerNexa.">
+<Layout title="Sitemap" description="A complete directory of all health tools, calculators, and content on HerNexa." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Sitemap","description":"A complete directory of all health tools, calculators, and content on HerNexa.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

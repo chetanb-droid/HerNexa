@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/SolidFoodTimeline.tsx';
 ---
 
-<Layout title="Clinical Infant Feeding & Solid Food Guide" description="Evidence-based timeline for introducing complementary foods. Understand developmental readiness, appropriate textures, and allergen introduction.">
+<Layout title="Clinical Infant Feeding & Solid Food Guide" description="Evidence-based timeline for introducing complementary foods. Understand developmental readiness, appropriate textures, and allergen introduction." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Infant Feeding & Solid Food Guide","description":"Evidence-based timeline for introducing complementary foods. Understand developmental readiness, appropriate textures, and allergen introduction.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

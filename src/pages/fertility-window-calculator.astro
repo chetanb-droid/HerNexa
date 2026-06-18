@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/FertilityWindowCalculator.tsx';
 ---
 
-<Layout title="Fertile Window Calculator | Pregnancy Probability Calculator Calendar" description="Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant calculator estimates.">
+<Layout title="Fertile Window Calculator | Pregnancy Probability Calculator Calendar" description="Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant calculator estimates." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Fertile Window Calculator | Pregnancy Probability Calculator Calendar","description":"Use our fertile window calculator to view your pregnancy probability calculator calendar. Find your conception window and what are your chances of getting pregnant calculator estimates.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

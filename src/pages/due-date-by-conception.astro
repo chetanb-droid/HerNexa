@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/DueDateByConceptionCalculator.tsx';
 ---
 
-<Layout title="Clinical Due Date by Conception Calculator" description="Calculate your highly accurate pregnancy due date based on a known date of conception, ovulation, IUI, or IVF transfer.">
+<Layout title="Clinical Due Date by Conception Calculator" description="Calculate your highly accurate pregnancy due date based on a known date of conception, ovulation, IUI, or IVF transfer." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Due Date by Conception Calculator","description":"Calculate your highly accurate pregnancy due date based on a known date of conception, ovulation, IUI, or IVF transfer.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

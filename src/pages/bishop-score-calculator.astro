@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BishopScoreCalculator.tsx';
 ---
 
-<Layout title="Bishop Score Calculator | Due Date Calculator" description="Assess cervical ripeness to predict labor induction success. Expert guidance on labor readiness, tracking progression, and using a due date calculator.">
+<Layout title="Bishop Score Calculator | Due Date Calculator" description="Assess cervical ripeness to predict labor induction success. Expert guidance on labor readiness, tracking progression, and using a due date calculator." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bishop Score Calculator | Due Date Calculator","description":"Assess cervical ripeness to predict labor induction success. Expert guidance on labor readiness, tracking progression, and using a due date calculator.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

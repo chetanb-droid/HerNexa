@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/VBACCalculator.tsx';
 ---
 
-<Layout title="VBAC Success Probability Calculator" description="Estimate your probability of a successful vaginal birth after a cesarean (VBAC) using medical risk factors.">
+<Layout title="VBAC Success Probability Calculator" description="Estimate your probability of a successful vaginal birth after a cesarean (VBAC) using medical risk factors." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"VBAC Success Probability Calculator","description":"Estimate your probability of a successful vaginal birth after a cesarean (VBAC) using medical risk factors.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

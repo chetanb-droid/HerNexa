@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/WomensTDEECalculator.tsx';
 ---
 
-<Layout title="Women's TDEE & Metabolism Calculator" description="Calculate your Total Daily Energy Expenditure (TDEE) and Basal Metabolic Rate (BMR) using formulas specifically calibrated for women. Plan your nutrition with precision.">
+<Layout title="Women's TDEE & Metabolism Calculator" description="Calculate your Total Daily Energy Expenditure (TDEE) and Basal Metabolic Rate (BMR) using formulas specifically calibrated for women. Plan your nutrition with precision." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Women's TDEE & Metabolism Calculator","description":"Calculate your Total Daily Energy Expenditure (TDEE) and Basal Metabolic Rate (BMR) using formulas specifically calibrated for women. Plan your nutrition with precision.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

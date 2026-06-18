@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/IdealBodyWeightCalculator.tsx';
 ---
 
-<Layout title="Ideal Body Weight & Frame Size Calculator" description="Calculate your Ideal Body Weight (IBW) using the Robinson, Miller, Devine, and Hamwi medical formulas, adjusted for your unique frame size.">
+<Layout title="Ideal Body Weight & Frame Size Calculator" description="Calculate your Ideal Body Weight (IBW) using the Robinson, Miller, Devine, and Hamwi medical formulas, adjusted for your unique frame size." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ideal Body Weight & Frame Size Calculator","description":"Calculate your Ideal Body Weight (IBW) using the Robinson, Miller, Devine, and Hamwi medical formulas, adjusted for your unique frame size.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

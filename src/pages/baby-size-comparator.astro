@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BabySizeComparator.tsx';
 ---
 
-<Layout title="Clinical Fetal Development & Size Tracker | Baby Size Comparator" description="Track baby size by week using our pregnancy baby size comparator. Compare fetal size to everyday objects and predict baby gender based on heart rate myth.">
+<Layout title="Clinical Fetal Development & Size Tracker | Baby Size Comparator" description="Track baby size by week using our pregnancy baby size comparator. Compare fetal size to everyday objects and predict baby gender based on heart rate myth." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Fetal Development & Size Tracker | Baby Size Comparator","description":"Track baby size by week using our pregnancy baby size comparator. Compare fetal size to everyday objects and predict baby gender based on heart rate myth.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

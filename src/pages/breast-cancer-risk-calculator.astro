@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BreastCancerRiskCalculator.tsx';
 ---
 
-<Layout title="Breast Cancer Risk Assessment (Gail Model)" description="Estimate your 5-year and lifetime risk of developing invasive breast cancer using factors from the Gail Model. Expert guidance on breast health.">
+<Layout title="Breast Cancer Risk Assessment (Gail Model)" description="Estimate your 5-year and lifetime risk of developing invasive breast cancer using factors from the Gail Model. Expert guidance on breast health." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Breast Cancer Risk Assessment (Gail Model)","description":"Estimate your 5-year and lifetime risk of developing invasive breast cancer using factors from the Gail Model. Expert guidance on breast health.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

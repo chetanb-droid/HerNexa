@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/MenopauseChecker.tsx';
 ---
 
-<Layout title="Menopause Test Online | Menopause Age Calculator UK" description="Take our free menopause test online to check your symptoms. Use our menopause age calculator and menopause checker to understand your transition.">
+<Layout title="Menopause Test Online | Menopause Age Calculator UK" description="Take our free menopause test online to check your symptoms. Use our menopause age calculator and menopause checker to understand your transition." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Menopause Test Online | Menopause Age Calculator UK","description":"Take our free menopause test online to check your symptoms. Use our menopause age calculator and menopause checker to understand your transition.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

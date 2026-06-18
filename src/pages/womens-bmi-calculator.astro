@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/WomensBMICalculator.tsx';
 ---
 
-<Layout title="Women's BMI & Health Ratio Calculator" description="Calculate your Body Mass Index (BMI) and Waist-to-Height Ratio specifically designed for women. Get a comprehensive view of your health markers.">
+<Layout title="Women's BMI & Health Ratio Calculator" description="Calculate your Body Mass Index (BMI) and Waist-to-Height Ratio specifically designed for women. Get a comprehensive view of your health markers." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Women's BMI & Health Ratio Calculator","description":"Calculate your Body Mass Index (BMI) and Waist-to-Height Ratio specifically designed for women. Get a comprehensive view of your health markers.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

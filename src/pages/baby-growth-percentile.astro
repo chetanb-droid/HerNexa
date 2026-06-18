@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BabyGrowthPercentile.tsx';
 ---
 
-<Layout title="Baby Growth Percentile Calculator | Baby Size Comparator" description="Track your baby's weight and height against WHO growth standards. Compare percentiles with our baby size comparator and understand sleep schedules.">
+<Layout title="Baby Growth Percentile Calculator | Baby Size Comparator" description="Track your baby's weight and height against WHO growth standards. Compare percentiles with our baby size comparator and understand sleep schedules." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Baby Growth Percentile Calculator | Baby Size Comparator","description":"Track your baby's weight and height against WHO growth standards. Compare percentiles with our baby size comparator and understand sleep schedules.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

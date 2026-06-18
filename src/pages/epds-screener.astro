@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/EPDSScreener.tsx';
 ---
 
-<Layout title="Postpartum Depression (EPDS) Screener" description="A clinical tool (EPDS) to help identify signs of postpartum depression.">
+<Layout title="Postpartum Depression (EPDS) Screener" description="A clinical tool (EPDS) to help identify signs of postpartum depression." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Postpartum Depression (EPDS) Screener","description":"A clinical tool (EPDS) to help identify signs of postpartum depression.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

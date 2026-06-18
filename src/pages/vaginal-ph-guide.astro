@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/VaginalPHGuide.tsx';
 ---
 
-<Layout title="Vaginal pH Health Guide" description="Understand what your vaginal pH levels mean for your overall health.">
+<Layout title="Vaginal pH Health Guide" description="Understand what your vaginal pH levels mean for your overall health." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vaginal pH Health Guide","description":"Understand what your vaginal pH levels mean for your overall health.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

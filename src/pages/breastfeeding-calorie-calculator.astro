@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BreastfeedingCalorieCalculator.tsx';
 ---
 
-<Layout title="Breastfeeding Calorie Calculator" description="Calculate your daily calorie needs while breastfeeding and determine your chances of getting pregnant calculator for postpartum fertility. Essential nutrition tracking.">
+<Layout title="Breastfeeding Calorie Calculator" description="Calculate your daily calorie needs while breastfeeding and determine your chances of getting pregnant calculator for postpartum fertility. Essential nutrition tracking." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Breastfeeding Calorie Calculator","description":"Calculate your daily calorie needs while breastfeeding and determine your chances of getting pregnant calculator for postpartum fertility. Essential nutrition tracking.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

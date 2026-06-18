@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/OvulationPainCalculator.tsx';
 ---
 
-<Layout title="Ovulation Pain (Mittelschmerz) Calculator" description="Analyze your mid-cycle abdominal pain to determine if it aligns with typical ovulation pain (Mittelschmerz). Understand your body's fertility signals.">
+<Layout title="Ovulation Pain (Mittelschmerz) Calculator" description="Analyze your mid-cycle abdominal pain to determine if it aligns with typical ovulation pain (Mittelschmerz). Understand your body's fertility signals." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ovulation Pain (Mittelschmerz) Calculator","description":"Analyze your mid-cycle abdominal pain to determine if it aligns with typical ovulation pain (Mittelschmerz). Understand your body's fertility signals.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

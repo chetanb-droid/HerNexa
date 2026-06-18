@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/HealthTools.tsx';
 ---
 
-<Layout title="Health Tools & Calculators | Women's Health Hub" description="Explore our directory of 30+ free women's health calculators, from pregnancy due dates to ovulation trackers and nutrition guides.">
+<Layout title="Health Tools & Calculators | Women's Health Hub" description="Explore our directory of 30+ free women's health calculators, from pregnancy due dates to ovulation trackers and nutrition guides." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Health Tools & Calculators | Women's Health Hub","description":"Explore our directory of 30+ free women's health calculators, from pregnancy due dates to ovulation trackers and nutrition guides.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

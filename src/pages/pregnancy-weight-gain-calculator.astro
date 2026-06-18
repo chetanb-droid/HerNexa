@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyWeightGainCalculator.tsx';
 ---
 
-<Layout title="Pregnancy Weight Gain Calculator | Pregnancy BMI Calculator" description="Track your pregnancy weight gain based on BMI with our pregnancy weight gain calculator. Your personalized pregnancy weight tracker.">
+<Layout title="Pregnancy Weight Gain Calculator | Pregnancy BMI Calculator" description="Track your pregnancy weight gain based on BMI with our pregnancy weight gain calculator. Your personalized pregnancy weight tracker." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy Weight Gain Calculator | Pregnancy BMI Calculator","description":"Track your pregnancy weight gain based on BMI with our pregnancy weight gain calculator. Your personalized pregnancy weight tracker.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

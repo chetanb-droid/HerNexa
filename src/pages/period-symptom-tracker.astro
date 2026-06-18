@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PeriodSymptomTracker.tsx';
 ---
 
-<Layout title="Period Symptom Tracker & Analyzer" description="Track and analyze your menstrual and premenstrual symptoms to understand their severity and impact on your daily life.">
+<Layout title="Period Symptom Tracker & Analyzer" description="Track and analyze your menstrual and premenstrual symptoms to understand their severity and impact on your daily life." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Period Symptom Tracker & Analyzer","description":"Track and analyze your menstrual and premenstrual symptoms to understand their severity and impact on your daily life.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

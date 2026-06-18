@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PMDDScreener.tsx';
 ---
 
-<Layout title="PMDD Clinical Symptom Screener" description="Evaluate your symptoms against the DSM-5 clinical criteria for Premenstrual Dysphoric Disorder (PMDD). Get a professional-grade screening and guidance on next steps.">
+<Layout title="PMDD Clinical Symptom Screener" description="Evaluate your symptoms against the DSM-5 clinical criteria for Premenstrual Dysphoric Disorder (PMDD). Get a professional-grade screening and guidance on next steps." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"PMDD Clinical Symptom Screener","description":"Evaluate your symptoms against the DSM-5 clinical criteria for Premenstrual Dysphoric Disorder (PMDD). Get a professional-grade screening and guidance on next steps.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

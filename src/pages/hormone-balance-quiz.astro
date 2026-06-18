@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/HormoneBalanceQuiz.tsx';
 ---
 
-<Layout title="Hormone Balance Assessment Quiz" description="Identify potential signs of hormonal imbalance based on common physical and emotional symptoms. Expert guidance on hormonal health for women.">
+<Layout title="Hormone Balance Assessment Quiz" description="Identify potential signs of hormonal imbalance based on common physical and emotional symptoms. Expert guidance on hormonal health for women." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hormone Balance Assessment Quiz","description":"Identify potential signs of hormonal imbalance based on common physical and emotional symptoms. Expert guidance on hormonal health for women.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

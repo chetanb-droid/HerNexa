@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/MacrosCalculator.tsx';
 ---
 
-<Layout title="Precision Macro & Nutrition Calculator" description="Calculate your optimal daily macronutrients (protein, fats, carbs) based on your TDEE, fitness goals, and diet preferences. Tailored for women's health.">
+<Layout title="Precision Macro & Nutrition Calculator" description="Calculate your optimal daily macronutrients (protein, fats, carbs) based on your TDEE, fitness goals, and diet preferences. Tailored for women's health." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Precision Macro & Nutrition Calculator","description":"Calculate your optimal daily macronutrients (protein, fats, carbs) based on your TDEE, fitness goals, and diet preferences. Tailored for women's health.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyBMICalculator.tsx';
 ---
 
-<Layout title="Pregnancy BMI Calculator" description="Calculate your pre-pregnancy BMI and understand your recommended weight gain range. Get expert guidance on healthy pregnancy weight management. Essential pregnancy health tracking.">
+<Layout title="Pregnancy BMI Calculator" description="Calculate your pre-pregnancy BMI and understand your recommended weight gain range. Get expert guidance on healthy pregnancy weight management. Essential pregnancy health tracking." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy BMI Calculator","description":"Calculate your pre-pregnancy BMI and understand your recommended weight gain range. Get expert guidance on healthy pregnancy weight management. Essential pregnancy health tracking.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

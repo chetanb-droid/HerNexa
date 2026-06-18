@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/DueDateCalculator.tsx';
 ---
 
-<Layout title="Clinical Due Date Calculator" description="Calculate your estimated due date (EDD) using LMP, conception date, or IVF transfer. Use our pregnancy chance calendar and best best days to get pregnant calculator tools alongside your EDD.">
+<Layout title="Clinical Due Date Calculator" description="Calculate your estimated due date (EDD) using LMP, conception date, or IVF transfer. Use our pregnancy chance calendar and best best days to get pregnant calculator tools alongside your EDD." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Due Date Calculator","description":"Calculate your estimated due date (EDD) using LMP, conception date, or IVF transfer. Use our pregnancy chance calendar and best best days to get pregnant calculator tools alongside your EDD.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

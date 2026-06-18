@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/DiaperCalculator.tsx';
 ---
 
-<Layout title="Clinical Infant Diaper Need Estimator" description="Estimate daily, weekly, and monthly infant diaper requirements based on pediatric developmental milestones and average output.">
+<Layout title="Clinical Infant Diaper Need Estimator" description="Estimate daily, weekly, and monthly infant diaper requirements based on pediatric developmental milestones and average output." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Infant Diaper Need Estimator","description":"Estimate daily, weekly, and monthly infant diaper requirements based on pediatric developmental milestones and average output.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

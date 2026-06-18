@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyWeekCalculator.tsx';
 ---
 
-<Layout title="Clinical Pregnancy Progress & Milestones" description="Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool.">
+<Layout title="Clinical Pregnancy Progress & Milestones" description="Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Pregnancy Progress & Milestones","description":"Calculate your current gestational age, trimester, fetal development metrics, and estimated conception date. A comprehensive clinical tracking tool.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

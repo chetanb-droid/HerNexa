@@ -7,13 +7,15 @@ interface Props {
   description?: string;
   canonical?: string;
   image?: string;
+  schema?: string;
 }
 
 const { 
   title = "HerNexa - Women's Wellness & Health Insights", 
   description = "Empowering women with expert health advice, wellness tips, and medical insights. Your global resource for evergreen health content.",
   canonical = "https://hernexa.com",
-  image = "https://picsum.photos/seed/hernexa/1200/630"
+  image = "https://picsum.photos/seed/hernexa/1200/630",
+  schema
 } = Astro.props;
 
 // Determine current URL for canonical fallback
@@ -44,6 +46,10 @@ const finalCanonical = canonical || currentUrl;
     <meta name="twitter:image" content={image} />
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    {schema && (
+      <script type="application/ld+json" set:html={schema} />
+    )}
   </head>
   <body class="bg-bg-light text-text-medium font-sans antialiased min-h-screen flex flex-col">
     <ReactLayout client:load>

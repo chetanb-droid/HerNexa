@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BreastMilkCalculator.tsx';
 ---
 
-<Layout title="Clinical Infant Enteral Feeding Calculator | Feeding Calculator" description="Calculate estimated daily breast milk or formula volume requirements using our baby feeding calculator based on infant weight and age.">
+<Layout title="Clinical Infant Enteral Feeding Calculator | Feeding Calculator" description="Calculate estimated daily breast milk or formula volume requirements using our baby feeding calculator based on infant weight and age." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clinical Infant Enteral Feeding Calculator | Feeding Calculator","description":"Calculate estimated daily breast milk or formula volume requirements using our baby feeding calculator based on infant weight and age.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

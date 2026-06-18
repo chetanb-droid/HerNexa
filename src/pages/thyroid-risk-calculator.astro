@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/ThyroidRiskCalculator.tsx';
 ---
 
-<Layout title="Thyroid Health Symptom Assessment" description="Analyze your symptoms to assess your risk for Hypothyroidism (underactive) or Hyperthyroidism (overactive). Expert guidance on thyroid health for women.">
+<Layout title="Thyroid Health Symptom Assessment" description="Analyze your symptoms to assess your risk for Hypothyroidism (underactive) or Hyperthyroidism (overactive). Expert guidance on thyroid health for women." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thyroid Health Symptom Assessment","description":"Analyze your symptoms to assess your risk for Hypothyroidism (underactive) or Hyperthyroidism (overactive). Expert guidance on thyroid health for women.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

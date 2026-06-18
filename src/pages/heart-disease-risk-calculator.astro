@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/HeartDiseaseRiskCalculator.tsx';
 ---
 
-<Layout title="Heart Disease Risk Assessment for Women" description="Estimate your 10-year risk of cardiovascular disease using gender-specific clinical algorithms. Expert guidance on women's heart health.">
+<Layout title="Heart Disease Risk Assessment for Women" description="Estimate your 10-year risk of cardiovascular disease using gender-specific clinical algorithms. Expert guidance on women's heart health." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Heart Disease Risk Assessment for Women","description":"Estimate your 10-year risk of cardiovascular disease using gender-specific clinical algorithms. Expert guidance on women's heart health.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

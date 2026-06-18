@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/CervicalMucusTracker.tsx';
 ---
 
-<Layout title="Cervical Mucus Fertility Tracker" description="Track and interpret changes in your cervical fluid to identify your most fertile days and peak conception window.">
+<Layout title="Cervical Mucus Fertility Tracker" description="Track and interpret changes in your cervical fluid to identify your most fertile days and peak conception window." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cervical Mucus Fertility Tracker","description":"Track and interpret changes in your cervical fluid to identify your most fertile days and peak conception window.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

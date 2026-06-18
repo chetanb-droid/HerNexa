@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/ChineseGenderPredictor.tsx';
 ---
 
-<Layout title="Chinese Gender Predictor (Folklore)" description="Explore the ancient Chinese Gender Chart, a popular cultural tradition for predicting fetal sex. Includes clinical context on actual sex determination.">
+<Layout title="Chinese Gender Predictor (Folklore)" description="Explore the ancient Chinese Gender Chart, a popular cultural tradition for predicting fetal sex. Includes clinical context on actual sex determination." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Chinese Gender Predictor (Folklore)","description":"Explore the ancient Chinese Gender Chart, a popular cultural tradition for predicting fetal sex. Includes clinical context on actual sex determination.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

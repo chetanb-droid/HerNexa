@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyExerciseCalculator.tsx';
 ---
 
-<Layout title="Pregnancy Exercise Intensity Calculator" description="Find your safe target heart rate zones for exercise during pregnancy based on your age.">
+<Layout title="Pregnancy Exercise Intensity Calculator" description="Find your safe target heart rate zones for exercise during pregnancy based on your age." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy Exercise Intensity Calculator","description":"Find your safe target heart rate zones for exercise during pregnancy based on your age.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

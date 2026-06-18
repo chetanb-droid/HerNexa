@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyCalorieCalculator.tsx';
 ---
 
-<Layout title="Pregnancy Nutrition Calculator" description="Calculate your daily calorie, iron, folic acid, and hydration needs during pregnancy. Get personalized recommendations for a healthy pregnancy.">
+<Layout title="Pregnancy Nutrition Calculator" description="Calculate your daily calorie, iron, folic acid, and hydration needs during pregnancy. Get personalized recommendations for a healthy pregnancy." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy Nutrition Calculator","description":"Calculate your daily calorie, iron, folic acid, and hydration needs during pregnancy. Get personalized recommendations for a healthy pregnancy.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

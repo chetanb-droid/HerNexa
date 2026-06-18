@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PCOSCalculator.tsx';
 ---
 
-<Layout title="PCOS Symptom Quiz | PCOS Test Online" description="Take our free PCOS test online to check your symptoms. This PCOS symptoms quiz helps evaluate your risk for Polycystic Ovary Syndrome.">
+<Layout title="PCOS Symptom Quiz | PCOS Test Online" description="Take our free PCOS test online to check your symptoms. This PCOS symptoms quiz helps evaluate your risk for Polycystic Ovary Syndrome." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"PCOS Symptom Quiz | PCOS Test Online","description":"Take our free PCOS test online to check your symptoms. This PCOS symptoms quiz helps evaluate your risk for Polycystic Ovary Syndrome.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/BloodVolumeCalculator.tsx';
 ---
 
-<Layout title="Pregnancy Blood Volume Calculator | Pregnancy Symptoms" description="Estimate your pregnancy blood volume increase. Understand how your body adapts to support your baby and what pregnancy symptoms to expect.">
+<Layout title="Pregnancy Blood Volume Calculator | Pregnancy Symptoms" description="Estimate your pregnancy blood volume increase. Understand how your body adapts to support your baby and what pregnancy symptoms to expect." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy Blood Volume Calculator | Pregnancy Symptoms","description":"Estimate your pregnancy blood volume increase. Understand how your body adapts to support your baby and what pregnancy symptoms to expect.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/EndometriosisRiskCalculator.tsx';
 ---
 
-<Layout title="Endometriosis Risk Assessment" description="Assess your risk factors and symptom patterns related to endometriosis. Identify if your symptoms warrant a specialist consultation.">
+<Layout title="Endometriosis Risk Assessment" description="Assess your risk factors and symptom patterns related to endometriosis. Identify if your symptoms warrant a specialist consultation." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Endometriosis Risk Assessment","description":"Assess your risk factors and symptom patterns related to endometriosis. Identify if your symptoms warrant a specialist consultation.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

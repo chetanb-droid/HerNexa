@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/PregnancyAnemiaCalculator.tsx';
 ---
 
-<Layout title="Pregnancy Anemia Risk Calculator" description="Evaluate your risk factors for iron-deficiency anemia during pregnancy based on hemoglobin levels.">
+<Layout title="Pregnancy Anemia Risk Calculator" description="Evaluate your risk factors for iron-deficiency anemia during pregnancy based on hemoglobin levels." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pregnancy Anemia Risk Calculator","description":"Evaluate your risk factors for iron-deficiency anemia during pregnancy based on hemoglobin levels.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

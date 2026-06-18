@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/TimeToConceiveCalculator.tsx';
 ---
 
-<Layout title="Chances of Getting Pregnant Calculator | Probability of Pregnancy" description="Estimate your probability of pregnancy based on your age, health, and how long you've been trying. Accurate chances of getting pregnant calculator.">
+<Layout title="Chances of Getting Pregnant Calculator | Probability of Pregnancy" description="Estimate your probability of pregnancy based on your age, health, and how long you've been trying. Accurate chances of getting pregnant calculator." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Chances of Getting Pregnant Calculator | Probability of Pregnancy","description":"Estimate your probability of pregnancy based on your age, health, and how long you've been trying. Accurate chances of getting pregnant calculator.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>

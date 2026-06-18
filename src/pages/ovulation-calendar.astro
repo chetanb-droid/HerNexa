@@ -3,6 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import PageComponent from '../react-pages/OvulationCalendar.tsx';
 ---
 
-<Layout title="Ovulation Calendar & Tracker | Pregnancy Chance Calendar" description="Generate a personalized 3-month ovulation calendar. Use our pregnancy probability calculator calendar and pregnancy chance calendar to track your cycle.">
+<Layout title="Ovulation Calendar & Tracker | Pregnancy Chance Calendar" description="Generate a personalized 3-month ovulation calendar. Use our pregnancy probability calculator calendar and pregnancy chance calendar to track your cycle." schema={JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ovulation Calendar & Tracker | Pregnancy Chance Calendar","description":"Generate a personalized 3-month ovulation calendar. Use our pregnancy probability calculator calendar and pregnancy chance calendar to track your cycle.","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}})}>
   <PageComponent client:load />
 </Layout>
